@@ -1,26 +1,27 @@
-@extends('layouts.app')
+@extends('layouts.app', [
+    'title' => __('Freelance PHP developer specialized in Laravel and WordPress')
+])
 
 @section('content')
-<div class="bg-no-repeat relative pb-12">
+<div class="bg-no-repeat relative pb-12 px-8 md:px-0">
     <div class="max-w-xl md:max-w-5xl mx-auto relative">
-        <div class="flex py-12">
-            <div class="w-2/3 pr-12">
+        <div class="flex flex-wrap py-12">
+            <div class="w-full md:w-2/3 md:pr-12">
                 <h1 class="font-bold text-gray-800 text-4xl mb-4 leading-snug">
-                    {{ __('Hi there, my name is') }}
-                    <span class="line-through">Bond, James Bond</span> Jeffrey.</h1>
+                    {!! __('Hi there, my name is :name', ['name' => '<span class="line-through">Bond, James Bond</span> Jeffrey van Rossum']) !!}.</h1>
                 <p class="text-3xl leading-snug mb-8 text-gray-800">
                     {{ __('I am a PHP Developer based in The Netherlands, specialized in Laravel and WordPress development.') }}
                 </p>
                 <p class="mb-8">
-                    <a href="/about" class="text-white border-yellow-300 border-solid border-b-4 mr-2 font-weight-bold bg-black py-2 px-4">
-                        {{ __('More about me →') }}
+                    <a href="/about" class="text-white inline-block border-yellow-300 mb-4 md:mb-0 border-solid border-b-4 mr-2 font-weight-bold bg-black py-2 px-4">
+                        {{ __('More about me') }} →
                     </a>
-                    <a href="/contact" class="text-white border-yellow-300 border-solid border-b-4 font-weight-bold bg-black py-2 px-4">
-                        {{ __('Work with me →') }}
+                    <a href="mailto:jeffrey@vanrossum.dev" class="text-white inline-block border-yellow-300 border-solid border-b-4 font-weight-bold bg-black py-2 px-4">
+                        {{ __('Lets work together') }} →
                     </a>
                 </p>
             </div>
-            <div class="w-1/3 pl-12">
+            <div class="w-full md:w-1/3 md:pl-12">
                 <img class="shadow-lg rounded"
                     src="https://pbs.twimg.com/profile_images/953023393091211274/a4yKMdGz_400x400.jpg">
             </div>
@@ -32,26 +33,19 @@
     </svg>
 </div>
 
-<div class="bg-white py-12 relative">
+<div class="bg-white py-12 relative px-8 md:px-0">
     <div class="max-w-xl md:max-w-5xl mx-auto">
-        <h2 class="text-4xl text-center sm:text-left font-bold mb-4 sm:mb-12 text-gray-800">{{ __('Latest posts') }}</h2>
+        <h2 class="text-4xl font-bold mb-4 sm:mb-12 text-gray-800">{{ __('Latest posts') }}</h2>
         @foreach ( $posts as $post )
-        <article class="mb-8">
-            <span class="block text-xs uppercase text-pink-500">
-                {{ date('d-m-y', strtotime($post->publish_date)) }}
-            </span>
-            <h3 class="text-2xl mt-2">
-                <a href="{{ route('posts.show', $post->idSlug()) }}" class="border-yellow-300 border-solid border-b-2">{{ $post->title }}</a>
-            </h3>
-            <article>
-            @endforeach
+            @include('posts.block', ['post' => $post])
+        @endforeach
     </div>
 </div>
 
-<div class="bg-gray-200 py-12 relative">
+<div id="projects" class="bg-gray-200 py-12 relative  px-8 md:px-0">
     <div class="max-w-xl md:max-w-5xl mx-auto">
         <h2 class="text-4xl text-center sm:text-left font-bold mb-4 sm:mb-12 text-gray-800">{{ __('Projects') }}</h2>
-        <div class="flex mb-16 -mx-4">
+        <div class="flex flex-wrap md:mb-16 -mx-4">
             @foreach($projects as $project)
                 @include('projects.block', ['project' => $project])
             @endforeach

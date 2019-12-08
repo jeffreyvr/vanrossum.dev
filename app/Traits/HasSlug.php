@@ -2,6 +2,7 @@
 
 namespace App\Traits;
 
+use App\Interfaces\Sluggable;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 

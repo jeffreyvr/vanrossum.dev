@@ -1,4 +1,4 @@
-<div class="md:flex-1 px-4 w-1/3 mb-16 md:mb-0">
+<div class="w-full md:w-1/3 md:px-4 mb-16 md:mb-0">
     <a href="{{ $project['url'] }}" target="_blank">
         <div
             class="bg-white enlarge rounded text-center text-base rounded-lg border-t-6 border-primary shadow-lg h-full px-8 md:px-12 py-8">

@@ -8,14 +8,20 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    @isset($title)
+    <title>{{ $title }} - {{ config('app.name', 'Laravel') }}</title>
+    @else
     <title>{{ config('app.name', 'Laravel') }}</title>
+    @endisset
+
+    @yield('seo')
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 
 <body class="bg-white h-screen antialiased leading-none bg-gray-100">
-    <div id="app">
+    <div id="app" class="">
         @include('layouts.partials.navigation')
 
         @yield('content')
@@ -23,7 +29,7 @@
         <footer class="">
             <div class="max-w-xl md:max-w-5xl mx-auto text-sm text-gray-500 sm:flex  py-8">
                 <div class="sm:flex-1 text-center sm:text-left mb-6 sm:mb-0 sm:mt-3">
-                    © {{ env('APP_NAME') }}
+                    © {{ env('APP_NAME') }} | <a href="{{ route('privacy') }}">Privacy</a>
                 </div>
                 <div class="sm:flex-1 text-center sm:text-right">
                     <ul class="text-2xl">
@@ -55,10 +61,22 @@
                     </ul>
                 </div>
             </div>
-        </div>
+    </div>
     </footer>
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}"></script>
+    @if(!env('APP_DEBUG',false))
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154200476-1">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{ env("UA_CODE") }}');
+    </script>
+    @endif
+
 </body>
 
 </html>

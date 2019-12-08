@@ -11464,8 +11464,8 @@ video {
  */
 
 /**
- * Font Awesome
- */
+  * Font Awesome
+  */
 
 /*!
  * Font Awesome Free 5.11.2 by @fontawesome - https://fontawesome.com
@@ -17376,6 +17376,44 @@ readers do not read off random characters that represent icons */
 
 .brand {
   box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.markup h2,
+.markup h3 {
+  line-height: 1.25;
+  margin-top: 3rem;
+}
+
+.markup h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.markup h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.markup > :not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.markup a {
+  color: #ed64a6;
+  text-decoration: underline;
+}
+
+.markup pre {
+  margin-left: 0;
+  margin-right: 0;
+  border-bottom-width: 5px;
+  background-color: #f7f7f7;
+  border-color: #ddd;
+}
+
+.markup pre code {
+  background-color: #f8f8f8;
+  padding: 2rem;
 }
 
 @media (min-width: 640px){
