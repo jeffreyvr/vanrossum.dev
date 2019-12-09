@@ -9,6 +9,11 @@ use Illuminate\Auth\Access\HandlesAuthorization;
 class PostPolicy
 {
     use HandlesAuthorization;
+
+    public function view(?User $user, Post $post)
+    {
+        return $post->status == 'publish' || ($user && $user->is_admin);
+    }
     
     public function create(User $user)
     {
@@ -17,6 +22,6 @@ class PostPolicy
 
     public function update(User $user, Post $post)
     {
-        return $user->id === $post->author_id;
+        return $user->is_admin && $user->id === $post->author_id;
     }
 }
