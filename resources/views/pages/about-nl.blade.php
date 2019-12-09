@@ -11,9 +11,9 @@
             @markdown
             Ik ben Jeffrey van Rossum en dit is mijn persoonlijke website. Ik ben een freelance [PHP](https://www.php.net/)-developer en ik woon in [Bennekom](https://nl.wikipedia.org/wiki/Bennekom) (thé place to be) in Gelderland, Nederland.
 
-            Al op jonge leeftijd (14 jaar -2006) begon ik als hobby met het maken van websites. Het is sindsdien altijd een passie geweest en gelukkig heb ik mij door de jaren heen steeds verder ontwikkeld.
+            Al op jonge leeftijd begon ik als hobby met het maken van websites. Het is sindsdien altijd een passie geweest en gelukkig heb ik mij door de jaren heen steeds verder ontwikkeld.
 
-            Sinds 2011 werk fulltime als webdeveloper, eerst bij een reclamebureau en later bij een uitgeverij als onderdeel van het online-team. Sinds eind 2019 ben ik begonnen als freelancer. 
+            Sinds 2011 werk ik fulltime als webdeveloper, eerst bij een reclamebureau en later bij een uitgeverij als onderdeel van het online-team. Sinds eind 2019 ben ik freelancer. 
 
             Als PHP-developer ben ik gespecialiseerd in [Laravel](http://laravel.com/) en [WordPress](https://wordpress.org/) -development. Daarnaast, werk ik graag met de front-end tools [Vue](https://vuejs.org/), [TailwindCSS](https://tailwindcss.com/) en [Bootstrap](https://getbootstrap.com/). 
             
