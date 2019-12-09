@@ -8,7 +8,7 @@
         <div class="flex flex-wrap py-12">
             <div class="w-full md:w-2/3 md:pr-12">
                 <h1 class="font-bold text-gray-800 text-4xl mb-4 leading-snug">
-                    {!! __('Hi there, my name is :name', ['name' => '<span class="line-through">Bond, James Bond</span> Jeffrey van Rossum']) !!}.</h1>
+                    {!! __('Hi! My name is :name', ['name' => 'Jeffrey van Rossum']) !!}.</h1>
                 <p class="text-3xl leading-snug mb-8 text-gray-800">
                     {{ __('I am a PHP Developer based in The Netherlands, specialized in Laravel and WordPress development.') }}
                 </p>
