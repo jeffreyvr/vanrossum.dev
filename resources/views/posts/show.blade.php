@@ -1,5 +1,5 @@
 @extends('layouts.app', [
-    'title' => $post->title
+'title' => $post->title
 ])
 
 @section('content')
@@ -13,8 +13,8 @@
                 </time>
                 {{ __('by :name', ['name' => $post->author->name]) }}
                 @auth
-                    –
-                    <a target="_blank" href="{{ route('posts.edit', $post) }}">{{ __('Edit') }}</a>
+                –
+                <a target="_blank" href="{{ route('posts.edit', $post) }}">{{ __('Edit') }}</a>
                 @endauth
             </p>
         </header>
@@ -28,8 +28,14 @@
 @endsection
 
 @section('seo')
-    <meta property="og:title" content="{{ $post->title }}"/>
-    <meta property="og:description" content="{{ $post->excerpt }}"/>
-    <meta property="article:published_time" content="{{ Carbon::parse($post->publish_date)->toIso8601String() }}"/>
-    <meta property="og:updated_time" content="{{ $post->updated_at->toIso8601String() }}"/>
+<meta property="og:title" content="{{ $post->title }}" />
+<meta property="og:description" content="{{ $post->excerpt }}" />
+<meta property="article:published_time" content="{{ Carbon::parse($post->publish_date)->toIso8601String() }}" />
+<meta property="og:updated_time" content="{{ $post->updated_at->toIso8601String() }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="{{ $post->excerpt }}" />
+<meta name="twitter:title" content="{{ $post->title }}" />
+<meta name="twitter:site" content="@jeffreyrossum" />
+<meta name="twitter:image" content="https://pbs.twimg.com/profile_images/953023393091211274/a4yKMdGz_400x400.jpg" />
+<meta name="twitter:creator" content="@jeffreyrossum" />
 @endsection
