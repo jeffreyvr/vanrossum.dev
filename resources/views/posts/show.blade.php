@@ -36,6 +36,6 @@
 <meta name="twitter:description" content="{{ $post->excerpt }}" />
 <meta name="twitter:title" content="{{ $post->title }}" />
 <meta name="twitter:site" content="@jeffreyrossum" />
-<meta name="twitter:image" content="https://pbs.twimg.com/profile_images/953023393091211274/a4yKMdGz_400x400.jpg" />
+<meta name="twitter:image" content="{{ url('images/avatar.jpg') }}" />
 <meta name="twitter:creator" content="@jeffreyrossum" />
 @endsection

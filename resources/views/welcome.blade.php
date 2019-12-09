@@ -23,7 +23,7 @@
             </div>
             <div class="w-full md:w-1/3 md:pl-12">
                 <img class="shadow-lg rounded"
-                    src="https://pbs.twimg.com/profile_images/953023393091211274/a4yKMdGz_400x400.jpg">
+                    src="{{ url('images/avatar.jpg') }}">
             </div>
         </div>
     </div>
