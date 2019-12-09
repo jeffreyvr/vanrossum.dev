@@ -31,7 +31,7 @@ class Post extends Model implements Sluggable
 
     public function scopePublished($query)
     {
-        return $query->where('status', 'publish');
+        return $query->where('status', 'publish')->orderby('publish_date', 'desc');
     }
 
     public function getExcerptAttribute()
