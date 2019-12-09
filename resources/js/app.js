@@ -1,7 +1,7 @@
 require('./bootstrap');
 
 import hljs from 'highlight.js';
-import 'highlight.js/styles/github-gist.css';
+import 'highlight.js/styles/atelier-sulphurpool-light.css';
 hljs.initHighlightingOnLoad();
 
 window.onload = function () {
