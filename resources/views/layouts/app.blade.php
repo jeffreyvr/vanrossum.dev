@@ -71,9 +71,10 @@
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+            gtag('set', 'anonymizeIp', true);
+            gtag('js', new Date());
 
-        gtag('config', '{{ env("UA_CODE") }}');
+            gtag('config', '{{ env("UA_CODE") }}');
     </script>
     @endif
 
