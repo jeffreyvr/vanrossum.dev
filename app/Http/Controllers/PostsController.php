@@ -76,15 +76,20 @@ class PostsController extends Controller
         $post->title = request('title');
         $post->text = request('text');
         $post->status = request('status');
+        $post->publish_date = request('publish_date');
         $post->save();
 
         return redirect()->back();
     }
 
-    public function destroy()
+    public function destroy($id)
     {
+        $post = Post::findOrFail($id);
+        
         $this->authorize('update', $post);
 
-        return;
+        $post->delete();
+
+        return redirect()->route('posts');
     }
 }

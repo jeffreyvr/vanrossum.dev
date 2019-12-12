@@ -7,16 +7,24 @@
     <article class="max-w-xl md:max-w-3xl mx-auto px-8 md:px-0">
         <header class="mb-8">
             <h1 class="text-5xl font-extrabold leading-tight mb-1">{{ $post->title }}</h1>
-            <p class="text-sm text-gray-700">
+            <div class="text-sm text-gray-700">
                 <time datetime="{{ $post->publish_date }}">
                     {{ $post->localized_date }}
                 </time>
                 {{ __('by :name', ['name' => $post->author->name]) }}
-                @auth
+                @can('update', $post)
                 –
                 <a target="_blank" href="{{ route('posts.edit', $post) }}">{{ __('Edit') }}</a>
-                @endauth
-            </p>
+                –
+                <form method="POST" action="{{ route('posts.delete', $post) }}"
+                    class="inline-block" onsubmit="return confirm('{{ __('Are you sure?') }}')">
+                    @method('DELETE')
+                    @csrf
+
+                    <button type="submit" class="text-red-500">{{ __('Delete') }}</button>
+                </form>
+                @endcan
+            </div>
         </header>
 
         <div class="text-xl leading-relaxed markup">

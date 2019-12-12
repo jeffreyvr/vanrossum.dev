@@ -33,6 +33,15 @@
             </div>
 
             <div class="w-full mb-4">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="title">
+                    {{ __('Publish date') }}
+                </label>
+                <input
+                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    name="publish_date" id="publish_date" type="datetime-local" value="{{ Carbon::parse($post->publish_date)->format('Y-m-d\TH:s') }}">
+            </div>
+
+            <div class="w-full mb-4">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="text">
                     {{ __('Text') }}
                 </label>
