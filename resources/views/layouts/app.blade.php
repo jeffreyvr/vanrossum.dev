@@ -28,8 +28,8 @@
 
         <footer class="">
             <div class="max-w-xl md:max-w-5xl mx-auto text-sm text-gray-500 sm:flex  py-8">
-                <div class="sm:flex-1 text-center sm:text-left mb-6 sm:mb-0 sm:mt-3">
-                    © {{ env('APP_NAME') }} | <a href="{{ route('privacy') }}">Privacy</a>
+                <div class="sm:flex-1 text-center sm:text-left mb-6 sm:mb-0 sm:mt-3 uppercase">
+                    © {{ date('Y') }} {{ config('app.name') }} | <a href="{{ route('privacy') }}">Privacy</a>
                 </div>
                 <div class="sm:flex-1 text-center sm:text-right">
                     <ul class="text-2xl">

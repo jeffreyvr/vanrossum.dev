@@ -1,114 +1,64 @@
 /**
- * This injects Tailwind's base styles, which is a combination of
- * Normalize.css and some additional base styles.
- *
- * You can see the styles here:
- * https://github.com/tailwindcss/tailwindcss/blob/master/css/base.css
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/base";
- */
-@tailwind base;
-
-/**
- * This injects any component classes registered by plugins.
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/components";
- */
-@tailwind components;
-
-/**
- * Here you would add any of your custom component classes; stuff that you'd
- * want loaded *before* the utilities so that the utilities could still
- * override them.
- *
- * Example:
- *
- * .btn { ... }
- * .form-input { ... }
- *
- * Or if using a preprocessor or `postcss-import`:
- *
- * @import "components/buttons";
- * @import "components/forms";
- */
-
-/**
- * This injects all of Tailwind's utility classes, generated based on your
- * config file.
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/utilities";
- */
-@tailwind utilities;
-
-/**
- * Here you would add any custom utilities you need that don't come out of the
- * box with Tailwind.
- *
- * Example :
- *
- * .bg-pattern-graph-paper { ... }
- * .skew-45 { ... }
- *
- * Or if using a preprocessor or `postcss-import`:
- *
- * @import "utilities/background-patterns";
- * @import "utilities/skew-transforms";
- */
-
-/**
-  * Font Awesome
+  * Tailwind
   */
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
-@import "~@fortawesome/fontawesome-free/scss/regular";
-@import "~@fortawesome/fontawesome-free/scss/solid";
-@import "~@fortawesome/fontawesome-free/scss/brands";
-
-.brand {
-  box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.2);
-}
-
-.markup {
-  h2,
-  h3 {
-    line-height: 1.25;
-    margin-top: 3rem;
+  @tailwind base;
+  @tailwind components;
+  /* purgecss start ignore */
+  @tailwind utilities;
+  
+  /**
+    * Font Awesome
+    */
+  @import "~@fortawesome/fontawesome-free/scss/fontawesome";
+  @import "~@fortawesome/fontawesome-free/scss/regular";
+  @import "~@fortawesome/fontawesome-free/scss/solid";
+  @import "~@fortawesome/fontawesome-free/scss/brands";
+  
+  /**
+    * Custom
+    */
+  .brand {
+    box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.2);
   }
-
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
+  
+  .markup {
+    h2,
+    h3 {
+      line-height: 1.25;
+      margin-top: 3rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+  
+    & > :not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  
+    a {
+      color: #ed64a6;
+      text-decoration: underline;
+    }
+  
+    pre {
+      margin-left: 0;
+      margin-right: 0;
+      border-bottom-width: 5px;
+      background-color: #f7f7f7;
+      border-color: #ddd;
+    }
+  
+    pre code {
+      background-color: #f8f8f8;
+      padding: 2rem;
+    }
   }
-
-  h3 {
-    font-size: 1.3rem;
-    font-weight: 700;
-  }
-
-  & > :not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
-
-  a {
-    color: #ed64a6;
-    text-decoration: underline;
-  }
-
-  pre {
-    margin-left: 0;
-    margin-right: 0;
-    border-bottom-width: 5px;
-    background-color: #f7f7f7;
-    border-color: #ddd;
-  }
-
-  pre code {
-    background-color: #f8f8f8;
-    padding: 2rem;
-  }
-}
+  /* purgecss end ignore */
+  
