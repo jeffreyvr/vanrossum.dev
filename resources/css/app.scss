@@ -1,64 +1,61 @@
 /**
   * Tailwind
   */
-  @tailwind base;
-  @tailwind components;
-  /* purgecss start ignore */
-  @tailwind utilities;
-  
-  /**
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
     * Font Awesome
     */
-  @import "~@fortawesome/fontawesome-free/scss/fontawesome";
-  @import "~@fortawesome/fontawesome-free/scss/regular";
-  @import "~@fortawesome/fontawesome-free/scss/solid";
-  @import "~@fortawesome/fontawesome-free/scss/brands";
-  
-  /**
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+/**
     * Custom
     */
-  .brand {
-    box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.2);
+.brand {
+  box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.markup {
+  h2,
+  h3 {
+    line-height: 1.25;
+    margin-top: 3rem;
   }
-  
-  .markup {
-    h2,
-    h3 {
-      line-height: 1.25;
-      margin-top: 3rem;
-    }
-  
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-  
-    h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-    }
-  
-    & > :not(:last-child) {
-      margin-bottom: 1.5rem;
-    }
-  
-    a {
-      color: #ed64a6;
-      text-decoration: underline;
-    }
-  
-    pre {
-      margin-left: 0;
-      margin-right: 0;
-      border-bottom-width: 5px;
-      background-color: #f7f7f7;
-      border-color: #ddd;
-    }
-  
-    pre code {
-      background-color: #f8f8f8;
-      padding: 2rem;
-    }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
   }
-  /* purgecss end ignore */
-  
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  & > :not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  a {
+    color: #ed64a6;
+    text-decoration: underline;
+  }
+
+  pre {
+    margin-left: 0;
+    margin-right: 0;
+    border-bottom-width: 5px;
+    background-color: #f7f7f7;
+    border-color: #ddd;
+  }
+
+  pre code {
+    background-color: #f8f8f8;
+    padding: 2rem;
+  }
+}

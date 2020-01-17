@@ -19,9 +19,4 @@ mix.js('resources/js/app.js', 'public/js')
    .tailwind('./tailwind.config.js')
    .copyDirectory('./node_modules/@fortawesome/fontawesome-free/webfonts', 'public/webfonts');
 
-if (mix.inProduction()) {
-  mix
-   .purgeCss();
-}
-
 mix.version();
