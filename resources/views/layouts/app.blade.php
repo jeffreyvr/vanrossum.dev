@@ -16,6 +16,9 @@
 
     @yield('seo')
 
+    <link rel="webmention" href="https://webmention.io/vanrossum.dev/webmention" />
+    <link rel="pingback" href="https://webmention.io/vanrossum.dev/xmlrpc" />
+
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
