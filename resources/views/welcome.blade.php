@@ -5,7 +5,7 @@
 @section('content')
 <div class="bg-no-repeat relative pb-12 px-8 md:px-0">
     <div class="max-w-xl md:max-w-5xl mx-auto relative">
-        <div class="flex flex-wrap py-12">
+        <div class="flex flex-wrap py-6 md:py-12">
             <div class="w-full md:w-2/3 md:pr-12">
                 <h1 class="font-bold text-gray-800 text-2xl sm:text-4xl mb-4 leading-snug">
                     {!! __('Hi! My name is :name', ['name' => 'Jeffrey van Rossum']) !!}.</h1>

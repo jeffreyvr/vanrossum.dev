@@ -2,8 +2,8 @@
     <div class="max-w-xl md:max-w-5xl mx-auto relative items-center justify-center">
         <button id="toggleNav" class="block md:hidden text-3xl absolute right-0 top-0 text-black"><i class="fas fa-bars"></i></button>
         <div class="md:flex content-center">
-            <a href="{{ url('/') }}" class="brand font-semibold text-white bg-gray-900 no-underline">
-                <div class="py-4 px-4">
+            <a href="{{ url('/') }}" class="brand inline-block font-semibold text-white bg-gray-900 no-underline">
+                <div class="p-2 sm:p-4">
                     <span class="text-yellow-300 uppercase text-lg">vanrossum</span>.<span class="text-lg text-pink-500">dev</span>
                 </div>
             </a>
