@@ -34,10 +34,28 @@
 
         @yield('content')
 
-        <footer class="">
-            <div class="max-w-xl md:max-w-5xl mx-auto text-sm text-gray-500 sm:flex  py-8">
+        <footer>
+            <div class="max-w-xl flex items-center md:max-w-5xl mx-auto text-sm text-gray-500 sm:flex py-8">
                 <div class="sm:flex-1 text-center sm:text-left mb-6 sm:mb-0 sm:mt-3 uppercase">
-                    © {{ date('Y') }} {{ config('app.name') }} | <a href="{{ route('privacy') }}">Privacy</a>
+                    <div class="inline-block mb-4 relative w-64">
+                        <select
+                            onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);"
+                            class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                            @foreach (config('app.available_locales') as $label => $locale)
+                            <option value="{{ route(\Route::currentRouteName(), $locale) }}" @if (app()->getLocale()
+                                ==
+                                $locale) selected @endif>{{ $label }}</option>
+                            @endforeach
+                        </select>
+                        <div
+                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>© {{ date('Y') }} {{ config('app.name') }} | <a
+                            href="{{ route('privacy', app()->getLocale()) }}">Privacy</a></div>
                 </div>
                 <div class="sm:flex-1 text-center sm:text-right">
                     <ul class="text-2xl">
@@ -69,7 +87,7 @@
                     </ul>
                 </div>
             </div>
-    </div>
+        </div>
     </footer>
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}"></script>
