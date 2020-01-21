@@ -12,7 +12,7 @@
         <div class="mt-10 flex items-center justify-between">
             <div>
                 <div class="uppercase text-gray-900 font-semibold mb-2">Jan Egbert Krikken</div>
-                <div class="text-gray-700 text-base">Digital Marketing bij Geomares</div>
+                <div class="text-gray-700 text-base">Digital Marketing Manager bij Geomares</div>
             </div>
             <div>
                 <a href="https://nl.linkedin.com/in/jan-egbert-krikken-0b954720" class="text-blue-500"><i class="fab fa-linkedin text-3xl"></i></a>
@@ -32,7 +32,7 @@
     <div class="mt-10 flex items-center justify-between">
         <div>
             <div class="uppercase text-gray-900 font-semibold mb-2">Jan Egbert Krikken</div>
-            <div class="text-gray-700 text-base">Digital Marketing at Geomares</div>
+            <div class="text-gray-700 text-base">Digital Marketing Manager at Geomares</div>
         </div>
         <div>
             <a href="https://nl.linkedin.com/in/jan-egbert-krikken-0b954720" class="text-blue-500"><i class="fab fa-linkedin text-3xl"></i></a>

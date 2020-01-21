@@ -9,7 +9,7 @@ class HomeController extends Controller
     public function __invoke()
     {
         return view('welcome')->with([
-            'posts' => Post::published()->limit(5)->get(),
+            'posts' => Post::published()->limit(3)->get(),
             'projects' => [
                 [
                     'url' => 'https://addrow.io',

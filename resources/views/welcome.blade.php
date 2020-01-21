@@ -24,7 +24,7 @@
                 </p>
             </div>
             <div class="w-full md:w-1/3 md:pl-12">
-                <img class="shadow-lg relative z-10 rounded" src="{{ url('images/avatar.jpg') }}">
+                <img class="shadow-lg relative z-10 max-w-full rounded" src="{{ url('images/avatar.jpg') }}">
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
                 <div class="md:w-1/2 px-8">
                     <h2 class="text-4xl font-bold mb-4 sm:mb-12 text-gray-800">{{ __('Latest posts') }}</h2>
                     @foreach ( $posts as $post )
-                    @include('posts.block', ['post' => $post])
+                        @include('posts.block', ['post' => $post])
                     @endforeach
                 </div>
                 <div class="md:w-1/2 px-8">

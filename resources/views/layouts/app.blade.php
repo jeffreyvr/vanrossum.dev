@@ -35,7 +35,7 @@
         @yield('content')
 
         <footer>
-            <div class="max-w-xl flex items-center md:max-w-5xl mx-auto text-sm text-gray-500 sm:flex py-8">
+            <div class="max-w-xl md:flex items-center md:max-w-5xl mx-auto text-sm text-gray-500 sm:flex py-8">
                 <div class="sm:flex-1 text-center sm:text-left mb-6 sm:mb-0 sm:mt-3 uppercase">
                     <div class="inline-block mb-4 relative w-64">
                         <select
