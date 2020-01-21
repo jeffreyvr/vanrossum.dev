@@ -30,4 +30,7 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'webmentions' => [
+        'webhook_secret' => env('WEBMENTIONS_WEBHOOK_SECRET')
+    ]
 ];

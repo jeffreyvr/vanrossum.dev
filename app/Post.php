@@ -3,6 +3,7 @@
 namespace App;
 
 use Carbon;
+use App\Webmention;
 use App\Traits\HasSlug;
 use App\Interfaces\Sluggable;
 use Illuminate\Database\Eloquent\Model;
@@ -47,5 +48,10 @@ class Post extends Model implements Sluggable
     public function getLocalizedDateAttribute()
     {
         return Carbon::parse($this->publish_date)->locale(app()->getLocale())->translatedFormat('j F Y');
+    }
+
+    public function webmentions()
+    {
+        return $this->hasMany(Webmention::class);
     }
 }
