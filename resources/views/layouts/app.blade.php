@@ -34,27 +34,27 @@
                 <div class="sm:flex-1 text-center sm:text-right">
                     <ul class="text-2xl">
                         <li class="inline-block mr-6 sm:mr-10">
-                            <a href="https://twitter.com/jeffreyrossum" target="_blank">
+                            <a href="https://twitter.com/jeffreyrossum" rel="me" target="_blank">
                                 <i class="enlarge fab fa-twitter" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li class="inline-block mr-6 sm:mr-10">
-                            <a href="https://github.com/jeffreyvr" target="_blank">
+                            <a href="https://github.com/jeffreyvr" rel="me" target="_blank">
                                 <i class="enlarge fab fa-github" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li class="inline-block mr-6 sm:mr-10">
-                            <a href="https://www.youtube.com/channel/UC6fQApKy1ULAlr0kS7EDsbg" target="_blank">
+                            <a href="https://www.youtube.com/channel/UC6fQApKy1ULAlr0kS7EDsbg" rel="me" target="_blank">
                                 <i class="enlarge fab fa-youtube" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li class="inline-block mr-6 sm:mr-10">
-                            <a href="https://instagram.com/jeffrey.rossum/" target="_blank">
+                            <a href="https://instagram.com/jeffrey.rossum/" rel="me" target="_blank">
                                 <i class="enlarge fab fa-instagram" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li class="inline-block">
-                            <a href="https://linkedin.com/in/jeffrey-van-rossum-97b27321" target="_blank">
+                            <a href="https://linkedin.com/in/jeffrey-van-rossum-97b27321" rel="me" target="_blank">
                                 <i class="enlarge fab fa-linkedin-in" aria-hidden="true"></i>
                             </a>
                         </li>
