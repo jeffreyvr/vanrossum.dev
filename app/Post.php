@@ -16,7 +16,7 @@ class Post extends Model implements Sluggable
     protected $guarded = [];
 
     protected $appends = [
-        'excerpt', 
+        'excerpt',
         'localized_date'
     ];
 
@@ -42,12 +42,12 @@ class Post extends Model implements Sluggable
 
     public function getExcerptAttribute()
     {
-        $string = strip_tags($this->text);
+        $string = $this->renderedText();
         if (strlen($string) > 50) {
             $stringCut = substr($string, 0, 140);
             $string = substr($stringCut, 0, strrpos($stringCut, ' ')) . '...';
         }
-        return $string;
+        return strip_tags($string);
     }
 
     public function getLocalizedDateAttribute()

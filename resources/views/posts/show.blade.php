@@ -5,11 +5,6 @@
 @section('content')
 <div class="bg-white py-12 relative">
     <div class="max-w-xl md:max-w-3xl mx-auto px-8 md:px-0">
-        <div class="markup leading-normal text-md text-gray-800 mb-6 bg-yellow-200 p-4">
-            <p><strong>Wouldn't you like for invoicing to be just done quick and simple?</strong> <a href="https://addrow.io">Addrow</a> does just that. You can create invoices and send them as 
-                a PDF to your customers by email, send reminders automatically, include payment links and much more! And yes, there is an API too. 
-                <a href="https://addrow.io/register">Try it out for free</a></p>
-        </div>
         <article>
             <header class="mb-8">
                 <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-1">{{ $post->title }}</h1>
@@ -36,13 +31,18 @@
             <div class="text-lg md:text-xl leading-relaxed markup">
                 {!! $post->renderedText() !!}
             </div>
-
         </article>
+
+        <div class="markup leading-normal text-md text-gray-800 my-8 bg-pink-100 p-4">
+            <p><strong>Wouldn't you like for invoicing to be just done quick and simple?</strong> <a href="https://addrow.io">Addrow</a> does just that. You can create invoices and send them as 
+                a PDF to your customers by email, send reminders automatically, include payment links and much more! And yes, there is an API too. 
+                <a href="https://addrow.io/register">Try it out for free</a></p>
+        </div>
 
         @isset($post->tweet_url)
         <div class="my-4">
-            <div class="markup">
-                <h2 id="comments">{{ __('Comments') }}</h2>
+            <div>
+                <h2 class="text-3xl text-gray-800 mb-4 font-bold" id="comments">{{ __('Comments') }}</h2>
                 <div class="bg-gray-200 text-gray-800 p-4 mb-8">
                     {!! __('You can post a comment to this article by replying to :tweet_link.', ['tweet_link' => "<a href=\"{$post->tweet_url}\">" . __('this tweet') .'</a>' ]) !!}
                 </div>

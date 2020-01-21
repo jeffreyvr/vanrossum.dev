@@ -1,12 +1,12 @@
 <nav class="py-8 px-8 md:px-0">
     <div class="max-w-xl md:max-w-5xl mx-auto relative items-center justify-center">
         <button id="toggleNav" class="block md:hidden text-3xl absolute right-0 top-0 text-black"><i class="fas fa-bars"></i></button>
-        <div class="md:flex">
-            <div>
-                <a href="{{ url('/') }}" class="brand text-lg font-semibold text-white bg-gray-900 py-2 px-4 no-underline">
-                    <span class="text-yellow-300 uppercase">vanrossum</span>.<span class="text-pink-500">dev</span>
-                </a>
-            </div>
+        <div class="md:flex content-center">
+            <a href="{{ url('/') }}" class="brand font-semibold text-white bg-gray-900 no-underline">
+                <div class="py-4 px-4">
+                    <span class="text-yellow-300 uppercase text-lg">vanrossum</span>.<span class="text-lg text-pink-500">dev</span>
+                </div>
+            </a>
             <div id="nav" class="flex-1 w-full md:w-auto bg-gray-200 md:bg-transparent mt-8 md:mt-0 text-right hidden md:block">
                 <a class="block md:inline-block text-left no-underline hover:underline text-gray-900 text-lg p-3" href="{{ route('about') }}">{{ __('About') }}</a>
                 <a class="block md:inline-block text-left no-underline hover:underline text-gray-900 text-lg p-3" href="{{ route('posts') }}">{{ __('Articles') }}</a>

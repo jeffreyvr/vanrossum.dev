@@ -7,17 +7,17 @@
     <div class="max-w-xl md:max-w-5xl mx-auto relative">
         <div class="flex flex-wrap py-12">
             <div class="w-full md:w-2/3 md:pr-12">
-                <h1 class="font-bold text-gray-800 text-4xl mb-4 leading-snug">
+                <h1 class="font-bold text-gray-800 text-2xl sm:text-4xl mb-4 leading-snug">
                     {!! __('Hi! My name is :name', ['name' => 'Jeffrey van Rossum']) !!}.</h1>
-                <p class="text-3xl leading-snug mb-8 text-gray-800">
-                    {{ __('I am a PHP Developer based in The Netherlands, specialized in Laravel and WordPress development.') }}
+                <p class="text-1xl sm:text-3xl leading-snug mb-8 text-gray-700">
+                    {{ __('I am a freelance PHP Developer based in The Netherlands, specialized in Laravel and WordPress development.') }}
                 </p>
                 <p class="mb-8">
-                    <a href="/about" class="text-white inline-block border-yellow-300 mb-4 md:mb-0 border-solid border-b-4 mr-2 font-weight-bold bg-black py-2 px-4">
-                        {{ __('More about me') }} →
+                    <a href="/about" class="bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 px-4 shadow mr-4">
+                        {{ __('More about me') }}
                     </a>
-                    <a href="mailto:jeffrey@vanrossum.dev" class="text-white inline-block border-yellow-300 border-solid border-b-4 font-weight-bold bg-black py-2 px-4">
-                        {{ __('Lets work together') }} →
+                    <a href="mailto:jeffrey@vanrossum.dev" class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-4 shadow">
+                        {{ __('Hire me') }}
                     </a>
                 </p>
             </div>
