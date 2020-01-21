@@ -13,7 +13,12 @@ class Post extends Model implements Sluggable
 {
     use HasSlug;
 
-    protected $appends = ['excerpt', 'localized_date'];
+    protected $guarded = [];
+
+    protected $appends = [
+        'excerpt', 
+        'localized_date'
+    ];
 
     public function getSluggableValue(): string
     {

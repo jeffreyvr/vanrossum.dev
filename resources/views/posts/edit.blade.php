@@ -33,6 +33,15 @@
             </div>
 
             <div class="w-full mb-4">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="tweet_url">
+                    {{ __('Tweet URL') }}
+                </label>
+                <input
+                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    name="tweet_url" id="tweet_url" type="text" value="{{ $post->tweet_url }}">
+            </div>
+
+            <div class="w-full mb-4">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="title">
                     {{ __('Publish date') }}
                 </label>

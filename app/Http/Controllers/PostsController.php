@@ -35,21 +35,19 @@ class PostsController extends Controller
     {
         $this->authorize('create', Post::class);
         
-        request()->validate([
+        $attributes = request()->validate([
             'title' => 'required',
             'text' => 'required',
-            'status' => ['required', 'in:draft,publish']
+            'status' => ['required', 'in:draft,publish'],
+            'publish_date' => 'nullable',
+            'tweet_url' => 'nullable|url'
         ]);
 
-        $post = new Post();
-        $post->title = request('title');
-        $post->text = request('text');
-        $post->author_id = auth()->user()->id;
-        $post->status = request('status');
-        $post->publish_date = request('publish_date');
-        $post->save();
+        $attributes['author_id'] = auth()->id();
 
-        return redirect()->back();
+        $post = Post::create($attributes);
+        
+        return redirect()->route('posts.show', $post->idSlug());
     }
 
     public function edit($id)
@@ -61,23 +59,19 @@ class PostsController extends Controller
         return view('posts.edit', ['post' => $post]);
     }
 
-    public function update($post)
+    public function update(Post $post)
     {
-        request()->validate([
+        $attributes = request()->validate([
             'title' => 'required',
             'text' => 'required',
-            'status' => ['required', 'in:draft,publish']
+            'status' => ['required', 'in:draft,publish'],
+            'publish_date' => 'nullable',
+            'tweet_url' => 'nullable|url'
         ]);
-
-        $post = Post::findOrFail($post);
 
         $this->authorize('update', $post);
 
-        $post->title = request('title');
-        $post->text = request('text');
-        $post->status = request('status');
-        $post->publish_date = request('publish_date');
-        $post->save();
+        $post->update($attributes);
 
         return redirect()->back();
     }

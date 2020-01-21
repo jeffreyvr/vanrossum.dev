@@ -21,7 +21,7 @@ class WebmentionsController extends Controller
 
     protected function setPayload()
     {
-        $this->payload = json_decode(request('payload'), true);
+        $this->payload = request();
     }
 
     protected function payloadHasBeenReceivedBefore()

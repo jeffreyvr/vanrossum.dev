@@ -38,6 +38,36 @@
             </div>
 
         </article>
+
+        @isset($post->tweet_url)
+        <div class="my-4">
+            <div class="markup">
+                <h2 id="comments">{{ __('Comments') }}</h2>
+                <div class="bg-gray-200 text-gray-800 p-4 mb-8">
+                    {!! __('You can post a comment to this article by replying to :tweet_link.', ['tweet_link' => "<a href=\"{$post->tweet_url}\">" . __('this tweet') .'</a>' ]) !!}
+                </div>
+            </div>
+            
+            @foreach ($post->webmentions as $mention)
+            <div class="mb-6 text-sm">
+                <div class="flex items-center">
+                    <div class="mr-2"><img src="{{ $mention->author_photo_url }}" class="h-8 w-8 rounded-full"></div>
+                    <div>
+                        <span class="text-gray-700">
+                            <a class="underline" href="{{ $mention->interaction_url }}">{{ $mention->getTypeActionLabel() }}</a>
+                        </span>
+                        <a class="font-bold no-underline text-gray-900" href="{{ $mention->author_url }}">{{ __('by :name', ['name' => $mention->author_name]) }}</a>
+                    </div>
+                </div>
+                @if($mention->text)
+                <div class="mt-2 leading-snug">
+                    {{ $mention->text }}
+                </div>
+                @endif
+            </div>
+            @endforeach
+        </div>
+        @endisset
     </div>
 </div>
 @endsection

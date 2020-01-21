@@ -10,7 +10,7 @@ Route::get('/about', 'AboutController')->name('about');
 Route::get('/admin/dashboard', 'AdminController@dashboard')->name('admin.dashboard')->middleware('auth');
 Route::get('/posts', 'PostsController@index')->name('posts');
 Route::get('/posts/{id}/edit', 'PostsController@edit')->name('posts.edit');
-Route::patch('/posts/{id}', 'PostsController@update')->name('posts.update');
+Route::patch('/posts/{post}', 'PostsController@update')->name('posts.update');
 Route::delete('/posts/{id}', 'PostsController@destroy')->name('posts.delete');
 Route::get('/posts/create', 'PostsController@create')->name('posts.create');
 Route::post('/posts', 'PostsController@store')->name('posts.store');
