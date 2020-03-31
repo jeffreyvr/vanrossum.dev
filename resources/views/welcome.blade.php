@@ -1,5 +1,5 @@
 @extends('layouts.app', [
-'title' => __('Freelance PHP developer specialized in Laravel and WordPress')
+'title' => __('Jeffrey van Rossum - Freelance PHP developer specialized in Laravel and WordPress')
 ])
 
 @section('content')
