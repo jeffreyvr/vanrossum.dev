@@ -10,8 +10,8 @@
 
         <div class="text-xl leading-relaxed markup">
             @markdown
-            <div class="flex items-start font-bold text-gray-800">
-                <img class="shadow-lg relative z-10 w-64 mr-8 rounded" src="{{ url('images/avatar.jpg') }}">
+            <div class="md:flex md:items-start font-bold text-gray-800">
+                <img class="shadow-lg relative z-10 w-full md:w-64 md:mr-8 mb-4 md:mb-0 rounded" src="{{ url('images/avatar.jpg') }}">
             Ik ben Jeffrey van Rossum, freelance PHP developer met ruim 8 jaar WordPress ervaring. Met WordPress heb ik door de jaren aan vele websites gewerkt, waaronder ook maatwerk plugins en thema's.
             </div>
 
