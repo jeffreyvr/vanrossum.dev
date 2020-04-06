@@ -13,6 +13,8 @@ Route::prefix('{locale}')
 
     Route::get('/', 'HomeController')->name('welcome');
     Route::get('/about', 'AboutController')->name('about');
+    Route::get('/freelance-wordpress-developer', 'PagesController@wordpress')->name('wordpress');
+    Route::get('/freelance-laravel-developer', 'PagesController@laravel')->name('laravel');
     Route::get('/privacy', function () {
         return view('pages.privacy');
     })->name('privacy');

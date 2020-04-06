@@ -10,7 +10,8 @@
                 <h1 class="font-bold text-gray-800 text-2xl sm:text-4xl mb-4 leading-snug">
                     {!! __('Hi! My name is :name', ['name' => 'Jeffrey van Rossum']) !!}.</h1>
                 <p class="text-1xl sm:text-3xl leading-snug mb-8 text-gray-700">
-                    {{ __('I am a freelance PHP Developer based in The Netherlands, specialized in Laravel and WordPress development.') }}
+                    {!! __("I am a freelance PHP Developer based in The Netherlands, specialized in <a href=':laravel_url' class='underline'>Laravel</a> and <a href=':wordpress_url' class='underline'>WordPress</a> development.", ['wordpress_url' => route('wordpress', app()->getLocale()),
+                    'laravel_url' => route('laravel', app()->getLocale())]) !!}
                 </p>
                 <p class="mb-8">
                     <a href="{{ route('about', app()->getLocale()) }}"
