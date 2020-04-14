@@ -33,11 +33,7 @@
             </div>
         </article>
 
-        <div class="markup leading-normal text-md text-gray-800 my-8 bg-pink-100 p-4">
-            <p><strong>Wouldn't you like for invoicing to be just done quick and simple?</strong> <a href="https://addrow.io">Addrow</a> does just that. You can create invoices and send them as 
-                a PDF to your customers by email, send reminders automatically, include payment links and much more! And yes, there is an API too. 
-                <a href="https://addrow.io/register">Try it out for free</a></p>
-        </div>
+        @include('partials.addrow')
 
         @isset($post->tweet_url)
         <div class="my-4">
@@ -47,7 +43,7 @@
                     {!! __('You can post a comment to this article by replying to :tweet_link.', ['tweet_link' => "<a href=\"{$post->tweet_url}\" class=\"underline\">" . __('this tweet') .'</a>' ]) !!}
                 </div>
             </div>
-            
+
             @foreach ($post->webmentions as $mention)
             <div class="mb-6 text-sm">
                 <div class="flex items-center">
@@ -68,6 +64,8 @@
             @endforeach
         </div>
         @endisset
+
+        @include('partials.newsletter')
     </div>
 </div>
 @endsection
