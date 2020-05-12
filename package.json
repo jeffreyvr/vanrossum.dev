@@ -24,6 +24,7 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.13.0",
-        "highlight.js": "^9.18.1"
+        "highlight.js": "^9.18.1",
+        "simplemde": "^1.11.2"
     }
 }
