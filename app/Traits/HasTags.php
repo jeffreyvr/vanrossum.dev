@@ -6,11 +6,11 @@ trait HasTags
 {
     use \Spatie\Tags\HasTags;
 
-    public function scopeWithTagSlug($slug, $locale = null)
+    public function scopeWithTagSlug($query, $slug, $locale = null)
     {
         $locale = $locale ?? app()->getLocale();
 
-        $this->whereHas('tags', function ($query) use ($slug, $locale) {
+        return $this->whereHas('tags', function ($query) use ($slug, $locale) {
             $query->where("tags.slug->{$locale}", $slug);
         });
     }
