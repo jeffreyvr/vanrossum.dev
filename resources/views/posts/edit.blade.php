@@ -59,6 +59,15 @@
                     name="text" id="text">{{ $post->text }}</textarea>
             </div>
 
+            <div class="w-full mb-4">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="title">
+                    {{ __('Tags') }}
+                </label>
+                <input
+                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    name="tags" id="tags" type="text" value="{{ implode( ', ', $post->tags->pluck('name')->all() ) }}" placeholder="Tag 1, Tag 2">
+            </div>
+
             <div class="mb-4">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
                     {{ __('Status') }}

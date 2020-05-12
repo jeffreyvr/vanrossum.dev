@@ -7,7 +7,7 @@
     <div class="max-w-xl md:max-w-3xl mx-auto px-8 md:px-0">
         <article>
             <header class="mb-8">
-                <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-1">{{ $post->title }}</h1>
+                <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-2">{{ $post->title }}</h1>
                 <div class="text-sm text-gray-700">
                     <time datetime="{{ $post->publish_date }}">
                         {{ $post->localized_date }}
@@ -31,6 +31,19 @@
             <div class="text-lg md:text-xl leading-relaxed markup">
                 {!! $post->renderedText() !!}
             </div>
+
+            @if($post->tags)
+                <ul class="flex justify-end my-8">
+                    @foreach($post->tags->sortBy->name as $tag)
+                        <li class="ml-1">
+                            <a href="{{ route('posts.tagged', $tag->slug) }}" class="bg-gray-200 px-2 py-1 rounded text-sm">
+                                <i class="fa fa-tag text-xs text-gray-500" aria-hidden="true"></i>
+                                {{ $tag->name }}
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            @endif
         </article>
 
         @include('partials.addrow')
@@ -71,14 +84,17 @@
 @endsection
 
 @section('seo')
-<meta property="og:title" content="{{ $post->title }}" />
-<meta property="og:description" content="{{ $post->excerpt }}" />
-<meta property="article:published_time" content="{{ Carbon::parse($post->publish_date)->toIso8601String() }}" />
-<meta property="og:updated_time" content="{{ $post->updated_at->toIso8601String() }}" />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:description" content="{{ $post->excerpt }}" />
-<meta name="twitter:title" content="{{ $post->title }}" />
-<meta name="twitter:site" content="@jeffreyrossum" />
-<meta name="twitter:image" content="{{ url('images/avatar.jpg') }}" />
-<meta name="twitter:creator" content="@jeffreyrossum" />
+    <meta property="og:title" content="{{ $post->title }}" />
+    <meta property="og:description" content="{{ $post->excerpt }}" />
+    @foreach($post->tags as $tag)
+        <meta property="article:tag" content="{{ $tag->name }}"/>
+    @endforeach
+    <meta property="article:published_time" content="{{ Carbon::parse($post->publish_date)->toIso8601String() }}" />
+    <meta property="og:updated_time" content="{{ $post->updated_at->toIso8601String() }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="{{ $post->excerpt }}" />
+    <meta name="twitter:title" content="{{ $post->title }}" />
+    <meta name="twitter:site" content="@jeffreyrossum" />
+    <meta name="twitter:image" content="{{ url('images/avatar.jpg') }}" />
+    <meta name="twitter:creator" content="@jeffreyrossum" />
 @endsection

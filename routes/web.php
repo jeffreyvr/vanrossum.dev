@@ -22,6 +22,7 @@ Route::prefix('{locale}')
 
 Route::get('/admin/dashboard', 'AdminController@dashboard')->name('admin.dashboard')->middleware('auth');
 Route::get('/posts', 'PostsController@index')->name('posts');
+Route::get('/posts/tagged/{tag_slug}', 'PostsController@tagged')->name('posts.tagged');
 Route::get('/posts/{id}/edit', 'PostsController@edit')->name('posts.edit');
 Route::patch('/posts/{post}', 'PostsController@update')->name('posts.update');
 Route::delete('/posts/{id}', 'PostsController@destroy')->name('posts.delete');

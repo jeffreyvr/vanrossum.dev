@@ -5,13 +5,14 @@ namespace App;
 use Carbon;
 use App\Webmention;
 use App\Traits\HasSlug;
+use App\Traits\HasTags;
 use App\Interfaces\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 use GrahamCampbell\Markdown\Facades\Markdown;
 
 class Post extends Model implements Sluggable
 {
-    use HasSlug;
+    use HasSlug, HasTags;
 
     protected $guarded = [];
 
