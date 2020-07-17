@@ -20,6 +20,8 @@ class HomepageTest extends TestCase
     /** @test */
     public function a_visitor_can_view_the_homepage()
     {
+        $this->withoutExceptionHandling();
+
         $this->get(route('welcome', 'en'))
             ->assertStatus(200);
 
