@@ -18,7 +18,7 @@
                         class="bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 px-4 shadow mr-4">
                         {{ __('More about me') }}
                     </a>
-                    <a href="mailto:jeffrey@vanrossum.dev"
+                    <a href="{{ route('contact', app()->getLocale()) }}"
                         class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-4 shadow">
                         {{ __('Hire me') }}
                     </a>
