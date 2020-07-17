@@ -15,7 +15,7 @@ class HomeController extends Controller
                     'url' => 'https://addrow.io',
                     'domain' => 'addrow.io',
                     'description' => __('A user friendly invoicing app'),
-                    'logo' => file_get_contents(url('images/logos/addrow.svg'))
+                    'logo' => file_get_contents(public_path('images/logos/addrow.svg'))
                 ],
                 [
                     'url' => 'https://wordpress.org/plugins/easy-liveblogs/',
