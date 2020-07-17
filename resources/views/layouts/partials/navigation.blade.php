@@ -11,7 +11,7 @@
                 <a class="block md:inline-block text-left no-underline hover:underline text-gray-900 text-lg p-3" href="{{ route('about', app()->getLocale()) }}">{{ __('About') }}</a>
                 <a class="block md:inline-block text-left no-underline hover:underline text-gray-900 text-lg p-3" href="{{ route('posts') }}">{{ __('Articles') }}</a>
                 <a class="block md:inline-block text-left no-underline hover:underline text-gray-900 text-lg p-3" href="{{ route('welcome', app()->getLocale()) }}#projects">{{ __('Projects') }}</a>
-                <a class="block md:inline-block text-left no-underline hover:underline text-gray-900 text-lg p-3" href="mailto:jeffrey@vanrossum.dev">{{ __('Contact') }}</a>
+                <a class="block md:inline-block text-left no-underline hover:underline text-gray-900 text-lg p-3" href="{{ route('contact', app()->getLocale())}}">{{ __('Contact') }}</a>
             </div>
         </div>
     </div>

@@ -18,6 +18,7 @@ Route::prefix('{locale}')
     Route::get('/privacy', function () {
         return view('pages.privacy');
     })->name('privacy');
+    Route::get('/contact', 'ContactController@show')->name('contact');
 });
 
 Route::get('/admin/dashboard', 'AdminController@dashboard')->name('admin.dashboard')->middleware('auth');
@@ -29,5 +30,6 @@ Route::delete('/posts/{id}', 'PostsController@destroy')->name('posts.delete');
 Route::get('/posts/create', 'PostsController@create')->name('posts.create');
 Route::post('/posts', 'PostsController@store')->name('posts.store');
 Route::get('/{postSlug}', 'PostsController@show')->name('posts.show');
+Route::post('/contact', 'ContactController@submit')->name('contact.submit');
 
 Route::post('/webhooks/webmentions', 'WebmentionsController@handle');

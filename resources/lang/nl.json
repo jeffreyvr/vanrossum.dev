@@ -13,5 +13,10 @@
     "Posts": "Berichten",
     "by :name": "door :name",
     "Edit": "Bewerk",
-    "Hire me": "Samenwerken"
+    "Hire me": "Samenwerken",
+    "Your message has been sent.": "Je bericht is succesvol verzonden.",
+    "Your name": "Naam",
+    "Your email": "E-mailadres",
+    "Message": "Bericht",
+    "Send": "Verstuur"
 }
