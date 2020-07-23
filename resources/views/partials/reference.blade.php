@@ -5,9 +5,9 @@
             <i class="fas fa-quote-left text-3xl"></i>
         </div>
         <div class="relative leading-relaxed">
-            <p>Jeffrey is een developer met oog voor detail, maar blijft altijd de grote lijnen zien.</p>
-            <p class="mt-4">Een developer met oog voor vormgeving, met gevoel voor taal, uitstekende
-                sociale vaardigheden maar bovenal een hele prettige collega.</p>
+            <p>Jeffrey is een developer met oog voor detail, maar blijft de grote lijnen zien.</p>
+            <p class="mt-4">Een developer met gevoel voor vormgeving en taal, uitstekende
+                sociale vaardigheden maar bovenal prettig om mee samen te werken.</p>
         </div>
         <div class="mt-10 flex items-center justify-between">
             <div>
@@ -25,8 +25,8 @@
             <i class="fas fa-quote-left text-3xl"></i>
         </div>
         <div class="relative leading-relaxed">
-            <p>Jeffrey is a developer with an eye for detail, but always keeps seeing the big picture.</p>
-            <p class="mt-4">A developer with an eye for design, with a sense of language, excellent social skills but above all a very pleasant colleague.</p>
+            <p>Jeffrey is a developer with an eye for detail, while keeping notice of the big picture.</p>
+            <p class="mt-4">A developer with a feeling for design and language, excellent social skills and above all very pleasant to work with.</p>
         </div>
     </blockquote>
     <div class="mt-10 flex items-center justify-between">
