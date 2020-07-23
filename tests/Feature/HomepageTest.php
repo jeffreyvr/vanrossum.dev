@@ -14,7 +14,7 @@ class HomepageTest extends TestCase
     public function it_redirects_to_the_locale_homepage()
     {
         $this->get('/')
-            ->assertRedirect(route('welcome', app()->getLocale()));
+            ->assertRedirect(localized_route('welcome'));
     }
 
     /** @test */
@@ -22,10 +22,10 @@ class HomepageTest extends TestCase
     {
         $this->withoutExceptionHandling();
 
-        $this->get(route('welcome', 'en'))
+        $this->get(localized_route('welcome', [], 'en'))
             ->assertStatus(200);
 
-        $this->get(route('welcome', 'nl'))
+        $this->get(localized_route('welcome', [], 'nl'))
             ->assertStatus(200);
     }
 
@@ -35,7 +35,7 @@ class HomepageTest extends TestCase
         $posts = factory(Post::class)->times(3)->create();
 
         $posts->each(function(Post $post){
-            $this->get(route('welcome', 'en'))
+            $this->get(localized_route('welcome'))
                 ->assertSee($post->title);
         });
     }

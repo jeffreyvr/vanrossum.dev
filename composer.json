@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "chinleung/laravel-multilingual-routes": "^2.5",
         "fideloper/proxy": "^4.0",
         "graham-campbell/markdown": "^11.1",
         "laravel/framework": "^6.2",

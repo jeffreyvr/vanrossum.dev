@@ -82,9 +82,11 @@ return [
 
     'locale' => 'en',
 
-    'available_locales' => [
-        'English' => 'en',
-        'Nederlands' => 'nl'
+    'locales' => ['en', 'nl'],
+
+    'locale_labels' => [
+        'en' => 'English',
+        'nl' => 'Nederlands'
     ],
 
     /*

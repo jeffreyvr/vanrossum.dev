@@ -6,20 +6,17 @@ Route::get('/', function () {
     return redirect(app()->getLocale());
 });
 
-Route::prefix('{locale}')
-    ->where(['locale' => '[a-zA-Z]{2}'])
-    ->middleware('setlocale')
-    ->group(function () {
-
-    Route::get('/', 'HomeController')->name('welcome');
-    Route::get('/about', 'AboutController')->name('about');
-    Route::get('/freelance-wordpress-developer', 'PagesController@wordpress')->name('wordpress');
-    Route::get('/freelance-laravel-developer', 'PagesController@laravel')->name('laravel');
-    Route::get('/privacy', function () {
-        return view('pages.privacy');
-    })->name('privacy');
-    Route::get('/contact', 'ContactController@show')->name('contact');
-});
+/**
+ * All routes that require a locale prefix.
+ */
+Route::multilingual('/', 'HomeController')->name('welcome');
+Route::multilingual('/about', 'AboutController')->name('about');
+Route::multilingual('/freelance-wordpress-developer', 'PagesController@wordpress')->name('wordpress');
+Route::multilingual('/freelance-laravel-developer', 'PagesController@laravel')->name('laravel');
+Route::multilingual('/contact', 'ContactController@show')->name('contact');
+Route::multilingual('/privacy', function(){
+    return view('pages.privacy');
+})->name('privacy');
 
 Route::get('/admin/dashboard', 'AdminController@dashboard')->name('admin.dashboard')->middleware('auth');
 Route::get('/posts', 'PostsController@index')->name('posts');
