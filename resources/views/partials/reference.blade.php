@@ -1,4 +1,4 @@
-<div class="mt-10 bg-white p-10 shadow rounded text-lg italic text-gray-800">
+<div class="mt-10 bg-white p-10 shadow-lg bg-gray-100 rounded text-lg italic text-gray-800">
     @if(app()->getLocale() == 'nl')
     <blockquote>
         <div class="absolute pin-t pin-l -mt-4 text-gray-300 -ml-4">

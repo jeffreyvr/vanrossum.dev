@@ -1,5 +1,5 @@
 <article class="mb-8 block">
-    <span class="block text-xs uppercase text-pink-500">
+    <span class="block text-xs uppercase text-white px-2 py-1 inline-block bg-pink-500">
         {{ $post->localized_date }}
     </span>
     <h2 class="text-2xl font-bold mt-2">

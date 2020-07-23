@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 /**
   * Tailwind
   */
@@ -17,50 +19,50 @@
     * Custom
     */
 .brand {
-  box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .markup {
-  h2,
-  h3 {
-    line-height: 1.25;
-    margin-top: 3rem;
-  }
+    h2,
+    h3 {
+        line-height: 1.25;
+        margin-top: 3rem;
+    }
 
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
 
-  h3 {
-    font-size: 1.3rem;
-    font-weight: 700;
-  }
+    h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
 
-  & > :not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
+    & > :not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
 
-  a {
-    color: #ed64a6;
-    text-decoration: underline;
-  }
+    a {
+        color: #ed64a6;
+        text-decoration: underline;
+    }
 
-  pre {
-    margin-left: 0;
-    margin-right: 0;
-    border-bottom-width: 5px;
-    background-color: #f7f7f7;
-    border-color: #ddd;
-  }
+    pre {
+        margin-left: 0;
+        margin-right: 0;
+        border-bottom-width: 5px;
+        background-color: #f7f7f7;
+        border-color: #ddd;
+    }
 
-  pre code {
-    background-color: #f8f8f8;
-    padding: 2rem;
-  }
-  
-  ul {
-    list-style-position: inside;
-    list-style-type: disc;
-  }
+    pre code {
+        background-color: #f8f8f8;
+        padding: 2rem;
+    }
+
+    ul {
+        list-style-position: inside;
+        list-style-type: disc;
+    }
 }
