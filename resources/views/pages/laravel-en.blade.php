@@ -13,7 +13,7 @@
                 @markdown
                 <div class="md:flex md:items-start font-bold text-gray-800">
                     <img class="shadow-lg relative z-10 w-full md:w-64 md:mr-8 mb-4 md:mb-0 rounded"
-                         src="{{ url('images/avatar.jpg') }}">
+                         src="{{ url('images/avatar.png') }}">
                     I am Jeffrey van Rossum, freelance PHP developer with over 5 years of Laravel experience. Over the
                     years I have worked on various applications with Laravel.
                 </div>

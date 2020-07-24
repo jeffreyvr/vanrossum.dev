@@ -11,8 +11,7 @@
             <div class="text-xl leading-relaxed markup">
                 @markdown
                 Hi, my name is Jeffrey van Rossum and this is my website. I am a freelance [PHP](https://www.php.net/)
-                developer and I live in a small town called [Bennekom](https://nl.wikipedia.org/wiki/Bennekom) (thé
-                place to be) in the Netherlands.
+                developer and I live in a small town called [Bennekom](https://nl.wikipedia.org/wiki/Bennekom) in the Netherlands.
 
                 I started creating websites back in 2006 when I was 14 years old. I’ve been passionate about it ever
                 since, and luckily over the years I’ve gotten a lot better at it through study and [work

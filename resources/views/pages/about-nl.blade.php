@@ -12,7 +12,7 @@
                 @markdown
                 Ik ben Jeffrey van Rossum en dit is mijn website. Ik ben een freelance
                 [PHP](https://www.php.net/)-developer en ik woon in [Bennekom](https://nl.wikipedia.org/wiki/Bennekom)
-                (thé place to be) in Gelderland, Nederland.
+                in Gelderland, Nederland.
 
                 Al op jonge leeftijd begon ik als hobby met het maken van websites. Het is sindsdien altijd een passie
                 geweest en door de jaren heen heb ik mij steeds verder ontwikkeld. Zowel door studeren en alsmede door
