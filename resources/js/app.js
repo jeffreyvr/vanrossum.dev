@@ -4,7 +4,7 @@ import SimpleMDE from 'simplemde';
 import SimpleMDEStyles from "simplemde/dist/simplemde.min.css";
 
 import hljs from 'highlight.js';
-import 'highlight.js/styles/atelier-sulphurpool-light.css';
+import 'highlight.js/styles/github-gist.css';
 
 var simplemdeeditor = document.getElementsByClassName("markdown-editor")[0];
 if ( typeof simplemdeeditor !== 'undefined' ) {

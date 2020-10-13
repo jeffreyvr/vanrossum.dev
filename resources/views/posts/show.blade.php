@@ -3,7 +3,7 @@
 ])
 
 @section('content')
-    @include('layouts.partials.navigation', ['shape' => true])
+
 
     <div class="bg-white py-12 relative">
         <div class="max-w-xl md:max-w-3xl mx-auto px-8 md:px-0">
