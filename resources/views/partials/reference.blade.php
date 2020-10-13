@@ -1,4 +1,4 @@
-<div class="p-16 mx-auto text-lg italic text-gray-200">
+<div class="p-12 lg:p-16 mx-auto text-lg italic text-gray-200">
     @if(app()->getLocale() == 'nl')
     <blockquote>
         <div class="absolute pin-t pin-l -mt-4 text-gray-600 -ml-4">
@@ -15,7 +15,7 @@
                     <div class="uppercase text-white font-semibold mb-2">Jan Egbert Krikken</div>
                     <div class="text-gray-200 text-base">Digital Marketing Manager bij <a href="https://geomares-marketing.com/" class="text-gray-200 underline" target="_blank">Geomares</a></div>
                 </div>
-                <div class="flex items-center">
+                <div class="flex items-center ml-4">
                     <a href="https://nl.linkedin.com/in/jan-egbert-krikken-0b954720" class="text-white"><i class="fab fa-linkedin text-3xl"></i></a>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                     <div class="uppercase text-white font-semibold mb-2">Jan Egbert Krikken</div>
                     <div class="text-gray-200 text-base">Digital Marketing Manager at <a href="https://geomares-marketing.com/" class="text-gray-200 underline" target="_blank">Geomares</a></div>
                 </div>
-                <div class="ml-4">
+                <div class="flex items-center ml-4">
                     <a href="https://nl.linkedin.com/in/jan-egbert-krikken-0b954720" class="text-white"><i class="fab fa-linkedin text-3xl"></i></a>
                 </div>
             </div>

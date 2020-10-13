@@ -2,7 +2,7 @@
     <a href="{{ $project['url'] }}" target="_blank">
         <div
             class="shadow-3d border border-gray-600 text-center text-base shadow-lg hover:border-gray-900 h-full px-8 md:px-12 py-8">
-            <div class="h-24 pt-5 mb-6">
+            <div class="h-24 flex items-center  justify-center pt-5 mb-6">
                 {!! $project['logo'] !!}
             </div>
             <div class="py-8 px-4">

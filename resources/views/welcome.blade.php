@@ -16,11 +16,11 @@
                     </p>
                     <div class="md:flex mb-8 md:mb-0">
                         <a href="{{ localized_route('about') }}"
-                           class="bg-gray-900 text-xl hover:bg-black text-white font-semibold py-3 px-4 shadow mr-4">
+                           class="bg-gray-900 text-lg lg:text-xl hover:bg-black text-white font-semibold py-3 px-4 shadow mr-4">
                             {{ __('More about me') }}
                         </a>
                         <a href="{{ localized_route('contact') }}"
-                           class="bg-pink-500 text-xl hover:bg-pink-600 text-white font-semibold py-3 px-4 shadow">
+                           class="bg-pink-500 text-lg lg:text-xl hover:bg-pink-600 text-white font-semibold py-3 px-4 shadow">
                             {{ __('Hire me') }}
                         </a>
                     </div>
