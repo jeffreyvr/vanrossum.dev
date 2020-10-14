@@ -47,7 +47,9 @@
                 @endmarkdown
             </div>
 
-            @include('partials.reference')
+            <div class="mt-4 bg-gradient-to-r from-gray-800 to-gray-600 relative py-12 px-8 lg:px-0">
+                @include('partials.reference')
+            </div>
 
         </article>
     </div>
