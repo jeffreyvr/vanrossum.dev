@@ -97,7 +97,7 @@
 <!-- Scripts -->
 <script src="{{ mix('js/app.js') }}"></script>
 @if(!env('APP_DEBUG',false))
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154200476-1">
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ env("UA_CODE") }}">
     </script>
     <script>
         window.dataLayer = window.dataLayer || [];
