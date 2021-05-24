@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="bg-white py-12 relative">
+    <div class="bg-white py-12 relative bg-gradient-to-b from-gray-100">
         <article class="max-w-xl md:max-w-3xl mx-auto px-8 md:px-0">
             <header class="mb-8">
                 <h1 class="text-5xl font-extrabold leading-tight mb-1">{{ __('Contact') }}</h1>
@@ -34,7 +34,7 @@
                             {{ __('Your name') }}
                         </label>
                         <input
-                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             name="name" id="name" type="text">
                     </div>
 
@@ -44,7 +44,7 @@
                             {{ __('Last name') }}
                         </label>
                         <input
-                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             name="last_name" id="last_name" type="text">
                     </div>
 
@@ -53,7 +53,7 @@
                             {{ __('Your email') }}
                         </label>
                         <input
-                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             name="email" id="email" type="email">
                     </div>
 
@@ -62,12 +62,12 @@
                             {{ __('Message') }}
                         </label>
                         <textarea rows="10" name="message" id="message"
-                                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"></textarea>
+                                  class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"></textarea>
                     </div>
 
                     <div class="flex justify-end">
                         <button type="submit"
-                                class="text-white border-yellow-300 border-solid border-b-4 font-weight-bold bg-black py-2 px-4">{{ __('Send') }}</button>
+                                class="shadow-3d text-white font-weight-bold bg-pink-500 hover:bg-pink-600 py-2 px-4">{{ __('Send') }}</button>
                     </div>
 
                 </form>

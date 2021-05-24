@@ -1,4 +1,4 @@
-<nav class="py-6 px-8 lg:px-0 relative block shadow z-10">
+<nav class="py-6 px-8 lg:px-0 relative block z-10">
     <div class="max-w-xl md:max-w-5xl mx-auto relative items-center justify-center">
         <button id="toggleNav" class="block md:hidden text-3xl absolute right-0 top-0 text-black"><i
                 class="fas fa-bars"></i></button>

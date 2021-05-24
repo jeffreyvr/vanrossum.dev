@@ -4,8 +4,7 @@
 
 @section('content')
 
-
-    <div class="bg-white py-12 relative">
+    <div class="bg-white py-12 relative bg-gradient-to-b from-gray-100">
         <div class="max-w-xl md:max-w-3xl mx-auto px-8 md:px-0">
             <article>
                 <header class="mb-8">
@@ -101,6 +100,6 @@
     <meta name="twitter:description" content="{{ $post->excerpt }}"/>
     <meta name="twitter:title" content="{{ $post->title }}"/>
     <meta name="twitter:site" content="@jeffreyrossum"/>
-    <meta name="twitter:image" content="{{ url('images/avatar.jpg') }}"/>
+    <meta name="twitter:image" content="{{ url('images/iJeffrey.jpg') }}"/>
     <meta name="twitter:creator" content="@jeffreyrossum"/>
 @endsection

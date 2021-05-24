@@ -27,7 +27,7 @@
                     {{ __('Title') }}
                 </label>
                 <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     name="title" id="title" type="text">
             </div>
 
@@ -36,7 +36,7 @@
                     {{ __('Publish date') }}
                 </label>
                 <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     name="publish_date" id="publish_date" type="datetime-local" value="{{ Carbon::now()->format('Y-m-d\TH:s') }}">
             </div>
 
@@ -52,7 +52,7 @@
                     {{ __('Tags') }}
                 </label>
                 <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     name="tags" id="tags" type="text" placeholder="Tag 1, Tag 2">
             </div>
 

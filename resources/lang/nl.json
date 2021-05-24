@@ -1,6 +1,8 @@
 {
-    "I am a freelance PHP Developer based in The Netherlands, specialized in <a href=':laravel_url' class='underline'>Laravel</a> and <a href=':wordpress_url' class='underline'>WordPress</a> development.": "Ik ben een freelance PHP-developer gevestigd in Nederland, gespecialiseerd in <a href=':laravel_url' class='underline'>Laravel</a> en <a href=':wordpress_url' class='underline'>WordPress</a> -development.",
-    "Hi! My name is :name": "Hallo, ik ben :name",
+    "I'm a PHP Developer doing freelance <a href=':laravel_url' class='underline'>Laravel</a> and <a href=':wordpress_url' class='underline'>WordPress</a> development.": "Ik ben een freelance PHP-developer gevestigd in Nederland, gespecialiseerd in <a href=':laravel_url' class='underline'>Laravel</a> en <a href=':wordpress_url' class='underline'>WordPress</a> -development.",
+    "I also maintain a couple of <a href=':github_url' class='underline'>open source projects</a> and write the occasional <a href=':blog_url' class='underline'>blog article</a>.": "Daarnaast werk aan meerdere <a href=':github_url' class='underline'>open source</a> projecten en schrijf ik regelmatig <a href=':blog_url' class='underline'>blogberichten</a>.",
+    "Jeffrey van Rossum - Freelance PHP developer specialized in Laravel and WordPress": "Jeffrey van Rossum - Freelance PHP developer gespecialiseerd in Laravel en WordPress ontwikkeling",
+    "Hi, my name is :name": "Hallo, ik ben :name",
     "More about me": "Meer over mij",
     "Lets work together": "Laten we samenwerken",
     "Latest posts": "Meest recente berichten",
@@ -18,5 +20,10 @@
     "Your name": "Naam",
     "Your email": "E-mailadres",
     "Message": "Bericht",
-    "Send": "Verstuur"
+    "Send": "Verstuur",
+    "WordPress theme boilerplate with Tailwind CSS and Laravel Mix": "WordPress boilerplate-thema met Tailwind CSS en Laravel Mix",
+    "Library for getting vehicle data by license plate.": "Een handige interface voor de RDW API.",
+    "Quickly create an image of your code snippet.": "Maak snel een mooie afbeelding van code.",
+    "PHP Client for RDW API": "PHP Client voor de RDW API",
+    "Laravel package to handle media attached or unattached to Eloquent models.": "Een Laravel package waarmee je media kan uploaden, optioneel gekoppeld aan Eloquent models."
 }

@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="bg-white py-12 relative">
+    <div class="bg-white py-12 relative bg-gradient-to-b from-gray-100">
         <article class="max-w-xl md:max-w-3xl mx-auto px-8 md:px-0">
             <header class="mb-8">
                 <h1 class="text-5xl font-extrabold leading-tight mb-1">{{ __('Donate') }}</h1>
@@ -30,7 +30,7 @@
                             {{ __('Your name') }}
                         </label>
                         <input
-                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             name="name" id="name" type="text" value="{{ old('name') }}">
                     </div>
 
@@ -40,7 +40,7 @@
                             {{ __('Last name') }}
                         </label>
                         <input
-                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             name="last_name" id="last_name" type="text" value="{{ old('last_name') }}">
                     </div>
 
@@ -49,7 +49,7 @@
                             {{ __('Your email') }}
                         </label>
                         <input
-                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             name="email" id="email" type="email" value="{{ old('email') }}">
                     </div>
 
@@ -58,7 +58,7 @@
                             {{ __('Amount in EUR') }}
                         </label>
                         <input
-                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             name="amount" id="amount" type="number" value="{{ old('amount') }}" min="1" step="0.1" placeholder="0.00">
                     </div>
 
@@ -67,7 +67,7 @@
                             {{ __('Message') }}
                         </label>
                         <textarea rows="10" name="message" id="message"
-                                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">{{ old('message') }}</textarea>
+                                  class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">{{ old('message') }}</textarea>
                     </div>
 
                     <div class="flex justify-end">
