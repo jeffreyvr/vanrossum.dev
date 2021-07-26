@@ -1,5 +1,6 @@
 module.exports = {
     purge: [
+        './resources/views/*.blade.php',
         './resources/views/**/*.blade.php',
         './resources/views/vendor/**/*.blade.php',
         './resources/css/**/*.css',
