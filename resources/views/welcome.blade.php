@@ -20,7 +20,7 @@
                     </p>
                     <p class="text-lg leading-relaxed mb-8 text-gray-700">
                         {!! __("I also maintain a couple of <a href=':github_url' class='underline'>open source projects</a> and write the occasional <a href=':blog_url' class='underline'>blog article</a>.", [
-                            'github_url' => 'laravel',
+                            'github_url' => 'https://github.com/jeffreyvr',
                             'blog_url' => route('posts')
                         ]) !!}
                     </p>
