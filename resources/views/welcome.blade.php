@@ -26,11 +26,11 @@
                     </p>
                     <div class="md:flex mb-8 md:mb-0">
                         <a href="{{ localized_route('about') }}"
-                        class="shadow-3d text-white text-lg font-weight-bold bg-gray-800 hover:bg-gray-900 py-2 px-4 mr-6">
+                        class="block md:inline-block shadow-3d text-white text-lg font-weight-bold bg-gray-800 hover:bg-gray-900 py-2 px-4 md:mr-6">
                             {{ __('More about me') }}
                         </a>
                         <a href="{{ localized_route('contact') }}"
-                        class="shadow-3d text-white text-lg font-weight-bold bg-pink-500 hover:bg-pink-600 py-2 px-4">
+                        class="block md:inline-block shadow-3d text-white text-lg font-weight-bold bg-pink-500 hover:bg-pink-600 py-2 px-4">
                             {{ __('Hire me') }}
                         </a>
                     </div>
