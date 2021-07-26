@@ -38,8 +38,8 @@ class HomeController extends Controller
                 'open_source' => true
             ],
             [
-                'url' => 'https://code-snappy.io',
-                'domain' => 'code-snappy.io',
+                'url' => 'https://codesnappy.io',
+                'domain' => 'codesnappy.io',
                 'name' => 'CodeSnappy.io',
                 'description' => __('Quickly create an image of your code snippet.'),
                 'open_source' => true
