@@ -23,6 +23,8 @@ Route::get('/donate', 'DonationController@show')->name('donate');
 Route::post('/donate', 'DonationController@store')->name('donate.submit');
 Route::get('/thank-you', 'DonationController@thanks')->name('donate.thanks');
 Route::post('/contact', 'ContactController@submit')->name('contact.submit');
+Route::get('/products', 'ProductsController@index')->name('products');
+Route::get('/products/{slug}', 'ProductsController@show')->name('products.show');
 Route::get('/posts', 'PostsController@index')->name('posts');
 Route::get('/posts/tagged/{tag_slug}', 'PostsController@tagged')->name('posts.tagged');
 Route::get('/posts/{id}/edit', 'PostsController@edit')->name('posts.edit');

@@ -19,6 +19,8 @@
                 <a class="block md:inline-block text-left no-underline hover:text-pink-500 text-gray-800 text-lg pb-3 md:p-3"
                    href="{{ localized_route('welcome') }}#projects">{{ __('Projects') }}</a>
                 <a class="block md:inline-block text-left no-underline hover:text-pink-500 text-gray-800 text-lg pb-3 md:p-3"
+                   href="{{ route('products') }}">{{ __('Products') }}</a>
+                <a class="block md:inline-block text-left no-underline hover:text-pink-500 text-gray-800 text-lg pb-3 md:p-3"
                    href="{{ localized_route('contact')}}">{{ __('Contact') }}</a>
             </div>
         </div>

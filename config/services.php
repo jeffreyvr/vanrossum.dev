@@ -36,5 +36,10 @@ return [
 
     'mollie' => [
         'api_key' => env('MOLLIE_API_KEY')
+    ],
+
+    'github' => [
+        'access_token' => env('GITHUB_ACCESS_TOKEN'),
+        'username' => env('GITHUB_USERNAME')
     ]
 ];
