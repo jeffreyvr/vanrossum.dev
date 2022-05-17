@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&display=swap');
-@import "../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css";
-@import "../../node_modules/@fortawesome/fontawesome-free/css/regular.css";
-@import "../../node_modules/@fortawesome/fontawesome-free/css/solid.css";
-@import "../../node_modules/@fortawesome/fontawesome-free/css/brands.css";
+@import url("https://use.typekit.net/vab7vzb.css");
 
 @tailwind base;
 @tailwind components;
@@ -34,7 +30,8 @@
     }
 
     a {
-        color: #ed64a6;
+        @apply text-primary;
+
         text-decoration: underline;
     }
 
@@ -47,7 +44,7 @@
     }
 
     pre code {
-        background-color: #f8f8f8;
+        background-color: #ffffff;
         padding: 2rem;
     }
 

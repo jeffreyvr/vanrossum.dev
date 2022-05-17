@@ -8,7 +8,7 @@
         <div class="max-w-xl md:max-w-3xl mx-auto px-8 md:px-0">
             <article>
                 <header class="mb-8">
-                    <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-2">{{ $post->title }}</h1>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-primary leading-tight mb-2">{{ $post->title }}</h1>
                     <div class="text-sm text-gray-700">
                         <time datetime="{{ $post->publish_date }}">
                             {{ $post->localized_date }}

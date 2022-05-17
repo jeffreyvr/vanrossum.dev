@@ -1,7 +1,7 @@
 <div class="md:w-1/3 md:px-6 mb-6 md:mb-0">
     <a href="{{ $project['url'] }}" target="_blank">
         <div
-            class="bg-white shadow-3d border border-gray-600 text-center text-base shadow-lg hover:border-gray-900 h-full px-8 md:px-12 py-8">
+            class="hover:scale-105 transition ease-in-out bg-white text-center text-base shadow-lg h-full px-8 md:px-12 py-8">
             <div class="h-24 flex items-center  justify-center pt-5 mb-6">
                 {!! $project['logo'] !!}
             </div>

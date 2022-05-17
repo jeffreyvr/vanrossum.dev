@@ -1,5 +1,5 @@
 module.exports = {
-    purge: [
+    content: [
         './resources/views/*.blade.php',
         './resources/views/**/*.blade.php',
         './resources/views/vendor/**/*.blade.php',
@@ -9,9 +9,14 @@ module.exports = {
     ],
     theme: {
         fontFamily: {
-            'sans': ['Poppins', 'Helvetica', 'Arial', 'sans-serif'],
+            'sans': ['roc-grotesk', 'Helvetica', 'Arial', 'sans-serif'],
         },
-        extend: {}
+        extend: {
+            colors: {
+                primary: '#070C80',
+                secondary: '#04FA90'
+            }
+        }
     },
     variants: {},
     plugins: []

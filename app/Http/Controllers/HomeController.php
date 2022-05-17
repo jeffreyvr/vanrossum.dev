@@ -27,7 +27,7 @@ class HomeController extends Controller
                 'url' => 'https://wordpress.org/plugins/easy-liveblogs/',
                 'domain' => 'wordpress.org',
                 'description' => __('Easy liveblogs for WordPress'),
-                'logo' => '<i class="fas text-5xl fa-sync-alt"></i>',
+                'logo' => file_get_contents(public_path('images/logos/easy-liveblogs.svg')),
                 'open_source' => true
             ],
             [

@@ -6,7 +6,7 @@
         <article class="max-w-xl md:max-w-3xl mx-auto px-8 md:px-0">
 
             <header class="mb-8">
-                <h1 class="text-5xl font-extrabold leading-tight mb-1">{{ __('Freelance WordPress Developer') }}</h1>
+                <h1 class="text-5xl text-primary font-extrabold leading-tight mb-1">{{ __('Freelance WordPress Developer') }}</h1>
             </header>
 
             <div class="text-xl leading-relaxed markup">

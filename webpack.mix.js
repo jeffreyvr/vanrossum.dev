@@ -1,15 +1,17 @@
-const mix = require('laravel-mix');
+let mix = require('laravel-mix');
 
 mix
   .js('resources/js/app.js', 'public/js')
-  .copyDirectory('./node_modules/@fortawesome/fontawesome-free/webfonts', 'public/webfonts')
+  // .copyDirectory('./node_modules/@fortawesome/fontawesome-free/webfonts', 'public/webfonts')
   .postCss('resources/css/app.css', 'public/css', [
-    require('postcss-import'),
-    require('postcss-url'),
-    require('tailwindcss'),
-    require('postcss-nested'),
-    require('autoprefixer'),
+    require('tailwindcss')
   ]);
+
+// mix.webpackConfig({
+//   stats: {
+//     children: true
+//   }
+// });
 
 if (mix.inProduction()) {
   mix

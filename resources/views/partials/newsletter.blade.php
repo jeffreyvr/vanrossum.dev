@@ -10,7 +10,7 @@
             <div class="mc-field-group flex justify-between">
                 <input type="email" value="" name="EMAIL" placeholder="{{ __("What's your email?") }}" class="required email appearance-none block w-full bg-gray-200 text-gray-700 placeholder-gray-700 border border-gray-300 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 mr-4" id="mce-EMAIL">
                 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                    class="button bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-4 shadow">
+                    class="button bg-primary text-secondary hover:cursor-pointer font-semibold py-3 px-4 shadow">
             </div>
             <div id="mce-responses" class="clear">
                 <div class="response" id="mce-error-response" style="display:none"></div>
