@@ -21,8 +21,20 @@ class ProductsController extends Controller
         return view('products.show',compact('product'));
     }
 
-    public function buy($slug)
+    public function purchased($slug, $licenseKey)
     {
-        return Product::where('slug', $slug)->first();
+        $product = Product::where('slug', $slug)->first();
+
+        return view('products.purchased',compact('product', 'licenseKey'));
+    }
+
+    public function update($product)
+    {
+        // return view('products.edit', compact('product'));
+    }
+
+    public function edit(Product $product)
+    {
+        return view('products.edit', compact('product'));
     }
 }

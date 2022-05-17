@@ -1,18 +1,11 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Api\LicensesController;
+use App\Http\Controllers\Api\WordPressPluginsController;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
-
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/wordpress/plugins/{slug}', [WordPressPluginsController::class, 'show']);
+Route::get('/wordpress/plugins/{slug}/download.zip', [WordPressPluginsController::class, 'download'])->name('wordpress.plugin.download');
+Route::post('/licenses/activate', [LicensesController::class, 'activate']);
+Route::post('/licenses/deactivate', [LicensesController::class, 'deactivate']);
+Route::post('/licenses/validate', [LicensesController::class, 'check']);

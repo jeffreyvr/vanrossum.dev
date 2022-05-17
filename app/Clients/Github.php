@@ -7,23 +7,22 @@ use GuzzleHttp\Client;
 class Github
 {
     public $client;
-    public $user;
     public $repository;
+    public $base_uri = 'https://api.github.com/';
 
     public function __construct()
     {
         $this->token = config('services.github.access_token');
-        $this->user = config('services.github.username');
 
-        if (empty($this->token) || empty($this->user)) {
-            throw new \Exception('No token or user set.');
+        if (empty($this->token)) {
+            throw new \Exception('No token is set.');
         }
 
         $this->client = new Client([
-            'base_uri' => 'https://api.github.com/',
+            'base_uri' => $this->base_uri,
             'timeout'  => 15.0,
             'headers' => [
-                'Authorization' => 'bearer ' . $this->token
+                'Authorization' => 'token ' . $this->token
             ]
         ]);
     }
@@ -41,29 +40,40 @@ class Github
             throw new \Exception('Repository has not been set.');
         }
 
-        $response = $this->client->request('GET', "/repos/{$this->user}/{$this->repository}");
+        $response = $this->client->request('GET', "/repos/{$this->repository}");
 
         return json_decode($response->getBody());
     }
 
     public function getRepositoryTags()
     {
-        $response = $this->client->request('GET', "/repos/{$this->user}/{$this->repository}/tags");
+        $response = $this->client->request('GET', "/repos/{$this->repository}/tags");
 
         return json_decode($response->getBody());
     }
 
     public function getRepositoryReleases()
     {
-        $response = $this->client->request('GET', "/repos/{$this->user}/{$this->repository}/releases");
+        $response = $this->client->request('GET', "/repos/{$this->repository}/releases");
 
         return json_decode($response->getBody());
     }
 
-    public function downloadRepositoryZip($ref)
+    public function getRelease($tag)
     {
-        $response = $this->client->request('GET', "/repos/{$this->user}/{$this->repository}/zipball/{$ref}");
+        $response = $this->client->request('GET', "/repos/{$this->repository}/releases/tags/{$tag}");
 
         return json_decode($response->getBody());
+    }
+
+    public function downloadAsset($id)
+    {
+        $response = $this->client->request('GET', "/repos/{$this->repository}/releases/assets/{$id}", [
+            'headers' => [
+                'Accept' => 'application/octet-stream'
+            ]
+        ]);
+
+        return $response->getBody();
     }
 }
