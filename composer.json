@@ -7,7 +7,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3",
+        "php": "^8.0",
         "chinleung/laravel-multilingual-routes": "^2.5",
         "fideloper/proxy": "^4.0",
         "graham-campbell/markdown": "^13.1",
@@ -15,11 +15,11 @@
         "laravel/framework": "^8.0",
         "laravel/legacy-factories": "^1.1",
         "laravel/tinker": "^2.0",
-        "spatie/laravel-tags": "^2.7.2"
+        "spatie/laravel-tags": "^3.0.1"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
-        "fzaninotto/faker": "^1.4",
+        "fakerphp/faker": "^1.19.0",
         "laravel-frontend-presets/tailwindcss": "^4.3.1",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^5.0",
