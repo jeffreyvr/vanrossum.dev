@@ -7,7 +7,7 @@
                 <x-logo class="w-[240px]" />
             </a>
             <div id="nav"
-                 class="flex-1 w-full md:w-auto mt-8 md:mt-0 text-right hidden md:block">
+                 class="font-wide flex-1 w-full md:w-auto mt-8 md:mt-0 text-right hidden md:block">
                 <a class="block md:inline-block text-left decoration-2 underline-offset-4 hover:text-secondary hover:underline hover:decoration-primary text-gray-800 text-lg pb-3 md:p-3"
                    href="{{ localized_route('about') }}">{{ __('About') }}</a>
                 <a class="block md:inline-block text-left decoration-2 underline-offset-4 hover:text-secondary hover:underline hover:decoration-primary text-gray-800 text-lg pb-3 md:p-3"

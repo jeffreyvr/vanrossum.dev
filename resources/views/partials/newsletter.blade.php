@@ -5,7 +5,7 @@
         method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
         novalidate>
         <div id="mc_embed_signup_scroll">
-            <h5 class="font-bold text-2xl mb-2">{{ __("Did you like this post?") }}</h5>
+            <h5 class="font-semibold font-wide text-2xl mb-2">{{ __("Did you like this post?") }}</h5>
             <p class="text-base text-gray-700 leading-relaxed mb-4">{{ __("If you sign up for my newsletter, I can keep you up to date on more posts like this when they are published.") }}</p>
             <div class="mc-field-group flex justify-between">
                 <input type="email" value="" name="EMAIL" placeholder="{{ __("What's your email?") }}" class="required email appearance-none block w-full bg-gray-200 text-gray-700 placeholder-gray-700 border border-gray-300 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 mr-4" id="mce-EMAIL">

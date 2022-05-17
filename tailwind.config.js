@@ -10,6 +10,7 @@ module.exports = {
     theme: {
         fontFamily: {
             'sans': ['roc-grotesk', 'Helvetica', 'Arial', 'sans-serif'],
+            'wide': ['roc-grotesk-wide', 'Helvetica', 'Arial', 'sans-serif'],
         },
         extend: {
             colors: {
