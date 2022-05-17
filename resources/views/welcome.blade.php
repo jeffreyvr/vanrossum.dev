@@ -12,18 +12,22 @@
                 </div>
                 <div class="flex-1 md:pl-12">
                     <h1 class="font-bold text-primary text-2xl sm:text-6xl mb-4 leading-snug"> {!! __('Hi, my name is :name', ['name' => 'Jeffrey van Rossum']) !!}<span class="text-secondary">.</span></h1>
-                    <p class="text-2xl font-medium sm:text-xl leading-relaxed mb-4 text-gray-700">
-                        {!! __( "I'm a PHP Developer doing freelance <a href=':laravel_url' class='text-primary underline decoration-2 underline-offset-4 hover:text-secondary hover:decoration-primary'>Laravel</a> and <a href=':wordpress_url' class='text-primary underline decoration-2 underline-offset-4 hover:text-secondary hover:decoration-primary'>WordPress</a> development.", [
-                            'wordpress_url' => localized_route('wordpress'),
-                            'laravel_url' => localized_route('laravel'),
-                        ]) !!}
-                    </p>
-                    <p class="text-lg leading-relaxed mb-8 text-gray-700">
-                        {!! __("I also maintain a couple of <a href=':github_url' class='text-primary underline decoration-2 underline-offset-4 hover:text-secondary hover:decoration-primary'>open source projects</a> and write the occasional <a href=':blog_url' class='text-primary underline decoration-2 underline-offset-4 hover:text-secondary hover:decoration-primary'>blog article</a>.", [
-                            'github_url' => 'https://github.com/jeffreyvr',
-                            'blog_url' => route('posts')
-                        ]) !!}
-                    </p>
+                    @if(app()->getLocale() != 'nl')
+                        <p class="text-2xl font-medium sm:text-xl leading-relaxed mb-4 text-gray-700">
+                            I'm a PHP Developer doing freelance <a href="{{ localized_route('laravel') }}" class="text-primary underline decoration-2 underline-offset-4 hover:text-secondary hover:decoration-primary">Laravel</a> and <a href="{{ localized_route('wordpress') }}" class='text-primary underline decoration-2 underline-offset-4 hover:text-secondary hover:decoration-primary'>WordPress</a> development.
+                        </p>
+                        <p class="text-lg leading-relaxed mb-8 text-gray-700">
+                            I also maintain a couple of <a href="https://github.com/jeffreyvr" class="text-primary underline decoration-2 underline-offset-4 hover:text-secondary hover:decoration-primary">open source projects</a> and write the occasional <a href="{{ route('posts') }}" class="text-primary underline decoration-2 underline-offset-4 hover:text-secondary hover:decoration-primary">blog article</a>.
+                        </p>
+                    @else
+                        <p class="text-2xl font-medium sm:text-xl leading-relaxed mb-4 text-gray-700">
+                            Ik ben een freelance PHP-developer gevestigd in Nederland, gespecialiseerd in <a href="{{ localized_route('laravel') }}" class="text-primary underline decoration-2 underline-offset-4 hover:text-secondary hover:decoration-primary">Laravel</a> en <a href="{{ localized_route('wordpress') }}" class='text-primary underline decoration-2 underline-offset-4 hover:text-secondary hover:decoration-primary'>WordPress</a>- development.
+                        </p>
+                        <p class="text-lg leading-relaxed mb-8 text-gray-700">
+                            Daarnaast werk aan meerdere <a href="https://github.com/jeffreyvr" class="text-primary underline decoration-2 underline-offset-4 hover:text-secondary hover:decoration-primary">open source projecten</a> en schrijf ik regelmatig <a href="{{ route('posts') }}" class="text-primary underline decoration-2 underline-offset-4 hover:text-secondary hover:decoration-primary">blog-berichten</a>.
+                        </p>
+                    @endif
+
                     <div class="md:flex mb-8 md:mb-0">
                         <a href="{{ localized_route('about') }}"
                         class="text-center block mb-4 md:mb-0 md:inline-block shadow-3d text-white text-lg font-weight-bold bg-gray-800 hover:bg-gray-900 py-2 px-4 md:mr-6">
