@@ -1,22 +1,21 @@
-@extends('layouts.app', ['title' => 'Blog archive'])
+<x-site-layout title="Blog archive">
 
-@section('content')
+    <article class="container mx-auto max-w-screen-xl px-8 lg:px-0 my-16">
+        <header>
+            @isset($tag)
+                <h1 class="font-semibold font-wide text-2xl lg:text-3xl mb-6 text-primary">{{ __('Blogs tagged with :tag', ['tag' => $tag->name]) }}</h1>
+            @else
+                <h1 class="font-semibold font-wide text-2xl lg:text-3xl mb-6 text-primary">{{ __('Blog') }}</h1>
+                <p class="mb-8 text-base">{{ __('The posts are all written in English.') }}</p>
+            @endif
+        </header>
 
-    <div class="bg-white py-12 relative bg-gradient-to-b from-gray-100">
-        <article class="max-w-xl md:max-w-3xl mx-auto px-8 md:px-0">
-            <header>
-                <h1 class="font-semibold font-wide text-4xl mb-6 text-primary">{{ __('Posts') }}</h1>
-            </header>
+        @foreach($posts as $post)
+            @include('posts.block', ['post' => $post])
+        @endforeach
 
-            <p class="mb-8">{{ __('The posts are all written in English.') }}</p>
+        {{ $posts->links() }}
 
-            @foreach( $posts as $post)
-                @include('posts.block', ['post' => $post])
-            @endforeach
+    </article>
 
-            {{ $posts->links() }}
-
-        </article>
-    </div>
-
-@endsection
+</x-site-layout>

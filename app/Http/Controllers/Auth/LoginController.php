@@ -34,8 +34,8 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->redirectTo = route('admin.dashboard');
-        
+        $this->redirectTo = url('/nova');
+
         $this->middleware('guest')->except('logout');
     }
 }

@@ -3,14 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ContactRequest;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
     public function show()
     {
-        return view('pages.contact');
+        return view('pages.contact.index');
     }
 
     public function submit()
@@ -26,6 +25,7 @@ class ContactController extends Controller
 
         Mail::to('jeffrey@vanrossum.dev')->send(new ContactRequest(request()));
 
-        return redirect()->back()->with('status', __('Your message has been sent.'));
+        return redirect()->back()
+            ->with('status', __('Your message has been sent.'));
     }
 }

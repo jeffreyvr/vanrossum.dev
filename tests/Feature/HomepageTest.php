@@ -22,10 +22,10 @@ class HomepageTest extends TestCase
     {
         $this->withoutExceptionHandling();
 
-        $this->get(localized_route('welcome', [], 'en'))
+        $this->get(localized_route('home', [], 'en'))
             ->assertStatus(200);
 
-        $this->get(localized_route('welcome', [], 'nl'))
+        $this->get(localized_route('home', [], 'nl'))
             ->assertStatus(200);
     }
 
@@ -35,7 +35,7 @@ class HomepageTest extends TestCase
         $posts = factory(Post::class)->times(3)->create();
 
         $posts->each(function(Post $post){
-            $this->get(localized_route('welcome'))
+            $this->get(localized_route('home'))
                 ->assertSee($post->title);
         });
     }
