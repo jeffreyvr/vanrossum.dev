@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}" class="min-h-screen">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,7 +38,10 @@
             </div>
             <div class="flex text-[18px] font-medium font-wide items-center">
                 <div x-data="{open: false}" class="lg:hidden px-8">
-                    <button x-on:click="open = !open; $dispatch('nav')">
+                    <button x-on:click="open = !open; $dispatch('nav')" class="flex items-center gap-6">
+                        <span x-show="!open">menu.</span>
+                        <span x-show="open">{{__('close.')}}</span>
+
                         <svg x-show="!open" width="27px" height="16px" viewBox="0 0 27 16" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -67,14 +71,18 @@
                         </svg>
                     </button>
                 </div>
+                @if(!request()->routeIs('posts'))
                 <div class="gap-4 px-8 hidden lg:flex">
                     @foreach (config('app.locales') as $locale)
-                        <a href="{{ current_route($locale) }}" class="uppercase text-primary border-b-2 {{ app()->getLocale() == $locale ? 'border-secondary' : 'border-transparent text-primary/20' }}">
-                            {{ $locale }}
-                        </a>
+                    <a href="{{ current_route($locale) }}"
+                        class="uppercase text-primary border-b-2 {{ app()->getLocale() == $locale ? 'border-secondary' : 'border-transparent text-primary/20' }}">
+                        {{ $locale }}
+                    </a>
                     @endforeach
                 </div>
-                <a href="{{ localized_route('contact') }}" class="bg-secondary text-primary px-8 h-full items-center justify-center gap-4 hidden lg:flex">
+                @endif
+                <a href="{{ localized_route('contact') }}"
+                    class="bg-secondary text-primary px-8 h-full items-center justify-center gap-4 hidden lg:flex">
                     {{ __('Get in touch.') }}
                     <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -109,9 +117,11 @@
 
             <div class="lg:flex lg:gap-32 lg:items-center lg:justify-items-stretch">
                 <div>
-                    <div class="text-[26px] lg:text-3xl font-wide font-bold" data-aos-anchor="#footer-placeholder" ata-aos="fade-down" data-aos-duration="1000">{{ __('Let\'s work together') }}</div>
+                    <div class="text-[26px] lg:text-3xl font-wide font-bold" data-aos-anchor="#footer-placeholder"
+                        ata-aos="fade-down" data-aos-duration="1000">{{ __('Let\'s work together') }}</div>
 
-                    <div class="flex gap-6 mt-12 mb-12 lg:mb-0" data-aos-anchor="#footer-placeholder" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">
+                    <div class="flex gap-6 mt-12 mb-12 lg:mb-0" data-aos-anchor="#footer-placeholder" data-aos="fade-in"
+                        data-aos-duration="1000" data-aos-delay="500">
                         <a href="{{ localized_route('contact') }}"
                             class="stack-dark px-6 py-3 font-medium bg-white text-primary text-[18px] flex gap-4">
                             {{ __('Shoot me a message') }}
@@ -119,7 +129,8 @@
                     </div>
                 </div>
 
-                <div class="grow" data-aos-anchor="#footer-placeholder" data-aos="fade-down" data-aos-delay="500" data-aos-duration="1000">
+                <div class="grow" data-aos-anchor="#footer-placeholder" data-aos="fade-down" data-aos-delay="500"
+                    data-aos-duration="1000">
                     <div class="font-medium text-[28px] mb-6">{{ __('Get social') }}</div>
                     <div class="grid grid-cols-2 gap-6 text-base mb-8 lg:mb-0">
                         <a href="https://www.youtube.com/channel/UC6fQApKy1ULAlr0kS7EDsbg" class="underline">GitHub</a>
@@ -132,8 +143,7 @@
 
             </div>
 
-            <div
-                data-aos-anchor="#footer-placeholder" data-aos="fade-down" data-aos-duration="1000"
+            <div data-aos-anchor="#footer-placeholder" data-aos="fade-down" data-aos-duration="1000"
                 class="border-t border-white/25 pt-12 lg:py-12 lg:flex lg:justify-between text-center lg:text-left text-base">
                 <div>
                     &copy; {{ date('Y') }} | <a href="{{ localized_route('privacy') }}" class="underline">Privacy</a>
@@ -153,17 +163,24 @@
             class="absolute top-0 left-0 z-10 w-full h-full text-white mt-[75px] z-10 p-8"
             style="background-image:url({{ url('/images/footer.png') }});">
             <nav aria-label="mobile nav" class="flex flex-col text-white border-b border-white/25 pb-12 mb-12">
-                <a href="{{ localized_route('about') }}" class="text-white block text-[28px] font-wide font-medium mb-12 last:mb-0 ">{{ __('About') }}.</a>
-                <a href="{{ route('posts') }}" class="text-white block text-[28px] font-wide font-medium mb-12 last:mb-0 ">{{ __('Articles') }}.</a>
-                <a href="{{ localized_route('projects') }}" class="text-white block text-[28px] font-wide font-medium mb-12 last:mb-0 ">{{ __('Projects') }}.</a>
-                <a href="{{ localized_route('contact')}}" class="text-white block text-[28px] font-wide font-medium mb-12 last:mb-0 ">{{ __('Contact') }}.</a>
+                <a href="{{ localized_route('about') }}"
+                    class="text-white block text-[28px] font-wide font-medium mb-12 last:mb-0 ">{{ __('About') }}.</a>
+                <a href="{{ route('posts') }}"
+                    class="text-white block text-[28px] font-wide font-medium mb-12 last:mb-0 ">{{ __('Articles')
+                    }}.</a>
+                <a href="{{ localized_route('projects') }}"
+                    class="text-white block text-[28px] font-wide font-medium mb-12 last:mb-0 ">{{ __('Projects')
+                    }}.</a>
+                <a href="{{ localized_route('contact')}}"
+                    class="text-white block text-[28px] font-wide font-medium mb-12 last:mb-0 ">{{ __('Contact') }}.</a>
             </nav>
 
             <div class="flex gap-4">
                 @foreach (config('app.locales') as $locale)
-                    <a href="{{ current_route($locale, false) }}" class="uppercase text-white border-b-2 {{ app()->getLocale() == $locale ? 'border-secondary' : 'border-transparent text-white/20' }}">
-                        {{ $locale }}
-                    </a>
+                <a href="{{ current_route($locale, false) }}"
+                    class="uppercase text-white border-b-2 {{ app()->getLocale() == $locale ? 'border-secondary' : 'border-transparent text-white/20' }}">
+                    {{ $locale }}
+                </a>
                 @endforeach
             </div>
         </div>
@@ -171,4 +188,5 @@
 
     <script defer src="{{ mix('/js/app.js') }}"></script>
 </body>
+
 </html>

@@ -1,15 +1,15 @@
 <x-site-layout title="Freelance WordPress Developer">
-    <div class="mx-auto max-w-screen-md pt-20">
+    <div class="mx-auto max-w-screen-md lg:pt-20 pt-8 px-8 lg:px-0">
         <article>
             <header class="mb-8">
-                <h1 class="text-3xl font-bold font-wide text-primary">
+                <h1 class="text-xl lg:text-3xl font-bold font-wide text-primary">
                     <x-text-reveal>{{ __('Freelance WordPress Developer') }}</x-text-reveal>
                 </h1>
             </header>
 
             <img src="{{ url('images/me@work2.jpg') }}" data-aos="fade-up" data-aos-duration="1000" class="rounded-xl shadow-2xl shadow-primary/25 mb-12"  />
 
-            <div class="prose prose-pre:bg-white prose-pre:shadow-code text-dark text-base prose-h2:text-[24px] prose-headings:text-primary">
+            <x-post-content>
                 <div class="md:flex md:items-start font-medium text-gray-800">
                     Ik ben Jeffrey van Rossum, freelance PHP developer met ruim 8 jaar WordPress ervaring. Met WordPress
                     heb ik door de jaren aan vele websites gewerkt, waaronder ook maatwerk plugins en thema's.
@@ -40,7 +40,7 @@
                 Als je mij wilt inhuren of aanvullende informatie wilt, stuur dan gerust een e-mail naar
                 [jeffrey@vanrossum.dev](mailto:jeffrey@vanrossum.dev).
                 @endmarkdown
-            </div>
+            </x-post-content>
 
             <x-code-snippet title="TailPress" url="https://github.com/jeffreyvr/tailpress">
                 @markdown(Storage::get('code-snippets/wordpress.md'))
