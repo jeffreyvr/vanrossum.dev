@@ -11,9 +11,9 @@
                 </div>
             </header>
 
-            <div class="prose lg:prose-xl prose-pre:bg-white prose-pre:shadow-code text-dark">
+            <x-post-content>
                 {!! $post->renderedText() !!}
-            </div>
+            </x-post-content>
 
             @if($post->tags)
             <ul class="flex gap-2 my-8 py-8 border-y border-primary/5">

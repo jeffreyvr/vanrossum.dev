@@ -1,15 +1,15 @@
-<x-site-layout :title="__('Jeffrey van Rossum - Freelance Laravel Developer')">
-    <div class="mx-auto max-w-screen-md pt-20">
+<x-site-layout title="Freelance WordPress Developer">
+    <div class="mx-auto max-w-screen-md lg:pt-20 pt-8 px-8 lg:px-0">
         <article>
             <header class="mb-8">
-                <h1 class="text-3xl font-bold font-wide text-primary">
+                <h1 class="text-xl lg:text-3xl font-bold font-wide text-primary">
                     <x-text-reveal>{{ __('Freelance Laravel Developer') }}</x-text-reveal>
                 </h1>
             </header>
 
             <img src="{{ url('images/me@work.jpg') }}" class="rounded-lg shadow-xl shadow-primary/10 mb-12" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1000" />
 
-            <div class="prose prose-pre:bg-white prose-pre:shadow-code text-dark text-base prose-h2:text-[24px] prose-headings:text-primary">
+            <x-post-content>
                 @markdown
                 <div class="md:flex md:items-start font-medium text-gray-800">
                     I am Jeffrey van Rossum, a freelance PHP developer with years of Laravel experience. I've worked on a varity of
@@ -41,7 +41,7 @@
                 If you want to hire me or want additional information, feel free to send an email to
                 [jeffrey@vanrossum.dev](mailto:jeffrey@vanrossum.dev).
                 @endmarkdown
-            </div>
+            </x-post-content>
 
             <x-code-snippet title="Laravel Simple Media" url="https://github.com/jeffreyvr/laravel-simple-media">
                 @markdown(Storage::get('code-snippets/laravel.md'))
