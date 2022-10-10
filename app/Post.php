@@ -16,6 +16,10 @@ class Post extends Model implements Sluggable
 
     protected $guarded = [];
 
+    protected $casts = [
+        'publish_date' => 'datetime'
+    ];
+
     protected $appends = [
         'excerpt',
         'localized_date'
@@ -28,7 +32,7 @@ class Post extends Model implements Sluggable
 
     public function renderedText()
     {
-        return Markdown::convertToHtml($this->text);
+        return Markdown::convert($this->text);
     }
 
     public function author()
