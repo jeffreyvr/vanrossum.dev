@@ -14,7 +14,7 @@ class HomepageTest extends TestCase
     public function it_redirects_to_the_locale_homepage()
     {
         $this->get('/')
-            ->assertRedirect(localized_route('welcome'));
+            ->assertRedirect(localized_route('home'));
     }
 
     /** @test */
