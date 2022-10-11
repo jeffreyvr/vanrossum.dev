@@ -26,13 +26,13 @@
     <div class="relative z-10 min-h-screen bg-white">
         <div class="w-full flex justify-between border-b border-[#e9e9e9]">
             <div class="flex items-center">
-                <a href="{{ config('app.url') }}" class="border-r border-[#e9e9e9] lg:pr-8 flex items-center gap-8">
-                    <x-symbol class="h-[75px] lg:h-[100px]" />
+                <a href="{{ localized_route('home') }}" class="border-r border-[#e9e9e9] lg:pr-8 flex items-center gap-8">
+                    <x-symbol class="h-[75px] lg:h-[80px] xl:h-[100px]" />
 
-                    <span class="text-[25px] text-primary font-wide font-medium hidden lg:block">vanrossum.dev</span>
+                    <span class="text-sm xl:text-xl text-primary font-wide font-medium hidden lg:block">vanrossum.dev</span>
                 </a>
 
-                <nav class="px-8 gap-8 text-[18px] font-medium font-wide hidden lg:flex">
+                <nav class="px-8 gap-8 text-xs xl:text-sm font-medium font-wide hidden lg:flex">
                     @include('layouts.partials.navigation')
                 </nav>
             </div>
@@ -71,7 +71,7 @@
                         </svg>
                     </button>
                 </div>
-                @if(!request()->routeIs('posts'))
+                @if(!request()->routeIs('posts')&&!request()->routeIs('posts.show'))
                 <div class="gap-4 px-8 hidden lg:flex">
                     @foreach (config('app.locales') as $locale)
                     <a href="{{ current_route($locale) }}"
@@ -82,7 +82,7 @@
                 </div>
                 @endif
                 <a href="{{ localized_route('contact') }}"
-                    class="bg-secondary text-primary px-8 h-full items-center justify-center gap-4 hidden lg:flex">
+                    class="bg-secondary text-primary px-8 h-full items-center justify-center gap-4 hidden xl:flex">
                     {{ __('Get in touch.') }}
                     <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -111,7 +111,7 @@
 
     <footer class="lg:sticky lg:left-0 lg:bottom-0 bg-primary text-white lg:h-screen py-12 lg:py-0"
         style="background-image:url({{ url('/images/footer.png') }});">
-        <div class="container mx-auto max-w-screen-xl flex flex-col justify-between h-full px-8 lg:px-0">
+        <div class="container mx-auto flex flex-col justify-between h-full px-8 lg:px-0">
 
             <div></div>
 

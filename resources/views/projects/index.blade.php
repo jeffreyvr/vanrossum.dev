@@ -1,6 +1,6 @@
-<x-site-layout title="Blog archive">
+<x-site-layout title="Project">
 
-    <article class="container mx-auto max-w-screen-xl px-8 lg:px-0 my-16">
+    <article class="container mx-auto max-w-screen-xl my-16">
         <header>
             <h1 class="font-semibold font-wide text-2xl lg:text-3xl mb-6 text-primary">{{ __('Projects') }}</h1>
         </header>

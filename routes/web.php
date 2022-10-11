@@ -30,6 +30,7 @@ Route::multilingual('/freelance-laravel-developer', function() {
 })->name('laravel');
 
 Route::multilingual('/contact', [ContactController::class, 'show'])->name('contact');
+Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
 Route::multilingual('/privacy', function(){
     return view('pages.privacy');
@@ -43,7 +44,6 @@ Route::get('/donate', function() {
 
 // Route::post('/donate', 'DonationController@store')->name('donate.submit');
 // Route::get('/thank-you', 'DonationController@thanks')->name('donate.thanks');
-Route::post('/contact', 'ContactController@submit')->name('contact.submit');
 
 Route::multilingual('projects', [ProjectController::class, 'index'])->name('projects');
 
