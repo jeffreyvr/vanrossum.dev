@@ -1,16 +1,16 @@
 <div class="bg-no-repeat bg-left-top" style="background-image:url({{ url('/images/hero.png') }});">
-    <div class="max-w-screen-xl container mx-auto pt-12 lg:pt-32">
+    <div class="container pt-12 lg:pt-32">
         <div class="lg:flex lg:items-center lg:gap-32 px-8 lg:px-0">
             <div>
-                <h1 class="text-[28px] lg:text-3xl font-wide font-semibold text-primary mb-4">
+                <h1 class="text-[28px] lg:text-2xl xl:text-3xl font-wide font-semibold text-primary mb-8">
                     My name is Jeffrey van Rossum.
                 </h1>
 
                 <div class="text-primary text-[18px] lg:text-[24px] leading-loose mb-24 [&_p]:mt-4">
-                    <p>I'm a freelance PHP developer from Bennekom, The Netherlands.</p>
+                    <p>I'm a freelance PHP developer based in The Netherlands.</p>
                 </div>
             </div>
-            <div class="shrink-0">
+            <div class="max-w-[88%] mx-auto lg:mx-none md:max-w-xs xl:max-w-lg shrink-0">
                 <div class="stack relative" data-aos="fade-up" data-aos-duration="1000">
                     <img src="{{ url('images/jeffrey.jpg') }}" class="w-full lg:w-[473px]" data-aos="fade-up"
                         data-aos-duration="1000" data-delay="1000" />
@@ -30,7 +30,7 @@
     </div>
 </div>
 
-<div class="max-w-screen-xl container mx-auto my-20 px-8 lg:px-0">
+<div class="container mx-auto my-20">
     <h2 class="text-lg lg:text-2xl text-primary font-wide font-semibold pb-0 mb-4 lg:pb-6 lg:mb-6 border-b">{{ __('More about me') }}</h2>
 
     <div class="grid lg:grid-cols-2 text-sm lg:text-base leading-loose text-dark gap-8 mb-12">

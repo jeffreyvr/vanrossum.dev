@@ -1,5 +1,5 @@
 <x-site-layout title="Freelance WordPress Developer">
-    <div class="mx-auto max-w-screen-md lg:pt-20 pt-8 px-8 lg:px-0">
+    <div class="container max-w-screen-md lg:pt-20 pt-8">
         <article>
             <header class="mb-8">
                 <h1 class="text-xl lg:text-3xl font-bold font-wide text-primary">

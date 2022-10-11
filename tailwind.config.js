@@ -20,6 +20,21 @@ module.exports = {
             '2xl': ['45px', '64px'],
             '3xl': ['55px', '64px'],
         },
+        screens: {
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px'
+        },
+        container: {
+            center: true,
+            padding: {
+                DEFAULT: '1rem',
+                sm: '2rem',
+                lg: '3rem',
+                xl: '0rem'
+            },
+        },
         extend: {
             colors: {
                 primary: '#1a008b',

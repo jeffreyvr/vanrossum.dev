@@ -49,7 +49,7 @@ class Post extends Model implements Sluggable
     {
         $string = $this->renderedText();
         if (strlen($string) > 50) {
-            $stringCut = substr($string, 0, 140);
+            $stringCut = substr($string, 0, 240);
             $string = substr($stringCut, 0, strrpos($stringCut, ' ')) . '...';
         }
         return strip_tags($string);

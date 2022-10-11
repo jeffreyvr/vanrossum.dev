@@ -1,5 +1,5 @@
 <x-site-layout :title="$post->title">
-    <div class="mx-auto max-w-screen-md pt-8 lg:pt-20 px-8 lg:px-0">
+    <div class="mx-auto max-w-screen-md pt-8 lg:pt-20 container">
         <article>
             <header class="mb-8">
                 <h1 class="text-xl lg:text-3xl font-semibold font-wide text-primary">{{ $post->title }}</h1>
