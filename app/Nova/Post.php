@@ -2,15 +2,16 @@
 
 namespace App\Nova;
 
-use Illuminate\Http\Request;
-use Laravel\Nova\Fields\DateTime;
+use Spatie\TagsField\Tags;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Markdown;
-use Laravel\Nova\Fields\Select;
+use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Slug;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\Markdown;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Spatie\TagsField\Tags;
 
 class Post extends Resource
 {
@@ -70,6 +71,8 @@ class Post extends Resource
                 ->hideFromIndex(),
 
             Tags::make('Tags'),
+
+            BelongsTo::make('User', 'author')->hideFromIndex(),
         ];
     }
 
