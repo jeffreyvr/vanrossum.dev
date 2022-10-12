@@ -16,13 +16,6 @@
                 </div>
 
                 @markdown
-                <div class="md:flex md:items-start font-bold text-gray-800">
-                    <img class="shadow-lg relative z-10 w-full md:w-64 md:mr-8 mb-4 md:mb-0 rounded"
-                         src="{{ url('images/avatar.jpg') }}">
-                    I am Jeffrey van Rossum, freelance PHP developer with over 8 years of WordPress experience. Over the
-                    years I have worked on many websites with WordPress, including custom plugins and themes.
-                </div>
-
                 ## Why WordPress?
                 [WordPress](https://wordpress.org) is the most widely used CMS in the world. With WordPress you can
                 realize a fully operational website in no time. In addition, the basic functionality of WordPress is
