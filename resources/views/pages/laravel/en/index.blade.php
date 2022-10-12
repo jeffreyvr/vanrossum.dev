@@ -1,4 +1,4 @@
-<x-site-layout title="Freelance Laravel Developer">
+<x-app-layout title="Freelance Laravel Developer">
     <div class="container max-w-screen-md lg:pt-20 pt-8">
         <article>
             <header class="mb-8">

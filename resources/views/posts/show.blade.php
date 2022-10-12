@@ -1,4 +1,4 @@
-<x-site-layout :title="$post->title">
+<x-app-layout :title="$post->title">
     <div class="mx-auto max-w-screen-md pt-8 lg:pt-20 container">
         <article>
             <header class="mb-8">
@@ -77,7 +77,7 @@
         <meta name="twitter:description" content="{{ $post->excerpt }}" />
         <meta name="twitter:title" content="{{ $post->title }}" />
         <meta name="twitter:site" content="@jeffreyrossum" />
-        <meta name="twitter:image" content="{{ url('images/iJeffrey.jpg') }}" />
+        <meta name="twitter:image" content="{{ url('images/twitter-card.jpg') }}" />
         <meta name="twitter:creator" content="@jeffreyrossum" />
         @endsection
     </div>

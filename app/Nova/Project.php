@@ -2,18 +2,17 @@
 
 namespace App\Nova;
 
-use Carbon\CarbonInterval;
-use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\Markdown;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Slug;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Image;
-use Laravel\Nova\Fields\Select;
-use Laravel\Nova\Fields\DateTime;
-use Laravel\Nova\Fields\Markdown;
-use Laravel\Nova\Fields\BelongsTo;
-use Spatie\NovaTranslatable\Translatable;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Spatie\NovaTranslatable\Translatable;
 
 class Project extends Resource
 {
@@ -57,27 +56,27 @@ class Project extends Resource
                     ->hideFromIndex(),
             ]),
 
-            Slug::make('Slug'),
+            Slug::make('Slug')->hideFromIndex(),
 
             Text::make('Client'),
 
-            Text::make('Stack'),
+            Text::make('Stack')->hideFromIndex(),
 
-            Text::make('External Url'),
+            Text::make('External Url')->hideFromIndex(),
 
             DateTime::make('Publish date')
                 ->default(now()->format('Y-m-d H:i:s.u')),
 
-            DateTime::make('Updated At')->hideFromIndex(),
+            // DateTime::make('Updated At')->hideFromIndex(),
 
             Select::make('Status')->options([
                 'draft' => 'Draft',
-                'publish' => 'Publish'
+                'publish' => 'Publish',
             ])->displayUsingLabels(),
 
             Image::make('Image'),
 
-            BelongsTo::make('User', 'author'),
+            BelongsTo::make('User', 'author')->hideFromIndex(),
         ];
     }
 

@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use GuzzleHttp\Client;
-use Illuminate\Http\Request;
 use App\Mail\DonationRequest;
+use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Mail;
 
 class DonationController extends Controller
@@ -23,25 +22,25 @@ class DonationController extends Controller
     {
         request()->validate([
             'amount' => 'required|numeric|min:1',
-            'last_name' => 'present|max:0' // honeypot
+            'last_name' => 'present|max:0', // honeypot
         ]);
 
         $client = new Client;
 
-        $amount = number_format((float)request('amount'), 2, '.', ',');
+        $amount = number_format((float) request('amount'), 2, '.', ',');
 
         $response = $client->post('https://api.mollie.com/v2/payments', [
             'form_params' => [
                 'amount' => [
                     'value' => $amount,
-                    'currency' => 'EUR'
+                    'currency' => 'EUR',
                 ],
                 'description' => 'Donation vanrossum.dev',
-                'redirectUrl' => route('donate.thanks')
+                'redirectUrl' => route('donate.thanks'),
             ],
             'headers' => [
-                'Authorization' => 'bearer ' . config('services.mollie.api_key')
-            ]
+                'Authorization' => 'bearer '.config('services.mollie.api_key'),
+            ],
         ]);
 
         $response = json_decode($response->getBody());

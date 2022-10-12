@@ -2,13 +2,12 @@
 
 namespace App;
 
-use Carbon;
-use App\Webmention;
+use App\Interfaces\Sluggable;
 use App\Traits\HasSlug;
 use App\Traits\HasTags;
-use App\Interfaces\Sluggable;
-use Illuminate\Database\Eloquent\Model;
+use Carbon;
 use GrahamCampbell\Markdown\Facades\Markdown;
+use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model implements Sluggable
 {
@@ -17,12 +16,12 @@ class Post extends Model implements Sluggable
     protected $guarded = [];
 
     protected $casts = [
-        'publish_date' => 'datetime'
+        'publish_date' => 'datetime',
     ];
 
     protected $appends = [
         'excerpt',
-        'localized_date'
+        'localized_date',
     ];
 
     public function getSluggableValue(): string
@@ -50,8 +49,9 @@ class Post extends Model implements Sluggable
         $string = $this->renderedText();
         if (strlen($string) > 50) {
             $stringCut = substr($string, 0, 240);
-            $string = substr($stringCut, 0, strrpos($stringCut, ' ')) . '...';
+            $string = substr($stringCut, 0, strrpos($stringCut, ' ')).'...';
         }
+
         return strip_tags($string);
     }
 

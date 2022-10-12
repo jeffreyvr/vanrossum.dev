@@ -1,4 +1,4 @@
-<x-site-layout title="Freelance WordPress Developer">
+<x-app-layout title="Freelance WordPress Developer">
     <div class="container max-w-screen-md lg:pt-20 pt-8">
         <article>
             <header class="mb-8">

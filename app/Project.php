@@ -2,13 +2,12 @@
 
 namespace App;
 
-use App\Traits\HasSlug;
 use App\Interfaces\Sluggable;
-use Illuminate\Support\Carbon;
-use Illuminate\Database\Eloquent\Model;
-use Spatie\Translatable\HasTranslations;
+use App\Traits\HasSlug;
 use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
 
 class Project extends Model implements Sluggable
 {
@@ -19,7 +18,7 @@ class Project extends Model implements Sluggable
     public $translatable = ['title', 'text'];
 
     protected $casts = [
-        'publish_date' => 'datetime'
+        'publish_date' => 'datetime',
     ];
 
     public function getSluggableValue(): string

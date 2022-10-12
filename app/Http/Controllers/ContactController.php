@@ -16,10 +16,10 @@ class ContactController extends Controller
     {
         request()->validate(
             [
-            'email' => 'required|email',
-            'name' => 'required',
-            'message' => 'required',
-            'last_name' => 'present|max:0' // honeypot
+                'email' => 'required|email',
+                'name' => 'required',
+                'message' => 'required',
+                'last_name' => 'present|max:0', // honeypot
             ]
         );
 

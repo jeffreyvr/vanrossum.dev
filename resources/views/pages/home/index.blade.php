@@ -1,12 +1,12 @@
-<x-site-layout :title="__('Jeffrey van Rossum - Freelance PHP developer specialized in Laravel and WordPress')">
+<x-app-layout :title="__('Jeffrey van Rossum - Freelance PHP developer specialized in Laravel and WordPress')">
     @include('pages.home.'.app()->getLocale().'.introduction')
 
     <x-tools-slider />
 
     <div class="container relative z-1 mx-auto">
         <div class="border-b mb-8 pb-8 lg:pb-16 lg:mb-16">
-            <h2 class="text-lg lg:text-2xl text-primary font-wide font-bold mb-2">{{ __('What I work with') }}</h2>
-            <p class="text-sm lg:text-[24px] text-primary">{{ __('As a freelance developer, I specialise in...') }}</p>
+            <h2 class="text-lg lg:text-2xl text-primary font-wide font-bold mb-2">{{ __('Specialisaties') }}</h2>
+            <p class="text-sm lg:text-[24px] text-primary">{{ __('Tools of the trade') }}</p>
         </div>
 
         @foreach(App\Service::where('lang', app()->getLocale())->get() as $service)
@@ -32,8 +32,13 @@
 
     <div class="container relative z-1 mx-auto">
         <div class="mb-8 lg:mb-16">
-            <h2 class="text-lg lg:text-2xl text-primary font-wide font-semibold mb-2">{{ __('What I\'m working on') }}</h2>
+            @if(app()->getLocale() === 'nl')
+            <h2 class="text-lg lg:text-2xl text-primary font-wide font-semibold mb-2">Waar ik aan <span class="text-secondary decoration-primary underline">werk</span> heb</h2>
             <p class="text-sm lg:text-[24px] text-primary">{{ __('A few awesome projects where I get to do what I love.') }}</p>
+            @else
+            <h2 class="text-lg lg:text-2xl text-primary font-wide font-semibold mb-2">What I've <span class="text-secondary decoration-primary underline">worked</span> on</h2>
+            <p class="text-sm lg:text-[24px] text-primary">{{ __('A few awesome projects where I get to do what I love.') }}</p>
+            @endif
         </div>
 
         @foreach($projects as $project)

@@ -31,10 +31,10 @@ return [
     ],
 
     'webmentions' => [
-        'webhook_secret' => env('WEBMENTIONS_WEBHOOK_SECRET')
+        'webhook_secret' => env('WEBMENTIONS_WEBHOOK_SECRET'),
     ],
 
     'mollie' => [
-        'api_key' => env('MOLLIE_API_KEY')
-    ]
+        'api_key' => env('MOLLIE_API_KEY'),
+    ],
 ];

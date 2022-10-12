@@ -3,8 +3,8 @@
 namespace Tests\Feature;
 
 use App\Post;
-use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class HomepageTest extends TestCase
 {
@@ -34,7 +34,7 @@ class HomepageTest extends TestCase
     {
         $posts = factory(Post::class)->times(3)->create();
 
-        $posts->each(function(Post $post){
+        $posts->each(function (Post $post) {
             $this->get(localized_route('home'))
                 ->assertSee($post->title);
         });

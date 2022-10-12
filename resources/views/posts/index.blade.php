@@ -1,4 +1,4 @@
-<x-site-layout title="Blog archive">
+<x-app-layout title="Blog archive">
 
     <article class="container mx-auto my-16">
         <header>

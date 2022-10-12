@@ -9,9 +9,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view("pages.home.index")->with([
-            'posts' => Post::published()->limit(3)->get(),
-            'projects' => Project::published()->limit(3)->get()
+        return view('pages.home.index')->with([
+            'posts' => Post::published()->orderBy('publish_date', 'DESC')->limit(3)->get(),
+            'projects' => Project::published()->orderBy('publish_date', 'ASC')->limit(3)->get(),
         ]);
     }
 }

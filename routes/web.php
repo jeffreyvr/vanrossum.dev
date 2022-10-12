@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectController;
+use Illuminate\Support\Facades\Route;
 
 // Auth::routes(['register' => false]);
 
@@ -17,28 +17,28 @@ Route::get('/', function () {
  */
 Route::multilingual('/', [HomeController::class, 'index'])->name('home');
 
-Route::multilingual('about', function() {
+Route::multilingual('about', function () {
     return view('pages.about.index');
 })->name('about');
 
-Route::multilingual('/freelance-wordpress-developer', function() {
-    return view('pages.wordpress.' .app()->getLocale(). '.index');
+Route::multilingual('/freelance-wordpress-developer', function () {
+    return view('pages.wordpress.'.app()->getLocale().'.index');
 })->name('wordpress');
 
-Route::multilingual('/freelance-laravel-developer', function() {
-    return view('pages.laravel.' .app()->getLocale(). '.index');
+Route::multilingual('/freelance-laravel-developer', function () {
+    return view('pages.laravel.'.app()->getLocale().'.index');
 })->name('laravel');
 
 Route::multilingual('/contact', [ContactController::class, 'show'])->name('contact');
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
-Route::multilingual('/privacy', function(){
+Route::multilingual('/privacy', function () {
     return view('pages.privacy');
 })->name('privacy');
 
 // Route::get('/admin/dashboard', 'AdminController@dashboard')->name('admin.dashboard')->middleware('auth');
 
-Route::get('/donate', function() {
+Route::get('/donate', function () {
     return redirect()->to('https://github.com/sponsors/jeffreyvr');
 })->name('donate');
 

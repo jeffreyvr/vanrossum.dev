@@ -2,16 +2,15 @@
 
 namespace App\Nova;
 
-use Spatie\TagsField\Tags;
-use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Markdown;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Slug;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Select;
-use Laravel\Nova\Fields\DateTime;
-use Laravel\Nova\Fields\Markdown;
-use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Spatie\TagsField\Tags;
 
 class Post extends Resource
 {
@@ -35,7 +34,7 @@ class Post extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'title'
+        'id', 'title',
     ];
 
     /**
@@ -64,7 +63,7 @@ class Post extends Resource
 
             Select::make('Status')->options([
                 'draft' => 'Draft',
-                'publish' => 'Publish'
+                'publish' => 'Publish',
             ])->displayUsingLabels(),
 
             Markdown::make('Text')
@@ -117,5 +116,4 @@ class Post extends Resource
     {
         return [];
     }
-
 }

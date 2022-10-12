@@ -4,8 +4,8 @@ namespace App\Providers;
 
 use App\Nova\Post;
 use App\Nova\User;
-use Laravel\Nova\Nova;
 use Illuminate\Support\Facades\Gate;
+use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
@@ -81,7 +81,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         //
     }
 
-    /**
+/**
  * Register the application's Nova resources.
  *
  * @return void
@@ -92,7 +92,7 @@ protected function resources()
 
     Nova::resources([
         User::class,
-        Post::class
+        Post::class,
     ]);
 }
 }

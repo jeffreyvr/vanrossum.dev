@@ -2,10 +2,10 @@
 
 namespace App;
 
-use Sushi\Sushi;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Sushi\Sushi;
 
 class Service extends Model
 {
@@ -17,12 +17,12 @@ class Service extends Model
             [
                 'lang' => 'nl',
                 'title' => 'Laravel',
-                'description' => "Door de jaren heen heb ik met verschillende PHP frameworks gewerkt. Laravel vind ik met afstand het prettigst om mee te werken.
-                Het is een solide fundament voor simpele of juist complexe web-applicaties. Daarnaast is het wereldwijd een populair framework, met een grote en actieve developer-community.",
+                'description' => 'Door de jaren heen heb ik met verschillende PHP frameworks gewerkt. Laravel vind ik met afstand het prettigst om mee te werken.
+                Het is een solide fundament voor simpele of juist complexe web-applicaties. Daarnaast is het wereldwijd een populair framework, met een grote en actieve developer-community.',
                 'url' => localized_route('laravel'),
                 'snippet' => Storage::get('code-snippets/laravel.md'),
                 'snippet_name' => 'Laravel Simple Media',
-                'snippet_url' => 'https://github.com/jeffreyvr/laravel-simple-media'
+                'snippet_url' => 'https://github.com/jeffreyvr/laravel-simple-media',
             ],
             [
                 'lang' => 'en',
@@ -33,7 +33,7 @@ class Service extends Model
                 'url' => localized_route('laravel'),
                 'snippet' => Storage::get('code-snippets/laravel.md'),
                 'snippet_name' => 'Laravel Simple Media',
-                'snippet_url' => 'https://github.com/jeffreyvr/laravel-simple-media'
+                'snippet_url' => 'https://github.com/jeffreyvr/laravel-simple-media',
             ],
             [
                 'lang' => 'en',
@@ -45,7 +45,7 @@ class Service extends Model
                 'url' => localized_route('wordpress'),
                 'snippet' => Storage::get('code-snippets/wordpress.md'),
                 'snippet_name' => 'TailPress',
-                'snippet_url' => 'https://tailpress.io'
+                'snippet_url' => 'https://tailpress.io',
             ],
             [
                 'lang' => 'nl',
@@ -55,8 +55,8 @@ class Service extends Model
                 'url' => localized_route('wordpress'),
                 'snippet' => Storage::get('code-snippets/wordpress.md'),
                 'snippet_name' => 'TailPress',
-                'snippet_url' => 'https://tailpress.io'
-            ]
+                'snippet_url' => 'https://tailpress.io',
+            ],
         ];
     }
 }

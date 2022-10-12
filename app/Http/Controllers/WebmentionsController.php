@@ -12,7 +12,7 @@ class WebmentionsController extends Controller
 
     protected function isValid()
     {
-        if (!Arr::get($this->payload, 'secret')) {
+        if (! Arr::get($this->payload, 'secret')) {
             return false;
         }
 
@@ -36,7 +36,7 @@ class WebmentionsController extends Controller
         $accepted_types = ['in-reply-to', 'like-of', 'repost-of'];
         $retrieved_type = Arr::get($this->payload, 'post.wm-property');
 
-        if (!in_array($retrieved_type, $accepted_types)) {
+        if (! in_array($retrieved_type, $accepted_types)) {
             return;
         }
 
@@ -47,7 +47,7 @@ class WebmentionsController extends Controller
     {
         $url = Arr::get($this->payload, 'target');
 
-        if (!$url) {
+        if (! $url) {
             return null;
         }
 
@@ -67,11 +67,11 @@ class WebmentionsController extends Controller
             return;
         }
 
-        if (!$type = $this->getType()) {
+        if (! $type = $this->getType()) {
             return;
         }
 
-        if (!$post = $this->getPost()) {
+        if (! $post = $this->getPost()) {
             return;
         }
 

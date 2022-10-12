@@ -6,7 +6,7 @@ use Closure;
 
 class SetLocale
 {
-    function handle($request, Closure $next)
+    public function handle($request, Closure $next)
     {
         $segment = $request->segment(1) ?? substr($request->server('HTTP_ACCEPT_LANGUAGE'), 0, 2);
 

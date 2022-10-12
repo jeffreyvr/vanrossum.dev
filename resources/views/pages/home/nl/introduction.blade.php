@@ -2,16 +2,16 @@
     <div class="container mx-auto pt-12 lg:pt-20 xl:pt-32 relative z-10">
         <div class="md:flex lg:items-center md:gap-16 lg:gap-32">
             <div>
-                <h1 class="text-[28px] lg:text-2xl font-wide font-semibold text-primary mb-8">
-                    <span class="opacity-50" title="To long, didn't read">TLDR;</span> Ik maak <span class="text-secondary underline decoration-primary">websites</span>.
+                <h1 class="text-2xl lg:text-3xl font-wide font-semibold text-primary mb-8">
+                    Ik <span class="underline decoration-primary text-secondary activity-typewriter">maak</span> digitale producten.
                 </h1>
 
                 <div class="text-primary text-[18px] lg:text-[24px] leading-loose [&_p]:mb-4">
-                    <p>Dat is kortgezegd wat ik doe en wat mijn passie is. Ik ben Jeffrey en met de programmeertaal PHP en frameworks als Laravel en WordPress in mijn gereedschapskist, bouw ik web-applicaties.</p>
-                    <p>Daarnaast werk ik aan diverse open source projecten. Zo nu en dan schrijf ik een blog.</p>
+                    <p>Mijn naam is Jeffrey, freelance PHP developer en ik houd van het maken van digitale producten.</p>
+                    <p>Dit doe ik voor mezelf, voor jou en met behulp van geweldige tools als Laravel en WordPress.</p>
                 </div>
             </div>
-            <div class="max-w-[88%] mx-auto lg:mx-none md:max-w-xs shrink-0">
+            <div class="max-w-[88%] mx-auto lg:mx-none md:max-w-xs xl:max-w-lg shrink-0">
                 <div class="stack relative" data-aos="fade-up" data-aos-duration="1000">
                     <img src="{{ url('images/me@macbook.jpg') }}" class="w-full lg:w-[473px]" data-aos="fade-up" data-aos-duration="1000"
                         data-delay="1000" />
@@ -31,3 +31,20 @@
         <x-circle class="hidden lg:block" />
     </div>
 </div>
+
+<script>
+    new Typewriter('.activity-typewriter', {
+        autoStart: true,
+    })
+      .typeString('ontwerp')
+      .pauseFor(1500)
+      .deleteAll()
+      .typeString('programmeer')
+      .pauseFor(1500)
+      .deleteAll()
+      .typeString('test')
+      .pauseFor(1500)
+      .deleteAll()
+      .typeString('maak')
+      .start();
+    </script>

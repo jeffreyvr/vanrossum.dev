@@ -2,8 +2,8 @@
 
 namespace App\Policies;
 
-use App\User;
 use App\Post;
+use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class PostPolicy
@@ -14,7 +14,7 @@ class PostPolicy
     {
         return $post->status == 'publish' || ($user && $user->is_admin);
     }
-    
+
     public function create(User $user)
     {
         return $user->is_admin;

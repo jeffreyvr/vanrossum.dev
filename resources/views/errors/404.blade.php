@@ -1,4 +1,4 @@
-<x-site-layout title="404">
+<x-app-layout title="404">
 
     <div class="text-center px-8 max-w-screen-sm mx-auto my-12">
         <h1 class="font-wide font-semibold text-2xl mb-4 text-primary">{{ __('Whoops, 404...') }}</h1>

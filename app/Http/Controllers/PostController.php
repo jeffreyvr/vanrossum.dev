@@ -24,7 +24,7 @@ class PostController extends Controller
 
         $tag = Tag::where("slug->{$locale}", $tag_slug)->firstOrFail();
 
-        if(!$tag) {
+        if (! $tag) {
             abort(404);
         }
 
@@ -60,7 +60,7 @@ class PostController extends Controller
             'text' => 'required',
             'status' => ['required', 'in:draft,publish'],
             'publish_date' => 'nullable',
-            'tweet_url' => 'nullable|url'
+            'tweet_url' => 'nullable|url',
         ]);
 
         $attributes['author_id'] = auth()->id();
@@ -88,7 +88,7 @@ class PostController extends Controller
             'text' => 'required',
             'status' => ['required', 'in:draft,publish'],
             'publish_date' => 'nullable',
-            'tweet_url' => 'nullable|url'
+            'tweet_url' => 'nullable|url',
         ]);
 
         $this->authorize('update', $post);

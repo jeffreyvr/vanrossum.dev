@@ -17,6 +17,7 @@ class Webmention extends Model
         } elseif ($this->type == 'repost-of') {
             return __('Reposted');
         }
+
         return null;
     }
 }
