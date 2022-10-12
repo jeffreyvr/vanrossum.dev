@@ -15,9 +15,9 @@
     @endif
     <div>
         @if($project->external_url)
-            <a href="{{ $project->external_url }}" class="font-medium text-xl lg:text-2xl font-wide text-primary mb-2 block">{{ $project->title }}</a>
+            <a href="{{ Storage::url($project->external_url) }}" class="font-medium text-xl lg:text-2xl font-wide text-primary mb-2 block">{{ $project->title }}</a>
         @else
-            <h3 href="{{ $project->external_url }}" class="font-medium text-xl lg:text-2xl font-wide text-primary mb-2 block">{{ $project->title }}</h3>
+            <h3 href="{{ Storage::url($project->external_url) }}" class="font-medium text-xl lg:text-2xl font-wide text-primary mb-2 block">{{ $project->title }}</h3>
         @endif
         <div class="text-gray-400 mb-8">
             {{ __('Made for :client with :stack', ['client' => $project->client, 'stack' => $project->stack]) }}
