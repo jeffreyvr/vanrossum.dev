@@ -3,7 +3,7 @@
 
     <div class="container">
         <div class="border-b pb-8 mb-8 lg:pb-16 lg:mb-16">
-            <h2 class="text-lg lg:text-2xl text-primary font-wide font-bold mb-2">{{ __('Specialisaties') }}</h2>
+            <h2 class="text-lg lg:text-2xl text-primary font-wide font-bold mb-2">{{ __('Specializations') }}</h2>
             <p class="text-sm lg:text-[24px]">{{ __('Tools of the trade') }}</p>
         </div>
 
