@@ -9,11 +9,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        if (auth()->check()) {
-            $posts = Post::orderby('publish_date', 'desc')->paginate(9);
-        } else {
-            $posts = Post::published()->paginate(9);
-        }
+        $posts = Post::published()->paginate(9);
 
         return view('posts.index', ['posts' => $posts]);
     }
