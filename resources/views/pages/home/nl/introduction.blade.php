@@ -2,7 +2,7 @@
     <div class="container mx-auto pt-12 lg:pt-20 xl:pt-32 relative z-10">
         <div class="md:flex lg:items-center md:gap-16 lg:gap-32">
             <div>
-                <h1 class="text-2xl lg:text-3xl font-wide font-semibold text-primary mb-8">
+                <h1 class="text-[28px] lg:text-3xl font-wide font-semibold text-primary mb-8">
                     Ik maak <span class="underline decoration-primary decoration-[3px] text-secondary">digitale</span> producten.
                 </h1>
 
