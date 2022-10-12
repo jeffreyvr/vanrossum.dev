@@ -3,7 +3,7 @@
         <div class="md:flex lg:items-center md:gap-16 lg:gap-32">
             <div>
                 <h1 class="text-2xl lg:text-3xl font-wide font-semibold text-primary mb-8">
-                    Ik <span class="underline decoration-primary text-secondary activity-typewriter">maak</span> digitale producten.
+                    Ik maak <span class="underline decoration-primary decoration-[3px] text-secondary">digitale</span> producten.
                 </h1>
 
                 <div class="text-primary text-[18px] lg:text-[24px] leading-loose [&_p]:mb-4">
@@ -31,20 +31,3 @@
         <x-circle class="hidden lg:block" />
     </div>
 </div>
-
-<script>
-    new Typewriter('.activity-typewriter', {
-        autoStart: true,
-    })
-      .typeString('ontwerp')
-      .pauseFor(1500)
-      .deleteAll()
-      .typeString('programmeer')
-      .pauseFor(1500)
-      .deleteAll()
-      .typeString('test')
-      .pauseFor(1500)
-      .deleteAll()
-      .typeString('maak')
-      .start();
-    </script>

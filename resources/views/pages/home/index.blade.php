@@ -33,10 +33,10 @@
     <div class="container relative z-1 mx-auto">
         <div class="mb-8 lg:mb-16">
             @if(app()->getLocale() === 'nl')
-            <h2 class="text-lg lg:text-2xl text-primary font-wide font-semibold mb-2">Waar ik aan <span class="text-secondary decoration-primary underline">werk</span> heb</h2>
+            <h2 class="text-lg lg:text-2xl text-primary font-wide font-semibold mb-2">Waar ik aan <span class="text-secondary decoration-primary decoration-[3px] underline">werk</span> heb</h2>
             <p class="text-sm lg:text-[24px] text-primary">{{ __('A few awesome projects where I get to do what I love.') }}</p>
             @else
-            <h2 class="text-lg lg:text-2xl text-primary font-wide font-semibold mb-2">What I've <span class="text-secondary decoration-primary underline">worked</span> on</h2>
+            <h2 class="text-lg lg:text-2xl text-primary font-wide font-semibold mb-2">What I've <span class="text-secondary decoration-primary decoration-[3px] underline">worked</span> on</h2>
             <p class="text-sm lg:text-[24px] text-primary">{{ __('A few awesome projects where I get to do what I love.') }}</p>
             @endif
         </div>

@@ -20,7 +20,6 @@
     <link rel="pingback" href="https://webmention.io/vanrossum.dev/xmlrpc" />
 
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 </head>
 
 <body class="min-h-screen antialiased flex flex-col justify-between text-dark">
@@ -187,9 +186,9 @@
         </div>
     </div>
 
+    <script defer src="{{ mix('/js/app.js') }}"></script>
 
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}"></script>
+
     @if(app()->environment('production'))
         <script async src="https://www.googletagmanager.com/gtag/js?id={{ env("UA_CODE") }}">
         </script>
@@ -206,9 +205,6 @@
             gtag('config', '{{ env("UA_CODE") }}');
         </script>
     @endif
-
-
-    <script defer src="{{ mix('/js/app.js') }}"></script>
 </body>
 
 </html>
