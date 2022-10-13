@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\WebmentionsController;
 use Illuminate\Support\Facades\Route;
 
 // Auth::routes(['register' => false]);
@@ -33,7 +34,7 @@ Route::multilingual('/contact', [ContactController::class, 'show'])->name('conta
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
 Route::multilingual('/privacy', function () {
-    return view('pages.privacy');
+    return view('pages.privacy.index');
 })->name('privacy');
 
 // Route::get('/admin/dashboard', 'AdminController@dashboard')->name('admin.dashboard')->middleware('auth');
