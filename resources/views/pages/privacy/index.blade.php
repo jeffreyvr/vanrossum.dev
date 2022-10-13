@@ -1,11 +1,11 @@
-<x-app-layout>
+<x-app-layout title="Privacy">
     <div class="bg-white py-12 relative bg-gradient-to-b from-gray-100">
         <article class="max-w-xl md:max-w-3xl mx-auto px-8 md:px-0">
             <header class="mb-8">
-                <h1 class="text-5xl text-primary font-extrabold leading-tight mb-1">{{ __('Privacy statement') }}</h1>
+                <h1 class="text-xl xl:text-3xl text-primary font-extrabold leading-tight mb-1">{{ __('Privacy statement') }}</h1>
             </header>
 
-            <div class="text-3xl leading-relaxed prose text-dark prose-headings:text-primary">
+            <div class="leading-relaxed prose text-dark prose-headings:text-primary">
                 @markdown
                 The following applies to this website vanrossum.dev.
 
