@@ -37,4 +37,8 @@ return [
     'mollie' => [
         'api_key' => env('MOLLIE_API_KEY'),
     ],
+
+    'lemonsqueezy' => [
+        'api_key' => env('LEMONSQUEEZY_API_KEY'),
+    ],
 ];

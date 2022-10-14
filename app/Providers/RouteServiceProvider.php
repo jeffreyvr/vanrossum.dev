@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Post;
+use App\Product;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -56,8 +57,15 @@ class RouteServiceProvider extends ServiceProvider
 
     public function registerRouteModelBindings()
     {
+        $this->registerPostSlugRouteModelBinding();
+//        $this->registerProductSlugRouteModelBinding();
+    }
+
+    protected function registerPostSlugRouteModelBinding()
+    {
         Route::bind('postSlug', function ($slug) {
             $post = Post::findByIdSlug($slug);
+
             if (! $post) {
                 abort(404);
             }
@@ -66,6 +74,19 @@ class RouteServiceProvider extends ServiceProvider
             }
 
             return $post;
+        });
+    }
+
+    protected function registerProductSlugRouteModelBinding()
+    {
+        Route::bind('productSlug', function ($slug) {
+            $product = Product::findByIdSlug($slug);
+
+            if (! $product || $product->status != 'publish') {
+                abort(404);
+            }
+
+            return $product;
         });
     }
 }

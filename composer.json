@@ -16,6 +16,7 @@
         "laravel/legacy-factories": "^1.1",
         "laravel/nova": "~4.0",
         "laravel/tinker": "^2.0",
+        "spatie/laravel-medialibrary": "^10.0.0",
         "spatie/laravel-tags": "^4.0",
         "spatie/laravel-translatable": "^6.0",
         "spatie/nova-tags-field": "^4.0",
