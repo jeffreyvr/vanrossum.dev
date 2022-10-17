@@ -133,7 +133,7 @@
                     data-aos-duration="1000">
                     <div class="font-medium text-[28px] mb-6">{{ __('Get social') }}</div>
                     <div class="grid grid-cols-2 gap-6 text-base mb-8 lg:mb-0">
-                        <a href="https://www.youtube.com/channel/UC6fQApKy1ULAlr0kS7EDsbg" class="underline">GitHub</a>
+                        <a href="https://github.com/jeffreyvr" class="underline">GitHub</a>
                         <a href="https://twitter.com/jeffreyrossum" class="underline">Twitter</a>
                         <a href="https://www.youtube.com/channel/UC6fQApKy1ULAlr0kS7EDsbg" class="underline">Youtube</a>
                         <a href="https://linkedin.com/in/jeffrey-van-rossum-97b27321" class="underline">LinkedIn</a>
@@ -149,7 +149,7 @@
                     &copy; {{ date('Y') }} | <a href="{{ localized_route('privacy') }}" class="underline">Privacy</a>
                 </div>
                 <div>
-                    <a href="https://github.com/jeffreyvr/sponsors" class="underline">{{ __('Buy me a coffee ☕') }}</a>
+                    <a href="https://github.com/sponsors/jeffreyvr" class="underline">{{ __('Buy me a coffee ☕') }}</a>
                 </div>
             </div>
         </div>
