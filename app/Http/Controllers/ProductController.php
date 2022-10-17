@@ -12,4 +12,11 @@ class ProductController extends Controller
 
         return view('products.show', compact('product'));
     }
+
+    public function index()
+    {
+        $products = Product::published()->paginate(8);
+
+        return view('products.index', compact('products'));
+    }
 }

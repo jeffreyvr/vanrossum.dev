@@ -166,10 +166,13 @@
                 <a href="{{ localized_route('about') }}"
                     class="text-white block text-[28px] font-wide font-medium mb-12 last:mb-0 ">{{ __('About') }}.</a>
                 <a href="{{ route('posts') }}"
-                    class="text-white block text-[28px] font-wide font-medium mb-12 last:mb-0 ">{{ __('Articles')
+                    class="text-white block text-[28px] font-wide font-medium mb-12 last:mb-0 ">{{ __('Blog')
                     }}.</a>
                 <a href="{{ localized_route('projects') }}"
                     class="text-white block text-[28px] font-wide font-medium mb-12 last:mb-0 ">{{ __('Projects')
+                    }}.</a>
+                <a href="{{ route('products') }}"
+                   class="text-white block text-[28px] font-wide font-medium mb-12 last:mb-0 ">{{ __('Products')
                     }}.</a>
                 <a href="{{ localized_route('contact')}}"
                     class="text-white block text-[28px] font-wide font-medium mb-12 last:mb-0 ">{{ __('Contact') }}.</a>

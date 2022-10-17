@@ -2,6 +2,7 @@
 
 namespace App;
 
+use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Image\Manipulations;
@@ -61,5 +62,29 @@ class Product extends Model implements HasMedia
     public function getDownloadMedia()
     {
         return $this->getFirstMedia('product-download');
+    }
+
+    public function scopePublished($query)
+    {
+        return $query->where('status', 'publish')->orderby('created_at', 'desc');
+    }
+
+    public function getTextNavigation()
+    {
+        $markdown = Markdown::convert($this->text)->getContent();
+
+        $dom = new \DOMDocument();
+
+        $dom->loadHTML($markdown, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+
+        $xpath = new \DomXPath($dom);
+
+        $headings = $xpath->query('//h1|//h2|//h3|//h4|//h5|//h6');
+
+        foreach ($headings as $heading) {
+            $links[] = '<a href="#'.$heading->getAttribute('id').'">'.$heading->textContent.'</a>';
+        }
+
+        return collect($links);
     }
 }

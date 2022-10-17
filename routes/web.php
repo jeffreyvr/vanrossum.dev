@@ -44,6 +44,7 @@ Route::get('/donate', function () {
 
 Route::multilingual('projects', [ProjectController::class, 'index'])->name('projects');
 
+Route::get('products', [ProductController::class, 'index'])->name('products');
 Route::get('products/{product}', [ProductController::class, 'show'])->name('products.show');
 
 Route::get('/blog', [PostController::class, 'index'])->name('posts');
@@ -53,6 +54,6 @@ Route::get('/{postSlug}', [PostController::class, 'show'])->name('posts.show');
 
 Route::post('/webhooks/webmentions', [WebmentionsController::class, 'handle']);
 
-Route::get('media/{mediaItem}/download', function (Spatie\MediaLibrary\MediaCollections\Models\Media $mediaItem) {
+Route::get('media/{mediaItem}/download.zip', function (Spatie\MediaLibrary\MediaCollections\Models\Media $mediaItem) {
     return response()->download($mediaItem->getPath(), $mediaItem->file_name);
 })->name('download')->middleware('signed');

@@ -4,7 +4,8 @@ namespace App\Http\Api\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Product;
-use Illuminate\Support\Facades\Http;
+use App\Services\LemonSqueezy;
+use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Support\Facades\URL;
 
 class ProductWordPressUpdateController extends Controller
@@ -22,7 +23,7 @@ class ProductWordPressUpdateController extends Controller
             return $this->returnInvalidResponse();
         }
 
-        $response = Http::post('https://api.lemonsqueezy.com/v1/licenses/validate', [
+        $response = LemonSqueezy::post('/licenses/validate', [
             'license_key' => request('license_key'),
         ]);
 
@@ -38,7 +39,10 @@ class ProductWordPressUpdateController extends Controller
             'success' => true,
             'update' => [
                 'version' => $product->version,
-                'download_link' => URL::temporarySignedRoute('download', now()->addMinutes(30), ['mediaItem' => $product->getDownloadMedia()]),
+                'download_link' => URL::temporarySignedRoute('download', now()->addMinutes(60), ['mediaItem' => $product->getDownloadMedia()]),
+                'sections' => [
+                    'changelog' => Markdown::convert($product->changelog)->getContent(),
+                ],
             ],
         ]);
     }
