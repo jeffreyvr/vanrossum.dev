@@ -15,6 +15,7 @@
         "laravel/framework": "^9.19",
         "laravel/legacy-factories": "^1.1",
         "laravel/nova": "~4.0",
+        "laravel/slack-notification-channel": "^2.4",
         "laravel/tinker": "^2.0",
         "league/flysystem-sftp-v3": "^3.0",
         "spatie/laravel-backup": "^8.1",
