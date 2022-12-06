@@ -41,4 +41,8 @@ return [
     'lemonsqueezy' => [
         'api_key' => env('LEMONSQUEEZY_API_KEY'),
     ],
+
+    'postmark' => [
+        'token' => env('POSTMARK_TOKEN'),
+    ],
 ];
