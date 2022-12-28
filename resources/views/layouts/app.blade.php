@@ -156,11 +156,11 @@
     </footer>
 
     <div x-data="{open: false}" @nav.window="open = !open">
-        <div x-show="open" x-transition:enter="transition ease-in duration-300"
+        <div x-cloak x-show="open" x-transition:enter="transition ease-in duration-300"
             x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
             x-transition:leave="transition ease-out duration-300" x-transition:leave-start="opacity-100 scale-100"
             x-transition:leave-end="opacity-0 scale-90"
-            class="absolute top-0 left-0 z-10 w-full h-full text-white mt-[75px] z-10 p-8"
+            class="absolute top-0 left-0 w-full h-full text-white mt-[75px] z-10 p-8"
             style="background-image:url({{ url('/images/footer.png') }});">
             <nav aria-label="mobile nav" class="flex flex-col text-white border-b border-white/25 pb-12 mb-12">
                 <a href="{{ localized_route('about') }}"
