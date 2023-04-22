@@ -3,6 +3,7 @@ module.exports = {
         './resources/**/*.blade.php',
         './resources/*.blade.php',
         './resources/**/*.vue',
+        './resources/**/*.js',
         './content/**/*.md'
     ],
     theme: {
@@ -51,5 +52,6 @@ module.exports = {
     },
     plugins: [
         require('@tailwindcss/typography'),
+        require('@tailwindcss/aspect-ratio'),
     ],
 }

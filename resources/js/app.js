@@ -8,13 +8,6 @@ import Splitting from "splitting";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Alpine from 'alpinejs'
-import SimpleMDE from 'simplemde';
-import SimpleMDEStyles from "simplemde/dist/simplemde.min.css";
-
-var simplemdeeditor = document.getElementsByClassName("markdown-editor")[0];
-if ( typeof simplemdeeditor !== 'undefined' ) {
-    var simplemde = new SimpleMDE({ element: document.getElementsByClassName("markdown-editor")[0] });
-}
 
 window.Alpine = Alpine
 
@@ -39,3 +32,15 @@ var observer = new IntersectionObserver(function handleIntersection(entries) {
 });
 
 elements.forEach(element => observer.observe(element));
+
+var videoEmbeds = document.querySelectorAll('iframe[src*="youtube.com"], iframe[src*="vimeo.com"]');
+
+videoEmbeds.forEach((videoEmbed) => {
+    let videoEmbedContainer = document.createElement('div');
+
+    videoEmbedContainer.classList.add('aspect-h-9');
+    videoEmbedContainer.classList.add('aspect-w-16');
+
+    videoEmbed.parentNode.insertBefore(videoEmbedContainer, videoEmbed);
+    videoEmbedContainer.appendChild(videoEmbed);
+})
