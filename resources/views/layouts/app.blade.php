@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}" class="min-h-screen">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +17,10 @@
 
     <link rel="webmention" href="https://webmention.io/vanrossum.dev/webmention" />
     <link rel="pingback" href="https://webmention.io/vanrossum.dev/xmlrpc" />
+
+    @if(app()->environment('production') && $fathom_id = config('services.fathom.site_id'))
+    <script src="https://cdn.usefathom.com/script.js" data-site="{{ $fathom_id }}" defer></script>
+    @endif
 
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
@@ -189,24 +192,5 @@
     </div>
 
     <script defer src="{{ mix('/js/app.js') }}"></script>
-
-
-    @if(app()->environment('production'))
-        <script async src="https://www.googletagmanager.com/gtag/js?id={{ env("UA_CODE") }}">
-        </script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-
-            gtag('set', 'anonymizeIp', true);
-            gtag('js', new Date());
-
-            gtag('config', '{{ env("UA_CODE") }}');
-        </script>
-    @endif
 </body>
-
 </html>

@@ -45,4 +45,8 @@ return [
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],
+
+    'fathom' => [
+        'site_id' => env('FATHOM_SITE_ID'),
+    ],
 ];
