@@ -11,11 +11,12 @@
                 <div>
                     <p class="font-semibold text-base mb-4">{{ $product->summary }}</p>
 
-                    @if($product->vendor === 'lemonsqueezy' && strpos($product->checkout_url, '?embed') == false)
+                    @if($product->vendor === 'lemonsqueezy')
+                        @if(strpos($product->checkout_url, '?embed') !== false)
+                            <script src="https://app.lemonsqueezy.com/js/checkout.js" defer></script>
+                        @endif
+
                         <x-button-link :href="$product->checkout_url" class="lemonsqueezy-button">{{ __('Purchase') }}</x-button-link>
-
-                        <script src="https://app.lemonsqueezy.com/js/checkout.js" defer></script>
-
 
                         <p class="text-xs mt-4 text-gray-500">VAT will be calculated during checkout by <a href="http://lemonsqueezy.com" target="_blank" class="underline">Lemon Squeezy</a>.</p>
                     @elseif(!empty($product->checkout_url))
