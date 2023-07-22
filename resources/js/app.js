@@ -1,7 +1,5 @@
 require('./bootstrap');
 
-import hljs from 'highlight.js';
-import 'highlight.js/styles/github.css';
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
 import Splitting from "splitting";
@@ -14,8 +12,6 @@ window.Alpine = Alpine
 Alpine.start();
 
 AOS.init();
-
-hljs.highlightAll();
 
 Splitting();
 

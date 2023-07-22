@@ -30,7 +30,7 @@
     <div class="mx-auto py-8 lg:pt-20 container">
         <article class="grid lg:grid-cols-4 gap-20">
             <x-post-content class="order-last lg:order-first lg:col-span-3">
-                @markdown($product->text)
+                <x-markdown>{!! $product->text !!}</x-markdown>
             </x-post-content>
 
             <div>

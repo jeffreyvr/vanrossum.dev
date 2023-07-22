@@ -1,0 +1,6 @@
+{
+    "title": "Gravity Forms Send to API",
+    "description": "Send form data to an API endpoint.",
+    "homepage_path": "/products/gf-send-to-api",
+    "default_page": "introduction"
+}

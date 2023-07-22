@@ -1,0 +1,7 @@
+- [Introduction](/docs/{{project}}/{{version}}/introduction)
+- [Installation](/docs/{{project}}/{{version}}/installation)
+- [Feed](/docs/{{project}}/{{version}}/feed)
+- [Merge tag manipulations](/docs/{{project}}/{{version}}/merge-tag-manipulations)
+- [Resend entries](/docs/{{project}}/{{version}}/resend-entries)
+- [Debugging](/docs/{{project}}/{{version}}/debugging)
+- [Requirements](/docs/{{project}}/{{version}}/requirements)

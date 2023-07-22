@@ -17,6 +17,6 @@ class PostTest extends TestCase
             'text' => '# A heading',
         ]);
 
-        $this->assertStringContainsString('<h1>A heading</h1>', $post->renderedText());
+        $this->assertStringContainsString('<h1 id="a-heading">A heading</h1>', $post->renderedText());
     }
 }

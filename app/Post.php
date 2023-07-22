@@ -31,7 +31,8 @@ class Post extends Model implements Sluggable
 
     public function renderedText()
     {
-        return Markdown::convert($this->text);
+        return app(\Spatie\LaravelMarkdown\MarkdownRenderer::class)
+            ->toHtml($this->text);
     }
 
     public function author()

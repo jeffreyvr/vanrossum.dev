@@ -1,12 +1,13 @@
 <?php
 
-use App\Http\Controllers\ContactController;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\WebmentionsController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DocumentationController;
 
 //Auth::routes(['register' => false]);
 
@@ -30,6 +31,9 @@ Route::multilingual('/freelance-wordpress-developer', function () {
 Route::multilingual('/freelance-laravel-developer', function () {
     return view('pages.laravel.'.app()->getLocale().'.index');
 })->name('laravel');
+
+Route::get('/docs/{project}/{version?}', [DocumentationController::class, 'index'])->name('docs');
+Route::get('/docs/{project}/{version?}/{page?}', [DocumentationController::class, 'show'])->name('docs.show');
 
 Route::multilingual('/contact', [ContactController::class, 'show'])->name('contact');
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');

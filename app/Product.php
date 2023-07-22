@@ -71,7 +71,8 @@ class Product extends Model implements HasMedia
 
     public function getTextNavigation()
     {
-        $markdown = Markdown::convert($this->text)->getContent();
+        $markdown = app(\Spatie\LaravelMarkdown\MarkdownRenderer::class)
+            ->toHtml($this->text);
 
         $dom = new \DOMDocument();
 
