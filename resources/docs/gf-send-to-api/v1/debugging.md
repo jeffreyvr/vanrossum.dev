@@ -2,14 +2,14 @@
 
 ## Enable logging
 
-To enable logging, simply enable it within the Gravity Forms settings page.
+To enable logging, head on over to the Gravity Forms settings page.
 
-- Access the Settings page by hovering over Forms on the left side menu within your WordPress dashboard, then click on Settings
-- Next, scroll down to Logging and set it to On.
+- You'll find the Settings page under `Forms` -> `Settings`
+- Next, scroll down to Logging and set toggle it on
 
-Once complete, don’t forget to save your settings.
+Don't forget to save the page.
 
-Once logging is enabled within your Gravity Forms settings, an additional Settings item will appear labeled Logging. To configure any settings related to logging in Gravity Forms, simply access this tab.
+Once logging is enabled, an additional Settings item will appear labeled `Logging`. This is where you'll find the logs.
 
 ## Detailed logging
 
@@ -22,4 +22,4 @@ You can log:
 - Headers
 - Response
 
-![](/images/docs/gf-send-to-api/v1/debugging-1.png)
+![Screenshot of debugging options](/images/docs/gf-send-to-api/v1/debugging-1.png)
