@@ -7,6 +7,10 @@
 
 [x-cloak] { display: none !important; }
 
+.shiki {
+    overflow-x: auto;
+}
+
 @layer utilities {
     .shadow-code {
         box-shadow: 0 40px 207px 0 rgba(0, 1, 139, 0.1);

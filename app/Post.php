@@ -2,11 +2,10 @@
 
 namespace App;
 
-use App\Interfaces\Sluggable;
 use App\Traits\HasSlug;
 use App\Traits\HasTags;
-use Carbon;
-use GrahamCampbell\Markdown\Facades\Markdown;
+use App\Interfaces\Sluggable;
+use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model implements Sluggable
@@ -47,7 +46,10 @@ class Post extends Model implements Sluggable
 
     public function getExcerptAttribute()
     {
-        $string = $this->renderedText();
+        $string = app(\Spatie\LaravelMarkdown\MarkdownRenderer::class)
+            ->disableHighlighting()
+            ->toHtml($this->text);
+
         if (strlen($string) > 50) {
             $stringCut = substr($string, 0, 240);
             $string = substr($stringCut, 0, strrpos($stringCut, ' ')).'...';
