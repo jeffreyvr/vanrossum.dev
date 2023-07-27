@@ -136,7 +136,7 @@
                     data-aos-duration="1000">
                     <div class="font-medium text-[28px] mb-6">{{ __('Get social') }}</div>
                     <div class="grid grid-cols-2 gap-6 text-base mb-8 lg:mb-0">
-                        <a href="https://twitter.com/jeffreyrossum" class="underline">Twitter</a>
+                        <a href="https://x.com/jeffreyrossum" class="underline">X</a>
                         <a href="https://github.com/jeffreyvr" class="underline">GitHub</a>
                         <a href="https://youtube.com/@jeffrey.rossum" class="underline">YouTube</a>
                         <a href="https://linkedin.com/in/jeffrey-van-rossum-97b27321" class="underline">LinkedIn</a>

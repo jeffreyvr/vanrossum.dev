@@ -5,7 +5,7 @@
 To enable logging, head on over to the Gravity Forms settings page.
 
 - You'll find the Settings page under `Forms` -> `Settings`
-- Next, scroll down to Logging and set toggle it on
+- Next, scroll down to Logging and toggle it on
 
 Don't forget to save the page.
 
