@@ -42,7 +42,7 @@ class DocumentationController extends Controller
         foreach (glob(resource_path("docs/{$project}/{$version}/*.md")) as $page) {
             $pages->add([
                 'slug' => Str::slug(basename($page, '.md')),
-                'file' => $page
+                'file' => $page,
             ]);
         }
 

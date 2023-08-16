@@ -2,11 +2,11 @@
 
 namespace App;
 
+use App\Interfaces\Sluggable;
 use App\Traits\HasSlug;
 use App\Traits\HasTags;
-use App\Interfaces\Sluggable;
-use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 class Post extends Model implements Sluggable
 {

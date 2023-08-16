@@ -58,7 +58,7 @@ class RouteServiceProvider extends ServiceProvider
     public function registerRouteModelBindings()
     {
         $this->registerPostSlugRouteModelBinding();
-//        $this->registerProductSlugRouteModelBinding();
+        //        $this->registerProductSlugRouteModelBinding();
     }
 
     protected function registerPostSlugRouteModelBinding()

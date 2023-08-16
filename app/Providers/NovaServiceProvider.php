@@ -28,9 +28,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function routes()
     {
         Nova::routes()
-                ->withAuthenticationRoutes()
-                ->withPasswordResetRoutes()
-                ->register();
+            ->withAuthenticationRoutes()
+            ->withPasswordResetRoutes()
+            ->register();
     }
 
     /**
@@ -79,18 +79,18 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         //
     }
 
-/**
- * Register the application's Nova resources.
- *
- * @return void
- */
-protected function resources()
-{
-    Nova::resourcesIn(app_path('Nova'));
+    /**
+     * Register the application's Nova resources.
+     *
+     * @return void
+     */
+    protected function resources()
+    {
+        Nova::resourcesIn(app_path('Nova'));
 
-    Nova::resources([
-        User::class,
-        Post::class,
-    ]);
-}
+        Nova::resources([
+            User::class,
+            Post::class,
+        ]);
+    }
 }

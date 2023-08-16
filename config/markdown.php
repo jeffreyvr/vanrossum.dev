@@ -1,7 +1,6 @@
 <?php
 
 use League\CommonMark\Extension\Table\TableExtension;
-use League\CommonMark\Extension\GithubFlavoredMarkdownExtension;
 
 return [
     'code_highlighting' => [
@@ -63,7 +62,7 @@ return [
      * More info: https://commonmark.thephpleague.com/2.1/extensions/overview/
      */
     'extensions' => [
-        new TableExtension
+        new TableExtension,
     ],
 
     /*
