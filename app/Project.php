@@ -4,7 +4,6 @@ namespace App;
 
 use App\Interfaces\Sluggable;
 use App\Traits\HasSlug;
-use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
@@ -28,7 +27,8 @@ class Project extends Model implements Sluggable
 
     public function renderedText()
     {
-        return Markdown::convert($this->text);
+        return app(\Spatie\LaravelMarkdown\MarkdownRenderer::class)
+            ->toHtml($this->text);
     }
 
     public function author()

@@ -5,7 +5,6 @@ namespace App\Http\Api\Controllers;
 use App\Http\Controllers\Controller;
 use App\Product;
 use App\Services\LemonSqueezy;
-use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Support\Facades\URL;
 
 class ProductWordPressUpdateController extends Controller
@@ -41,7 +40,8 @@ class ProductWordPressUpdateController extends Controller
                 'version' => $product->version,
                 'download_link' => URL::temporarySignedRoute('download', now()->addMinutes(60), ['mediaItem' => $product->getDownloadMedia()]),
                 'sections' => [
-                    'changelog' => Markdown::convert($product->changelog)->getContent(),
+                    'changelog' => app(\Spatie\LaravelMarkdown\MarkdownRenderer::class)
+                        ->toHtml($product->changelog),
                 ],
             ],
         ]);
