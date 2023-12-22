@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot:title>
-        {{ $title }} - {{ $project }} - Docs
+        {{ $title }} - {{ $projectTitle }} - Docs
     </x-slot>
 
     <div class="container mx-auto my-8 md:flex md:gap-12">

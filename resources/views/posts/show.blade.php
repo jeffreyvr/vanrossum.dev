@@ -34,8 +34,8 @@
             <div>
                 <h2 class="text-lg mb-4 text-wide font-medium" id="comments">{{ __('Comments') }}</h2>
                 <div class="bg-primary/5 px-6 py-4 mb-8 text-base">
-                    {!! __('You can post a comment to this article by replying to :tweet_link.', ['tweet_link' => "<a
-                        href=\"{$post->tweet_url}\" class=\"text-secondary underline\">" . __('this tweet') .'</a>' ]) !!}
+                    {!! __('Talk about this article on :x_link.', ['x_link' => "<a
+                        href=\"{$post->tweet_url}\" class=\"text-secondary underline\">X</a>" ]) !!}
                 </div>
             </div>
 
