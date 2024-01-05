@@ -42,7 +42,9 @@ The method that is used make the request to your API-endpoint. You can choose be
 
 ### Authorization method
 
-Here you set the authorization method the API requires. You can choose between Basic, Bearer or no authentication.
+Here you set the authorization method the API requires. You can choose between Basic, Bearer, OAuth 2 or no authentication.
+
+The supported OAuth grant types are: password and client credentials.
 
 Some API's may require you to set a token through a different header. In that case, you could try and set a [custom header](#headers) instead.
 
