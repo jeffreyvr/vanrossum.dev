@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
 use App\Post;
 use App\Project;
+use Illuminate\View\View;
 
 class HomeController extends Controller
 {

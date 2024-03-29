@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
-use Illuminate\Http\RedirectResponse;
 use App\Post;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 use Spatie\Tags\Tag;
 
 class PostController extends Controller

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
 use App\Mail\DonationRequest;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\View\View;
 
 class DonationController extends Controller
 {

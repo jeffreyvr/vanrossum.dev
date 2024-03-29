@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
 use App\Product;
+use Illuminate\View\View;
 
 class ProductController extends Controller
 {

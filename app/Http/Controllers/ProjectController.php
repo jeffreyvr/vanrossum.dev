@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
 use App\Project;
+use Illuminate\View\View;
 
 class ProjectController extends Controller
 {
