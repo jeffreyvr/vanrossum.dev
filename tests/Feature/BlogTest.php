@@ -11,7 +11,7 @@ class BlogTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function a_visitor_can_view_a_blog()
+    public function a_visitor_can_view_a_blog(): void
     {
         $post = factory(Post::class)->create();
 
@@ -21,7 +21,7 @@ class BlogTest extends TestCase
     }
 
     /** @test */
-    public function a_visitor_can_view_a_blog_overview()
+    public function a_visitor_can_view_a_blog_overview(): void
     {
         $posts = factory(Post::class)->times(3)->create();
 

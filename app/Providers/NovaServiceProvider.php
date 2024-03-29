@@ -12,20 +12,16 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 {
     /**
      * Bootstrap any application services.
-     *
-     * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         parent::boot();
     }
 
     /**
      * Register the Nova routes.
-     *
-     * @return void
      */
-    protected function routes()
+    protected function routes(): void
     {
         Nova::routes()
             ->withAuthenticationRoutes()
@@ -37,10 +33,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      * Register the Nova gate.
      *
      * This gate determines who can access Nova in non-local environments.
-     *
-     * @return void
      */
-    protected function gate()
+    protected function gate(): void
     {
         Gate::define('viewNova', function ($user) {
             return $user->is_admin;
@@ -49,10 +43,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 
     /**
      * Get the dashboards that should be listed in the Nova sidebar.
-     *
-     * @return array
      */
-    protected function dashboards()
+    protected function dashboards(): array
     {
         return [
             new \App\Nova\Dashboards\Main,
@@ -61,30 +53,24 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 
     /**
      * Get the tools that should be listed in the Nova sidebar.
-     *
-     * @return array
      */
-    public function tools()
+    public function tools(): array
     {
         return [];
     }
 
     /**
      * Register any application services.
-     *
-     * @return void
      */
-    public function register()
+    public function register(): void
     {
         //
     }
 
     /**
      * Register the application's Nova resources.
-     *
-     * @return void
      */
-    protected function resources()
+    protected function resources(): void
     {
         Nova::resourcesIn(app_path('Nova'));
 

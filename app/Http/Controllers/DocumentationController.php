@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Str;
+use Illuminate\View\View;
 use Spatie\LaravelMarkdown\MarkdownRenderer;
 
 class DocumentationController extends Controller
@@ -18,7 +20,7 @@ class DocumentationController extends Controller
         return $this->info;
     }
 
-    public function index($project, $version = 'v1')
+    public function index($project, $version = 'v1'): RedirectResponse
     {
         $slug = $this->info($project, $version)['default_page'] ?? 'quickstart';
 
@@ -49,7 +51,7 @@ class DocumentationController extends Controller
         return $pages;
     }
 
-    public function show($project, $version = 'v1', $slug = null)
+    public function show($project, $version = 'v1', $slug = null): View
     {
         $pages = $this->getPages($project, $version);
 

@@ -6,6 +6,8 @@ use App\Interfaces\Sluggable;
 use App\Traits\HasSlug;
 use App\Traits\HasTags;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
 
 class Post extends Model implements Sluggable
@@ -34,9 +36,9 @@ class Post extends Model implements Sluggable
             ->toHtml($this->text);
     }
 
-    public function author()
+    public function author(): BelongsTo
     {
-        return $this->belongsTo('App\User', 'author_id', 'id');
+        return $this->belongsTo(\App\User::class, 'author_id', 'id');
     }
 
     public function scopePublished($query)
@@ -63,7 +65,7 @@ class Post extends Model implements Sluggable
         return Carbon::parse($this->publish_date)->locale(app()->getLocale())->translatedFormat('j F Y');
     }
 
-    public function webmentions()
+    public function webmentions(): HasMany
     {
         return $this->hasMany(Webmention::class);
     }

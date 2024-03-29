@@ -12,14 +12,14 @@ class ContactTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function a_visitor_can_view_the_contact_page()
+    public function a_visitor_can_view_the_contact_page(): void
     {
         $this->get(localized_route('contact', [], 'en'))
             ->assertStatus(200);
     }
 
     /** @test */
-    public function a_visitor_can_submit_the_contact_form()
+    public function a_visitor_can_submit_the_contact_form(): void
     {
         Mail::fake();
 
