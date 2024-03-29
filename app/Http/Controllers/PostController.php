@@ -2,19 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\View\View;
+use Illuminate\Http\RedirectResponse;
 use App\Post;
 use Spatie\Tags\Tag;
 
 class PostController extends Controller
 {
-    public function index()
+    public function index(): View
     {
         $posts = Post::published()->paginate(9);
 
         return view('posts.index', ['posts' => $posts]);
     }
 
-    public function tagged($tag_slug)
+    public function tagged($tag_slug): View
     {
         $locale = app()->getLocale();
 
@@ -33,21 +35,21 @@ class PostController extends Controller
         return view('posts.index', ['tag' => $tag, 'posts' => $posts->orderby('publish_date', 'desc')->paginate(9)]);
     }
 
-    public function show(Post $post)
+    public function show(Post $post): View
     {
         $this->authorize('view', $post);
 
         return view('posts.show')->with(['post' => $post]);
     }
 
-    public function create()
+    public function create(): View
     {
         $this->authorize('create', Post::class);
 
         return view('posts.create');
     }
 
-    public function store()
+    public function store(): RedirectResponse
     {
         $this->authorize('create', Post::class);
 
@@ -68,7 +70,7 @@ class PostController extends Controller
         return redirect()->route('posts.show', $post->idSlug());
     }
 
-    public function edit($id)
+    public function edit($id): View
     {
         $post = Post::findOrFail($id);
 
@@ -77,7 +79,7 @@ class PostController extends Controller
         return view('posts.edit', ['post' => $post]);
     }
 
-    public function update(Post $post)
+    public function update(Post $post): RedirectResponse
     {
         $attributes = request()->validate([
             'title' => 'required',
@@ -96,7 +98,7 @@ class PostController extends Controller
         return redirect()->back();
     }
 
-    public function destroy($id)
+    public function destroy($id): RedirectResponse
     {
         $post = Post::findOrFail($id);
 

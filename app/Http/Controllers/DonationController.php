@@ -2,18 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\View\View;
 use App\Mail\DonationRequest;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Mail;
 
 class DonationController extends Controller
 {
-    public function show()
+    public function show(): View
     {
         return view('pages.donate');
     }
 
-    public function thanks()
+    public function thanks(): View
     {
         return view('pages.donate-thanks');
     }
