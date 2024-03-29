@@ -18,8 +18,7 @@
             </div>
         </nav>
 
-
-        <article class="prose prose-pre:shadow-2xl prose-pre:shadow-primary/25 prose-code:text-base prose-pre:rounded-xl md:prose-lg prose-headings:text-primary max-w-none prose-headings:font-display md:w-4/6">
+        <article class="prose prose-pre:shadow-2xl prose-pre:bg-white prose-pre:text-dark prose-pre:shadow-primary/25 prose-code:text-base prose-pre:rounded-xl md:prose-lg prose-headings:text-primary max-w-none prose-headings:font-display md:w-4/6">
             <div class="mb-6 text-sm">
                 Documentation for
                 <a href="{{ $homepage }}" class="no-underline hover:underline">

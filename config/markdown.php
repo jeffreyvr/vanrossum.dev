@@ -1,6 +1,10 @@
 <?php
 
+use Tempest\Highlight\CommonMark\CodeBlockRenderer;
 use League\CommonMark\Extension\Table\TableExtension;
+use Tempest\Highlight\CommonMark\InlineCodeBlockRenderer;
+use League\CommonMark\Extension\CommonMark\Node\Inline\Code;
+use League\CommonMark\Extension\CommonMark\Node\Block\FencedCode;
 
 return [
     'code_highlighting' => [
@@ -9,7 +13,7 @@ return [
          *
          * More info: https://spatie.be/docs/laravel-markdown/v1/installation-setup
          */
-        'enabled' => true,
+        'enabled' => false,
 
         /*
          * The name of or path to a Shiki theme
@@ -62,7 +66,7 @@ return [
      * More info: https://commonmark.thephpleague.com/2.1/extensions/overview/
      */
     'extensions' => [
-        new TableExtension,
+        new TableExtension
     ],
 
     /*
@@ -72,7 +76,8 @@ return [
      * More info: https://commonmark.thephpleague.com/2.1/customization/rendering/
      */
     'block_renderers' => [
-        // ['class' => FencedCode::class, 'renderer' => MyCustomCodeRenderer::class, 'priority' => 0]
+        ['class' => FencedCode::class, 'renderer' => CodeBlockRenderer::class, 'priority' => 0],
+        ['class' => Code::class, 'renderer' => InlineCodeBlockRenderer::class, 'priority' => 1]
     ],
 
     /*
