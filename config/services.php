@@ -18,6 +18,7 @@ return [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
         'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
+        'scheme' => 'https',
     ],
 
     'postmark' => [
@@ -42,11 +43,8 @@ return [
         'api_key' => env('LEMONSQUEEZY_API_KEY'),
     ],
 
-    'postmark' => [
-        'token' => env('POSTMARK_TOKEN'),
-    ],
-
     'fathom' => [
         'site_id' => env('FATHOM_SITE_ID'),
     ],
+
 ];
