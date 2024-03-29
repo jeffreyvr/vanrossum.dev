@@ -25,7 +25,6 @@
         "@fortawesome/fontawesome-free": "^5.13.0",
         "alpinejs": "^3.10.3",
         "aos": "^3.0.0-beta.6",
-        "shiki": "^0.14.3",
         "splitting": "^1.0.6"
     }
 }

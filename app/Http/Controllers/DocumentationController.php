@@ -72,6 +72,7 @@ class DocumentationController extends Controller
             'project' => $project,
             'projectTitle' => $this->info($project, $version)['title'],
             'content' => app(MarkdownRenderer::class)
+                ->disableHighlighting()
                 ->toHtml($content),
         ]);
     }
