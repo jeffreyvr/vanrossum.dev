@@ -36,7 +36,7 @@ class Post extends Model implements Sluggable
 
     public function author()
     {
-        return $this->belongsTo('App\User', 'author_id', 'id');
+        return $this->belongsTo(\App\User::class, 'author_id', 'id');
     }
 
     public function scopePublished($query)
