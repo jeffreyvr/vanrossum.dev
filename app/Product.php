@@ -40,7 +40,7 @@ class Product extends Model implements HasMedia
             ->useDisk('product_downloads');
     }
 
-    public function registerMediaConversions(Media $media = null): void
+    public function registerMediaConversions(?Media $media = null): void
     {
         $this
             ->addMediaConversion('preview')
