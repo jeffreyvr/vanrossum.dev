@@ -7,7 +7,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.1",
+        "php": "^8.3",
         "calebporzio/sushi": "^2.4",
         "chinleung/laravel-multilingual-routes": "^4.0",
         "graham-campbell/markdown": "^15.0",
