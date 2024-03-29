@@ -11,7 +11,7 @@ class ProjectTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function a_visitor_can_view_a_project_overview()
+    public function a_visitor_can_view_a_project_overview(): void
     {
         $projects = factory(Project::class)->times(3)->create();
 

@@ -11,14 +11,14 @@ class HomepageTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function it_redirects_to_the_locale_homepage()
+    public function it_redirects_to_the_locale_homepage(): void
     {
         $this->get('/')
             ->assertRedirect(localized_route('home'));
     }
 
     /** @test */
-    public function a_visitor_can_view_the_homepage()
+    public function a_visitor_can_view_the_homepage(): void
     {
         $this->withoutExceptionHandling();
 
@@ -30,7 +30,7 @@ class HomepageTest extends TestCase
     }
 
     /** @test */
-    public function a_visitor_can_view_recent_posts_on_the_homepage()
+    public function a_visitor_can_view_recent_posts_on_the_homepage(): void
     {
         $posts = factory(Post::class)->times(3)->create();
 

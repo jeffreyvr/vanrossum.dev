@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use App\Interfaces\Sluggable;
 use App\Traits\HasSlug;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -31,7 +32,7 @@ class Project extends Model implements Sluggable
             ->toHtml($this->text);
     }
 
-    public function author()
+    public function author(): BelongsTo
     {
         return $this->belongsTo(\App\User::class, 'author_id', 'id');
     }

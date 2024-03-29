@@ -11,7 +11,7 @@ class PostTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function a_post_can_render_markdown_to_html()
+    public function a_post_can_render_markdown_to_html(): void
     {
         $post = factory(Post::class)->create([
             'text' => '# A heading',

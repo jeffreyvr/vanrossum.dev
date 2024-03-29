@@ -10,7 +10,7 @@ class ProductPolicy
 {
     use HandlesAuthorization;
 
-    public function view(?User $user, Product $product)
+    public function view(?User $user, Product $product): bool
     {
         if ($user && $user->is_admin) {
             return true;
@@ -19,7 +19,7 @@ class ProductPolicy
         return $product->status == 'publish';
     }
 
-    public function create(User $user)
+    public function create(User $user): bool
     {
         return $user->is_admin;
     }
@@ -29,7 +29,7 @@ class ProductPolicy
         return $user->is_admin;
     }
 
-    public function update(User $user, Product $product)
+    public function update(User $user, Product $product): bool
     {
         return $user->is_admin;
     }
