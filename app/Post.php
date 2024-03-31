@@ -18,12 +18,12 @@ class Post extends Model implements Sluggable
 
     protected $casts = [
         'publish_date' => 'datetime',
-        'updated_at' => 'datetime'
+        'updated_at' => 'datetime',
     ];
 
     protected $appends = [
         'excerpt',
-        'localized_date'
+        'localized_date',
     ];
 
     public function getSluggableValue(): string

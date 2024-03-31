@@ -1,10 +1,10 @@
 <?php
 
-use Tempest\Highlight\CommonMark\CodeBlockRenderer;
-use League\CommonMark\Extension\Table\TableExtension;
-use Tempest\Highlight\CommonMark\InlineCodeBlockRenderer;
-use League\CommonMark\Extension\CommonMark\Node\Inline\Code;
 use League\CommonMark\Extension\CommonMark\Node\Block\FencedCode;
+use League\CommonMark\Extension\CommonMark\Node\Inline\Code;
+use League\CommonMark\Extension\Table\TableExtension;
+use Tempest\Highlight\CommonMark\CodeBlockRenderer;
+use Tempest\Highlight\CommonMark\InlineCodeBlockRenderer;
 
 return [
     'code_highlighting' => [
@@ -66,7 +66,7 @@ return [
      * More info: https://commonmark.thephpleague.com/2.1/extensions/overview/
      */
     'extensions' => [
-        new TableExtension
+        new TableExtension,
     ],
 
     /*
@@ -77,7 +77,7 @@ return [
      */
     'block_renderers' => [
         ['class' => FencedCode::class, 'renderer' => CodeBlockRenderer::class, 'priority' => 0],
-        ['class' => Code::class, 'renderer' => InlineCodeBlockRenderer::class, 'priority' => 1]
+        ['class' => Code::class, 'renderer' => InlineCodeBlockRenderer::class, 'priority' => 1],
     ],
 
     /*
