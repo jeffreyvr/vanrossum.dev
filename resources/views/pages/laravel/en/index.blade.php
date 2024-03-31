@@ -16,7 +16,7 @@
                 </div>
 
                 <x-markdown>
-## Why Laravel?
+## Why I use Laravel
 [Laravel](https://laravel.com) is a very popular PHP framwork developed by Taylor Otwell. The framework
 allows you to work quickly and is suitable for both simple and complex applications. The framework is
 also ideal for creating API's.
@@ -29,23 +29,19 @@ like to apply this method, because by thoroughly testing your code you can avoid
 ## Hire me as Freelance Laravel Developer
 Looking for an experienced Laravel developer? The following might appeal to you:
 
-* Years of experience of working with [Laravel and
-PHP](https://linkedin.com/in/jeffrey-van-rossum-97b27321)
-* Experience with front-end frameworks like Tailwind CSS, Alpine.js and Vue.js
-* Working with version control (GIT)
-* Fluent in Dutch and English
-* Experience with working in a team as well as independently
-* Available on an hourly, project or contract basis
-* Preferably works remotely, but working (partly) on location is an option
+* Years of experience of working with [Laravel and PHP](https://linkedin.com/in/jeffrey-van-rossum-97b27321).
+* Experience with Tailwind CSS, Alpine.js and LaraveL Livewire.
+* Writing tests with Pest and PHPUnit (Test Driven Development).
+* Working with version control (GIT).
+* Fluent in Dutch and English.
+* Experience with working in a team as well as independently.
+* Available on an hourly, project or contract basis.
+* Preferably works remotely, but working (partly) on location is an option.
 
 If you want to hire me or want additional information, feel free to send an email to
 [jeffrey@vanrossum.dev](mailto:jeffrey@vanrossum.dev).
 </x-markdown>
             </x-post-content>
-
-            <x-code-snippet title="Laravel Simple Media" url="https://github.com/jeffreyvr/laravel-simple-media">
-                <x-markdown>{!! Storage::get('code-snippets/laravel.md') !!}</x-markdown>
-            </x-code-snippet>
         </div>
     </div>
 </x-site-layout>

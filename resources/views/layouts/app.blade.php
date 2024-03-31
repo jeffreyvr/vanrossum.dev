@@ -30,12 +30,12 @@
         <div class="w-full flex justify-between border-b border-[#e9e9e9]">
             <div class="flex items-center">
                 <a href="{{ localized_route('home') }}" class="border-r border-[#e9e9e9] lg:pr-8 flex items-center gap-8">
-                    <x-symbol class="h-[75px] lg:h-[80px] xl:h-[100px]" />
+                    <x-symbol class="h-[75px] lg:h-[80px]" />
 
-                    <span class="text-sm xl:text-xl text-primary font-wide font-medium hidden lg:block">vanrossum.dev</span>
+                    <span class="text-sm xl:text-base text-primary font-wide font-medium hidden lg:block">{{ config('app.name') }}</span>
                 </a>
 
-                <nav class="px-8 gap-8 text-xs xl:text-sm font-medium font-wide hidden lg:flex">
+                <nav class="px-8 gap-8 text-xs xl:text-base lowercase font-medium font-wide hidden lg:flex">
                     @include('layouts.partials.navigation')
                 </nav>
             </div>

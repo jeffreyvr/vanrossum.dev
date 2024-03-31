@@ -8,7 +8,7 @@
         <div class="text-sm lg:text-base leading-loose text-primary mb-8 [&_p]:mt-4">{!! $service['description'] !!}</div>
         <x-button-link href="{{ $service['url'] }}" :arrow="true">{{ __('Read more') }}</x-button-link>
     </div>
-    <div class="relative {{ $even ? '-rotate-1' : 'rotate-1' }}">
+    <div class="relative">
         <x-code-snippet :title="$service['snippet_name']" :url="$service['snippet_url']">
             {!! $service['snippet'] !!}
         </x-code-snippet>

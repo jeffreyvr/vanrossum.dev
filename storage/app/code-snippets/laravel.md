@@ -1,16 +1,17 @@
 ```php
-<?php
-
-namespace Jeffreyvr\SimpleMedia;
-
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-
-trait HasMedia
+class Article extends Block
 {
-    public function mediaByGroup($group): BelongsToMany
-    {
-        return $this->media()->where('media.group', $group);
-    }
+    public $data = [
+        'content' => 'This is just an example block.'
+    ];
 
-    // ...
+    public $blockEditComponent = 'article';
+
+    public function render()
+    {
+        return <<<'blade'
+            <div>{{ $content }}</div>
+        blade;
+    }
 }
+```

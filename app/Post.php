@@ -18,11 +18,12 @@ class Post extends Model implements Sluggable
 
     protected $casts = [
         'publish_date' => 'datetime',
+        'updated_at' => 'datetime'
     ];
 
     protected $appends = [
         'excerpt',
-        'localized_date',
+        'localized_date'
     ];
 
     public function getSluggableValue(): string
@@ -63,6 +64,11 @@ class Post extends Model implements Sluggable
     public function getLocalizedDateAttribute()
     {
         return Carbon::parse($this->publish_date)->locale(app()->getLocale())->translatedFormat('j F Y');
+    }
+
+    public function getLocalizedUpdatedAtDateAttribute()
+    {
+        return $this->updated_at->locale(app()->getLocale())->translatedFormat('j F Y');
     }
 
     public function webmentions(): HasMany

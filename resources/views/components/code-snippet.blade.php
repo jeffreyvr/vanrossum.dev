@@ -14,7 +14,7 @@
         @endif
         <div></div>
     </div>
-    <div class="shadow-code text-[12px] lg:text-[16px] py-8 px-6 rounded-md bg-white">
+    <div class="shadow-code text-[12px] lg:text-[16px] pb-8 pt-12 px-6 rounded-md bg-white">
 <x-markdown>
 {{ $slot }}
 </x-markdown>

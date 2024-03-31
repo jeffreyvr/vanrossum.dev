@@ -21,8 +21,8 @@ class Service extends Model
                 Het is een solide fundament voor simpele of juist complexe web-applicaties. Daarnaast is het wereldwijd een populair framework, met een grote en actieve developer-community.',
                 'url' => localized_route('laravel'),
                 'snippet' => Storage::get('code-snippets/laravel.md'),
-                'snippet_name' => 'Laravel Simple Media',
-                'snippet_url' => 'https://github.com/jeffreyvr/laravel-simple-media',
+                'snippet_name' => 'DropBlockEditor',
+                'snippet_url' => 'https://github.com/jeffreyvr/dropblockeditor',
             ],
             [
                 'lang' => 'en',
@@ -32,8 +32,8 @@ class Service extends Model
                 it's widely used around the world.",
                 'url' => localized_route('laravel'),
                 'snippet' => Storage::get('code-snippets/laravel.md'),
-                'snippet_name' => 'Laravel Simple Media',
-                'snippet_url' => 'https://github.com/jeffreyvr/laravel-simple-media',
+                'snippet_name' => 'DropBlockEditor',
+                'snippet_url' => 'https://github.com/jeffreyvr/dropblockeditor',
             ],
             [
                 'lang' => 'en',
