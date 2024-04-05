@@ -114,18 +114,16 @@
 
     @include('layouts.partials.footer')
 
-    @section('navigation-modal')
-        @include('layouts.partials.navigation-modal', [
-            'items' => [
-                ['url' => localized_route('about'), 'label' => __('About')],
-                ['url' => route('posts'), 'label' => __('Blog')],
-                ['url' => localized_route('projects'), 'label' => __('Projects')],
-                ['url' => route('products'), 'label' => __('Products')],
-                ['url' => localized_route('contact'), 'label' => __('Contact')],
-            ],
-            'showLocale' => true
-        ])
-    @endsection
+    @include('layouts.partials.navigation-modal', [
+        'items' => [
+            ['url' => localized_route('about'), 'label' => __('About')],
+            ['url' => route('posts'), 'label' => __('Blog')],
+            ['url' => localized_route('projects'), 'label' => __('Projects')],
+            ['url' => route('products'), 'label' => __('Products')],
+            ['url' => localized_route('contact'), 'label' => __('Contact')],
+        ],
+        'showLocale' => true
+    ])
 
     @yield('scripts')
 
