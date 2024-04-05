@@ -68,7 +68,7 @@
 <div class="relative">
     <div class="lg:w-[336px] lg:h-[862px] w-[155px] h-[400px] bg-right bg-cover bg-no-repeat absolute right-0 top-[-60px] lg:top-[-200px]" style="background-image: url({{ url('images/disortion-right.png') }});" class=""></div>
 
-    <div class="mx-auto lg:pb-8 lg:pt-20 container max-w-screen-md">
+    <div class="mx-auto lg:pb-8 lg:pt-20 container max-w-screen-md relative">
         <article>
             <x-post-content class="order-last lg:order-first lg:col-span-3">
                 <x-markdown>{!! $product->text !!}</x-markdown>
