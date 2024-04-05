@@ -80,6 +80,7 @@
     </div>
 
 @section('seo')
+    <meta name="description" content="{{ $post->excerpt }}">
     <meta property="og:title" content="{{ $post->title }}" />
     <meta property="og:description" content="{{ $post->excerpt }}" />
     <link rel="canonical" href="{{ route('posts.show', $post->idSlug()) }}" />

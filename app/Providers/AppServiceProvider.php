@@ -27,5 +27,6 @@ class AppServiceProvider extends ServiceProvider
         Translatable::defaultLocales(['en', 'nl']);
 
         Blade::component('layouts.app', 'app-layout');
+        Blade::component('layouts.product', 'product-layout');
     }
 }

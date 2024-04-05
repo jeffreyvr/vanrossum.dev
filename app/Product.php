@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Factories\ProductVendorFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Image\Manipulations;
@@ -68,6 +69,13 @@ class Product extends Model implements HasMedia
         return $query->where('status', 'publish')->orderby('created_at', 'desc');
     }
 
+    public function vendor()
+    {
+        return ProductVendorFactory::make($this->vendor, [
+            'product_id' => $this->vendor_product_id
+        ]);
+    }
+
     public function getTextNavigation()
     {
         $markdown = app(\Spatie\LaravelMarkdown\MarkdownRenderer::class)
@@ -82,7 +90,10 @@ class Product extends Model implements HasMedia
         $headings = $xpath->query('//h1|//h2|//h3|//h4|//h5|//h6');
 
         foreach ($headings as $heading) {
-            $links[] = '<a href="#'.$heading->getAttribute('id').'">'.$heading->textContent.'</a>';
+            $links[] = [
+                'url' => '#'.$heading->getAttribute('id'),
+                'label' => $heading->textContent
+            ];
         }
 
         return collect($links);
