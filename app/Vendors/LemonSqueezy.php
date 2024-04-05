@@ -16,7 +16,7 @@ class LemonSqueezy implements VendorInterface
 
     public function variants(): Collection
     {
-        $variants = Cache::remember("lemonsqueezy_product_variants_{$this->args['product_id']}_2", 15, function () {
+        $variants = Cache::remember("lemonsqueezy_product_variants_{$this->args['product_id']}", 300, function () {
             return ServicesLemonSqueezy::get("products/{$this->args['product_id']}/variants", [
                 'filter[status]' => 'published',
                 'sort' => 'sort'
