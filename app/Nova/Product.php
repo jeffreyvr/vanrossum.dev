@@ -97,6 +97,26 @@ class Product extends Resource
                     return [];
                 }),
 
+            Image::make('Hero image')
+                ->store(function (NovaRequest $request, EloquentProduct $product) {
+                    return function () use ($request, $product): void {
+                        $product
+                            ->addMedia($request->file('hero_image'))
+                            ->withResponsiveImages()
+                            ->toMediaCollection('product-hero-image');
+                    };
+                })
+                ->thumbnail(function ($value) {
+                    return $value;
+                })
+                ->preview(function ($value, $disk) {
+                    return $value;
+                })->delete(function ($request, EloquentProduct $product) {
+                    $product->deleteMedia($product->getFirstMedia('product-hero-image'));
+
+                    return [];
+                }),
+
             Text::make('Checkout Url')->hideFromIndex(),
 
             Text::make('Version')->hideFromIndex(),

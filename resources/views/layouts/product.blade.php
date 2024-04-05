@@ -15,9 +15,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/images/icons/favicon-16x16.png') }}">
     <link rel="shortcut icon" href="{{ asset('/images/icons/favicon.ico') }}">
 
-    <link rel="webmention" href="https://webmention.io/vanrossum.dev/webmention" />
-    <link rel="pingback" href="https://webmention.io/vanrossum.dev/xmlrpc" />
-
     @if(app()->environment('production') && $fathom_id = config('services.fathom.site_id'))
     <script src="https://cdn.usefathom.com/script.js" data-site="{{ $fathom_id }}" defer></script>
     @endif
@@ -36,12 +33,12 @@
 
                     <span class="text-sm xl:text-base text-primary font-wide font-medium hidden lg:block">{{ config('app.name') }}</span>
                 </a>
-
-                <nav class="px-8 gap-8 text-xs xl:text-base lowercase font-medium font-wide hidden lg:flex">
-                    @include('layouts.partials.navigation')
-                </nav>
             </div>
+
             <div class="flex text-[18px] font-medium font-wide items-center">
+                <nav class="px-8 gap-8 text-xs xl:text-base lowercase font-medium font-wide hidden lg:flex">
+                    @yield('navigation')
+                </nav>
                 <div x-data="{open: false}" class="lg:hidden px-8">
                     <button x-on:click="open = !open; $dispatch('nav')" class="flex items-center gap-6">
                         <span x-show="!open">menu.</span>
@@ -76,33 +73,11 @@
                         </svg>
                     </button>
                 </div>
-                @if(!request()->routeIs('posts')&&!request()->routeIs('posts.show'))
-                <div class="gap-4 px-8 hidden lg:flex">
-                    @foreach (config('app.locales') as $locale)
-                    <a href="{{ current_route($locale) }}"
-                        class="uppercase text-primary border-b-2 {{ app()->getLocale() == $locale ? 'border-secondary' : 'border-transparent text-primary/20' }}">
-                        {{ $locale }}
-                    </a>
-                    @endforeach
-                </div>
-                @endif
-                <a href="{{ localized_route('contact') }}"
-                    class="bg-secondary text-primary px-8 h-full items-center justify-center gap-4 hidden xl:flex">
-                    {{ __('Get in touch.') }}
-                    <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="Homepage" transform="translate(-1857.000000, -41.000000)" fill="#0C2175"
-                                fill-rule="nonzero">
-                                <g id="Group"
-                                    transform="translate(1865.000000, 49.000000) rotate(-45.000000) translate(-1865.000000, -49.000000) translate(1855.000000, 41.000000)">
-                                    <polygon id="Path"
-                                        points="9.3143 16 15.6857 9.3487 0 9.3487 0 6.6513 15.6857 6.6513 9.3143 0 12.8857 0 20 7.6322 20 8.3678 12.8857 16">
-                                    </polygon>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
+
+                <a href="{{ route('products') }}"
+                    class="border-l text-primary px-8 h-full items-center justify-center gap-4 hidden xl:flex">
+                    <x-svgs.arrow-left />
+                    {{ __('Back to products') }}
                 </a>
             </div>
         </div>
@@ -114,21 +89,9 @@
 
     @include('layouts.partials.footer')
 
-    @section('navigation-modal')
-        @include('layouts.partials.navigation-modal', [
-            'items' => [
-                ['url' => localized_route('about'), 'label' => __('About')],
-                ['url' => route('posts'), 'label' => __('Blog')],
-                ['url' => localized_route('projects'), 'label' => __('Projects')],
-                ['url' => route('products'), 'label' => __('Products')],
-                ['url' => localized_route('contact'), 'label' => __('Contact')],
-            ],
-            'showLocale' => true
-        ])
-    @endsection
+    @yield('navigation-modal')
 
     @yield('scripts')
-
     <script defer src="{{ mix('/js/app.js') }}"></script>
 </body>
 </html>
