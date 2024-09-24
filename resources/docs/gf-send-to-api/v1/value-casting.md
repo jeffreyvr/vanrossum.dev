@@ -47,11 +47,10 @@ This will transform a value into an array.
 (gfsta_cast type="array") {Multiple:7}
 ```
 
-In the above example, the value is the outcome of the merge tag - a dropdown with multiple values select. This will transform the string value `Test 1, Test 2` into an array: `['Test 1', 'Test 2']`.
+In the above example, the value is the outcome of the merge tag - a dropdown with multiple options. This will transform the string value `Test 1, Test 2` into an array: `['Test 1', 'Test 2']`.
 
 By default, the delimiter is `, `. You can set a specific delimiter like so:
 
 ```
 (gfsta_cast type="array" delimiter=",") Foo,Bar
-
 ```
