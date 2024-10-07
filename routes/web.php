@@ -60,4 +60,4 @@ Route::post('/webhooks/webmentions', [WebmentionsController::class, 'handle']);
 
 Route::get('media/{mediaItem}/download.zip', function (Spatie\MediaLibrary\MediaCollections\Models\Media $mediaItem) {
     return response()->download($mediaItem->getPath(), $mediaItem->file_name);
-})->name('download')->middleware('signed');
+})->name('download')->middleware('signed.or.licensekeyed');

@@ -38,7 +38,11 @@ class ProductWordPressUpdateController extends Controller
             'success' => true,
             'update' => [
                 'version' => $product->version,
-                'download_link' => URL::temporarySignedRoute('download', now()->addMinutes(60), ['mediaItem' => $product->getDownloadMedia()]),
+                'download_link' => URL::temporarySignedRoute('download', now()->addMinutes(60), [
+                    'mediaItem' => $product->getDownloadMedia(),
+                    'license_key' => request('license_key'),
+                    'product_id' => $product->vendor_product_id
+                ]),
                 'sections' => [
                     'changelog' => app(\Spatie\LaravelMarkdown\MarkdownRenderer::class)
                         ->toHtml($product->changelog),
