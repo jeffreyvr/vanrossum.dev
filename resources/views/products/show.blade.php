@@ -1,6 +1,6 @@
 <x-product-layout :title="$product->title">
 <div class="bg-no-repeat bg-left-top" style="background-image:url({{ url('/images/hero.png') }});">
-    <div class="container mx-auto max-w-screen-2lg mb-8 pt-12 lg:pt-20 xl:pt-32">
+    <div class="container relative z-10 mx-auto max-w-screen-2lg mb-8 pt-12 lg:pt-20 xl:pt-32">
         <header>
 
             <div class="md:flex">
