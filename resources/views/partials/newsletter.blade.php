@@ -1,12 +1,12 @@
 <!-- Begin Mailchimp Signup Form -->
-<div id="mc_embed_signup" class="my-6 py-6">
+<div id="mc_embed_signup" class="p-6 bg-zinc-100 dark:bg-black/50 rounded-xl">
     <form
         action="https://doubletakepigeon.us18.list-manage.com/subscribe/post?u=ec10dbb2a4630f8513ad86a36&amp;id=56c35552e7"
         method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
         novalidate>
         <div id="mc_embed_signup_scroll">
-            <h5 class="font-medium font-wide text-lg mb-2">{{ __("Did you like this post?") }}</h5>
-            <p class="text-base text-gray-700 leading-relaxed mb-4">{{ __("If you sign up for my newsletter, I can keep you up to date on more posts like this when they are published.") }}</p>
+            <x-heading class="mb-2">{{ __("Did you like this post?") }}</x-heading>
+            <x-text class="mb-6">{{ __("If you sign up for my newsletter, I can keep you up to date on more posts like this when they are published.") }}</x-text>
             <div class="mc-field-group flex flex-col lg:flex-row justify-between gap-4 items-center">
                 <x-input type="email" value="" name="EMAIL" :placeholder="__('Enter your email')" class="mb-0" />
                 <x-button type="submit" name="subscribe" id="mc-embedded-subscribe" class="w-full lg:w-auto flex justify-center">Subscribe</x-button>

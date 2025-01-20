@@ -96,7 +96,7 @@
                         <span>{{ __('Stay up to date') }}</span>
                     </x-heading>
 
-                    <x-text class="text-sm mb-4 leading-relaxed" muted>{{ __("If you sign up for my newsletter, I can keep you up to date on more posts like this when they are published.") }}</x-text>
+                    <x-text class="text-sm mb-4 leading-relaxed" muted>{{ __("If you'd like to keep up to date, feel free to subscribe to my newsletter.") }}</x-text>
 
                     <form
                     action="https://doubletakepigeon.us18.list-manage.com/subscribe/post?u=ec10dbb2a4630f8513ad86a36&amp;id=56c35552e7"
@@ -104,7 +104,7 @@
                     target="_blank"
                     novalidate>
                         <div class="flex flex-col md:flex-row items-start md:items-center gap-2">
-                            <input type="email" name="EMAIL" placeholder="Enter your email" required class="bg-white dark:bg-zinc-800 grow px-3 py-2.5 border dark:border-zinc-700 rounded-md shadow-sm text-sm" />
+                            <input type="email" name="EMAIL" placeholder="{{ __('Enter your email') }}" required class="bg-white dark:bg-zinc-800 grow px-3 py-2.5 border dark:border-zinc-700 rounded-md shadow-sm text-sm" />
                             <button type="submit" name="subscribe" class="bg-zinc-800 font-semibold px-3 py-2.5 rounded-md text-white ring ring-transparent border border-zinc-800/10">{{ __('Subscribe') }}</button>
                         </div>
 
