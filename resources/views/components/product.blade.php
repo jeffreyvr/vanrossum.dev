@@ -6,7 +6,7 @@
 
     {{-- <time class="mb-4 relative z-10 order-first flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5" datetime="{{ $post->publish_date }}"><span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true"><span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span></span>September 5, 2022</time> --}}
 
-    <div class="relative flex gap-12 justify-between">
+    <div class="relative flex flex-col md:flex-row gap-12 justify-between items-start">
         <img src="{{ $product->getFirstMediaUrl('product-image') }}" class="md:order-last shrink-0 rounded-xl w-52 h-auto">
 
         <div>
