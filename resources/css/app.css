@@ -1,7 +1,7 @@
 @import url("https://use.typekit.net/vab7vzb.css");
-@import 'animations.css';
+@import url(https://fonts.bunny.net/css?family=manrope:200,300,400,500,600,700,800);
 @import "/code-highlight-lite.css";
-/* @import "../../vendor/tempest/highlight/src/Themes/highlight-dark-lite.css"; */
+/* @import "../../vendor/tempest/highlight/src/Themes/highlight-lite.css"; */
 
 @tailwind base;
 @tailwind components;

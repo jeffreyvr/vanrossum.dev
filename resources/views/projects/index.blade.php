@@ -1,8 +1,8 @@
-<x-app-layout :title="__('Projects')">
+<x-site-layout :title="__('Projects')">
 
-    <article class="container mx-auto max-w-screen-xl my-16">
+    <article class="container mx-auto">
         <header>
-            <h1 class="font-semibold font-wide text-2xl lg:text-3xl mb-6 text-primary">{{ __('Projects') }}</h1>
+            <x-heading period size="2xl" level="1">{{ __('Projects') }}</x-heading>
         </header>
 
         <div>

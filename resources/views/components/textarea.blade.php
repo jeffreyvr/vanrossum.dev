@@ -1,1 +1,1 @@
-<textarea {{ $attributes->merge(['class' => 'appearance-none block w-full bg-primary/5 text-gray-700 py-3 px-4 mb-3']) }}>{{ $slot }}</textarea>
+<textarea {{ $attributes->merge(['class' => 'appearance-none block w-full text-zinc-800 dark:text-zinc-300 border-zinc-200 dark:bg-zinc-900 dark:border-zinc-800 border rounded-md py-3 px-4 mb-3']) }}>{{ $slot }}</textarea>

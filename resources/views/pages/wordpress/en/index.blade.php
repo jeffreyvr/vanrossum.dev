@@ -1,19 +1,17 @@
-<x-app-layout title="Freelance WordPress Developer">
-    <div class="container max-w-screen-md lg:pt-20 pt-8">
+<x-site-layout title="Freelance WordPress Developer">
+    <div class="mx-auto max-w-screen-md">
         <article>
-            <header class="mb-8">
-                <h1 class="text-xl lg:text-3xl font-bold font-wide text-primary">
-                    <x-text-reveal>{{ __('Freelance WordPress Developer') }}</x-text-reveal>
-                </h1>
+            <header>
+                <x-heading level="1" size="2xl" period>{{ __('Freelance WordPress Developer') }}</x-heading>
             </header>
 
-            <img src="{{ url('images/me@work2.jpg') }}" data-aos="fade-up" data-aos-duration="1000" class="rounded-xl shadow-2xl shadow-primary/25 mb-12"  />
+            <img src="{{ url('images/me@work2.jpg') }}" data-aos="fade-up" data-aos-duration="1000" class="rounded-3xl shadow-2xl shadow-primary/25 mb-12"  />
 
-            <x-post-content>
-                <div class="md:flex md:items-start font-medium text-gray-800">
-                    I am Jeffrey van Rossum, freelance PHP developer with over 8 years of WordPress experience. Over the
+            <x-content>
+                <p class="text-lg font-medium">
+                    I'm Jeffrey van Rossum, freelance PHP developer with over 10 years of WordPress experience. Over the
                     years I have worked on many websites with WordPress, including custom plugins and themes.
-                </div>
+                </p>
 
 <x-markdown>
 ## Why WordPress?
@@ -31,7 +29,7 @@ Looking for an experienced WordPress developer? The following might appeal to yo
 
 * Years of experience working with [WordPress and
 PHP](https://linkedin.com/in/jeffrey-van-rossum-97b27321)
-* Experience with several front-end frameworks including Tailwind CSS, Alpine.js and Vue.js
+* Experience with several front-end frameworks including Tailwind CSS and Alpine.js
 * Working with version control (GIT)
 * Fluent in Dutch and English
 * Experience with working in a team as well as independently
@@ -41,11 +39,7 @@ PHP](https://linkedin.com/in/jeffrey-van-rossum-97b27321)
 If you want to hire me or want additional information, feel free to send an email to
 [jeffrey@vanrossum.dev](mailto:jeffrey@vanrossum.dev).
 </x-markdown>
-            </x-post-content>
-
-            <x-code-snippet title="TailPress" url="https://github.com/jeffreyvr/tailpress">
-                <x-markdown>{!! Storage::get('code-snippets/wordpress.md') !!}</x-markdown>
-            </x-code-snippet>
+            </x-content>
         </article>
     </div>
 </x-site-layout>

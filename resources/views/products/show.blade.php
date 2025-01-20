@@ -1,21 +1,20 @@
-<x-product-layout :title="$product->title">
-<div class="bg-no-repeat bg-left-top" style="background-image:url({{ url('/images/hero.png') }});">
-    <div class="container relative z-10 mx-auto max-w-screen-2lg mb-8 pt-12 lg:pt-20 xl:pt-32">
-        <header>
+<x-site-layout :title="$product->title">
 
-            <div class="md:flex">
+    <article>
+        <header>
+            <div class="mb-6 md:flex md:mb-20">
                 <div class="text-center mb-4 md:mb-0 md:w-2/5 relative shrink-0 overflow-visible">
-                    <img src="{{ $product->getFirstMediaUrl('product-hero-image') }}" class="md:absolute md:min-w-[150%] md:bottom-0 md:right-0 md:-mr-[50%]" data-aos="fade-in" data-aos-duration="1000">
+                    <img src="{{ $product->getFirstMediaUrl('product-hero-image') }}" class="md:absolute md:min-w-[150%] md:bottom-0 md:right-0 md:-mr-[50%]">
                 </div>
 
                 <div class="md:w-3/5 relative">
-                    <h1 class="text-xl lg:text-2xl font-semibold font-display text-primary mb-6">{{ $product->title }}</h1>
+                    <x-heading level="1" size="2xl" period>{{ $product->title }}</x-heading>
 
-                    <p class="text-base mb-4">{{ $product->summary }}</p>
+                    <x-content class="mb-6">{{ $product->summary }}</x-content>
 
                     <div class="mb-6 space-y-1 text-base" x-data>
                         @foreach($product->vendor()->variants() as $variant)
-                        <div class="md:flex md:justify-between md:items-center">
+                        <div class="md:flex md:justify-between md:items-center text-zinc-800 dark:text-zinc-300">
                             <div class="flex gap-4 items-center">
                                 <div class="w-3 h-3 bg-primary border-b-2 border-r-2 border-secondary"></div>
 
@@ -41,41 +40,37 @@
                             <script src="https://app.lemonsqueezy.com/js/checkout.js" defer></script>
                         @endif
 
-                        <a href="{{ $product->checkout_url }}" class="lemonsqueezy-button bg-secondary text-primary px-5 py-2 inline-flex items-baseline gap-3 text-base font-semibold">
-                            {{ __('Purchase') }}.
+                        <x-button href="{{ $product->checkout_url }}" class="lemonsqueezy-button" icon-trailing="s-arrow-up-right">
+                            {{ __('Purchase') }}
+                        </x-button>
 
-                            <svg class="w-4 h-4"  viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g transform="translate(-1180.000000, -618.000000)" fill="currentColor" fill-rule="nonzero">
-                                        <g transform="translate(1188.000000, 626.000000) rotate(-45.000000) translate(-1188.000000, -626.000000) translate(1178.000000, 618.000000)">
-                                            <polygon id="Path" points="9.3143 16 15.6857 9.3487 0 9.3487 0 6.6513 15.6857 6.6513 9.3143 0 12.8857 0 20 7.6322 20 8.3678 12.8857 16"></polygon>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-                        </a>
-
-                        <p class="text-xs mt-4 text-gray-500">VAT will be calculated during checkout by <a href="http://lemonsqueezy.com" target="_blank" class="underline">Lemon Squeezy</a>.</p>
+                        <p class="text-xs mt-4 dark:text-zinc-400 text-zinc-500">VAT will be calculated during checkout by <a href="http://lemonsqueezy.com" target="_blank" class="underline">Lemon Squeezy</a>.</p>
                     @elseif(!empty($product->checkout_url))
-                        <x-button-link :href="$product->checkout_url">{{ __('Purchase') }}</x-button-link>
+                        <x-button href="{{ $product->checkout_url }}" icon-trailing="s-arrow-up-right">
+                            {{ __('Purchase') }}
+                        </x-button>
                     @endif
                 </div>
             </div>
         </header>
-    </div>
-</div>
-
-<div class="relative">
-    <div class="lg:w-[336px] lg:h-[862px] w-[155px] h-[400px] bg-right bg-cover bg-no-repeat absolute right-0 top-[-60px] lg:top-[-200px]" style="background-image: url({{ url('images/disortion-right.png') }});" class=""></div>
-
-    <div class="mx-auto lg:pb-8 lg:pt-20 container max-w-screen-md relative">
-        <article>
-            <x-post-content class="order-last lg:order-first lg:col-span-3">
+        <div class="grid md:grid-cols-4 gap-12 md:gap-20 max-w-4xl mx-auto">
+            <x-content class="md:col-span-3 [&_>_div_>_p:first-of-type]:mt-0">
                 <x-markdown>{!! $product->text !!}</x-markdown>
-            </x-post-content>
-        </article>
-    </div>
-</div>
+            </x-content>
+
+            <div class="hidden md:block order-first md:order-last">
+                <div class="md:sticky md:top-20">
+                    <x-heading size="sm" level="6">{{ __('On this page') }}</x-heading>
+
+                    <ul class="space-y-4">
+                        @foreach($product->getTextNavigation() as $item)
+                            <li><a class="text-primary dark:text-zinc-400 dark:hover:text-secondary/80 transition" href="{{ $item['url'] }}">{{ $item['label'] }}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </article>
 
 
     @section('scripts')
@@ -116,10 +111,4 @@
             'showLocale' => false
         ])
     @endsection
-
-    @section('navigation')
-        @foreach($product->getTextNavigation() as $item)
-            <a class="text-primary" href="{{ $item['url'] }}">{{ $item['label'] }}<span class="text-secondary">.</span></a>
-        @endforeach
-    @endsection
-</x-product-layout>
+</x-site-layout>
