@@ -1,7 +1,7 @@
 <article class="relative group">
     <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
 
-    <time class="mb-4 relative z-10 order-first flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5" datetime="{{ $post->publish_date }}"><span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true"><span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span></span>September 5, 2022</time>
+    <time class="mb-4 relative z-10 order-first flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5" datetime="{{ $post->publish_date }}"><span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true"><span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span></span>{{ $post->publish_date->format('j F Y') }}</time>
 
     <a href="{{ route('posts.show', $post->idSlug()) }}" class="mb-4 block">
         <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
