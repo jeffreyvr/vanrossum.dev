@@ -29,10 +29,12 @@
 
 <body class="min-h-screen antialiased flex flex-col justify-between text-dark">
     <div class="relative z-10 min-h-screen bg-white">
-        <div class="w-full flex justify-between border-b border-[#e9e9e9]">
-            <div class="flex items-center">
-                <a href="{{ localized_route('home') }}" class="border-r border-[#e9e9e9] lg:pr-8 flex items-center gap-8">
-                    <x-symbol class="h-[75px] lg:h-[80px]" />
+        <div class="w-full flex justify-between mx-auto container py-6 relative">
+            <img src="{{ url('/images/disortion-right.png') }}" class="top-0 right-0 absolute -rotate-90" />
+
+            <div class="flex items-center justify-between w-full">
+                <a href="{{ localized_route('home') }}" class="flex items-center gap-4">
+                    <x-symbol class="h-[50px] lg:h-[60px]" />
 
                     <span class="text-sm xl:text-base text-primary font-wide font-medium hidden lg:block">{{ config('app.name') }}</span>
                 </a>
@@ -41,6 +43,7 @@
                     @include('layouts.partials.navigation')
                 </nav>
             </div>
+
             <div class="flex text-[18px] font-medium font-wide items-center">
                 <div x-data="{open: false}" class="lg:hidden px-8">
                     <button x-on:click="open = !open; $dispatch('nav')" class="flex items-center gap-6">
@@ -86,24 +89,6 @@
                     @endforeach
                 </div>
                 @endif
-                <a href="{{ localized_route('contact') }}"
-                    class="bg-secondary text-primary px-8 h-full items-center justify-center gap-4 hidden xl:flex">
-                    {{ __('Get in touch.') }}
-                    <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="Homepage" transform="translate(-1857.000000, -41.000000)" fill="#0C2175"
-                                fill-rule="nonzero">
-                                <g id="Group"
-                                    transform="translate(1865.000000, 49.000000) rotate(-45.000000) translate(-1865.000000, -49.000000) translate(1855.000000, 41.000000)">
-                                    <polygon id="Path"
-                                        points="9.3143 16 15.6857 9.3487 0 9.3487 0 6.6513 15.6857 6.6513 9.3143 0 12.8857 0 20 7.6322 20 8.3678 12.8857 16">
-                                    </polygon>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </a>
             </div>
         </div>
 

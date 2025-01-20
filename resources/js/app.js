@@ -1,33 +1,33 @@
 require('./bootstrap');
 
-import "splitting/dist/splitting.css";
-import "splitting/dist/splitting-cells.css";
-import Splitting from "splitting";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Alpine from 'alpinejs'
+// import "splitting/dist/splitting.css";
+// import "splitting/dist/splitting-cells.css";
+// import Splitting from "splitting";
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
+// import Alpine from 'alpinejs'
 
-window.Alpine = Alpine
+// window.Alpine = Alpine
 
-Alpine.start();
+// Alpine.start();
 
-AOS.init();
+// AOS.init();
 
-Splitting();
+// Splitting();
 
-const elements = document.querySelectorAll('.observe');
+// const elements = document.querySelectorAll('.observe');
 
-var observer = new IntersectionObserver(function handleIntersection(entries) {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-        } else {
-            entry.target.classList.remove('visible')
-        }
-    });
-});
+// var observer = new IntersectionObserver(function handleIntersection(entries) {
+//     entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add('visible')
+//         } else {
+//             entry.target.classList.remove('visible')
+//         }
+//     });
+// });
 
-elements.forEach(element => observer.observe(element));
+// elements.forEach(element => observer.observe(element));
 
 var videoEmbeds = document.querySelectorAll('iframe[src*="youtube.com"], iframe[src*="vimeo.com"]');
 

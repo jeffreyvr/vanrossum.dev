@@ -1,20 +1,21 @@
-<x-app-layout title="Blog archive">
+<x-site-layout title="Blog archive">
 
-    <article class="container mx-auto my-16">
+    <article class="container mx-auto">
         <header>
             @isset($tag)
-                <h1 class="font-semibold font-wide text-2xl lg:text-3xl mb-6 text-primary">{{ __('Blogs tagged with :tag', ['tag' => $tag->name]) }}</h1>
+                <x-heading level="1" size="2xl" period>{{ __('Blogs tagged with :tag', ['tag' => $tag->name]) }}</x-heading>
             @else
-                <h1 class="font-semibold font-wide text-2xl lg:text-3xl mb-6 text-primary">{{ __('Blog') }}</h1>
-                <p class="mb-8 text-base">{{ __('The posts are all written in English.') }}</p>
+                <x-heading level="1" size="2xl" period>{{ __('Blog') }}</x-heading>
             @endif
         </header>
 
-        @foreach($posts as $post)
-            @include('posts.block', ['post' => $post])
-        @endforeach
+        <div class="my-12 flex flex-col gap-16">
+            @foreach($posts as $post)
+                <x-post :$post />
+            @endforeach
+        </div>
 
-        {{ $posts->links() }}
+        <div class="mt-6">{{ $posts->links() }}</div>
 
     </article>
 

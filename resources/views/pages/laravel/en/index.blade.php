@@ -1,19 +1,16 @@
-<x-app-layout title="Freelance Laravel Developer">
-    <div class="container max-w-screen-md lg:pt-20 pt-8">
-        <article>
+<x-site-layout title="Freelance Laravel Developer">
+        <article class="mx-auto max-w-screen-md">
             <header class="mb-8">
-                <h1 class="text-xl lg:text-3xl font-bold font-wide text-primary">
-                    <x-text-reveal>{{ __('Freelance Laravel Developer') }}</x-text-reveal>
-                </h1>
+                <x-heading level="1" size="2xl" period>{{ __('Freelance Laravel Developer') }}</x-heading>
             </header>
 
-            <img src="{{ url('images/me@work.jpg') }}" class="rounded-lg shadow-xl shadow-primary/10 mb-12" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1000" />
+            <img src="{{ url('images/me@work.jpg') }}" class="rounded-3xl shadow-xl shadow-primary/10 mb-12" />
 
-            <x-post-content>
-                <div class="md:flex md:items-start font-medium text-gray-800">
-                    I am Jeffrey van Rossum, a freelance PHP developer with years of Laravel experience. I've worked on a varity of
+            <x-content>
+                <p class="text-lg font-medium">
+                    I'm Jeffrey van Rossum, a freelance PHP developer with years of Laravel experience. I've worked on a varity of
                     Laravel apps, from simple apps to complex API's. And the site you're on right now, is made with Laravel too.
-                </div>
+                </p>
 
                 <x-markdown>
 ## Why I use Laravel
@@ -41,7 +38,5 @@ Looking for an experienced Laravel developer? The following might appeal to you:
 If you want to hire me or want additional information, feel free to send an email to
 [jeffrey@vanrossum.dev](mailto:jeffrey@vanrossum.dev).
 </x-markdown>
-            </x-post-content>
-        </div>
-    </div>
+</x-content>
 </x-site-layout>

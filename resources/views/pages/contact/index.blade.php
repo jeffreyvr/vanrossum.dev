@@ -1,9 +1,8 @@
-<x-app-layout :title="__('Contact')">
+<x-site-layout :title="__('Contact')">
 
-    <div class="bg-white py-12 relative bg-gradient-to-b from-gray-100">
-        <article class="max-w-xl md:max-w-3xl mx-auto px-8 md:px-0">
+        <article class="max-w-xl md:max-w-3xl mx-auto">
             <header class="mb-8">
-                <h1 class="text-3xl font-semibold font-wide text-primary leading-tight mb-1">{{ __('Contact') }}</h1>
+                <x-heading>{{ __('Contact') }}</x-heading>
             </header>
 
             <div class="">
@@ -62,5 +61,4 @@
                 </form>
             </div>
         </article>
-    </div>
 </x-site-layout>

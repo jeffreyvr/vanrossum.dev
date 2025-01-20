@@ -1,30 +1,32 @@
-<x-app-layout title="Privacy">
-    <div class="bg-white py-12 relative bg-gradient-to-b from-gray-100">
+<x-site-layout title="Privacy">
         <article class="max-w-xl md:max-w-3xl mx-auto px-8 md:px-0">
             <header class="mb-8">
-                <h1 class="text-xl xl:text-3xl text-primary font-extrabold leading-tight mb-1">{{ __('Privacy statement') }}</h1>
+                <x-heading level="1" size="2xl">{{ __('Privacy statement') }}</x-heading>
             </header>
 
-            <div class="leading-relaxed prose text-dark prose-headings:text-primary">
+            <x-content>
 <x-markdown>
-The following applies to this website vanrossum.dev.
+The following applies to this website: vanrossum.dev.
 
 ## What are cookies?
-A cookie is a small (text) file that is stored on your computer by your browser when you visit our
-website.
-This information can be sent back to us on your next visit. This way our website can recognize you.
+A cookie is a small text file that is stored on your computer or device by your browser when you visit our website. Cookies allow the website to recognize you during future visits and may store information about your preferences or actions.
 
 ## Which cookies do we use?
-Functional cookies: These cookies are necessary for the website to work. Without these cookies you and
-some
-preferences (such as your language settings) cannot be saved.
-Google Analytics: We use Google Analytics to test the quality and effectiveness of our website. This way
-we
-can see how the website is used and how we can improve the website. The data is anonymous and therefore
-cannot be traced back to a specific person.
+
+### Functional Cookies
+These cookies are necessary for the website to function properly. Without these cookies, certain functionalities (such as language preferences or saving form inputs) cannot be maintained.
+
+### Fathom Analytics
+We use Fathom Analytics to measure the quality and effectiveness of our website. Fathom Analytics collects anonymous data to understand how the website is used and how it can be improved. The data collected cannot be traced back to any specific individual, ensuring your privacy.
+
+## Your Choices
+- You can disable cookies by adjusting your browser settings. Please note that disabling functional cookies may affect the usability of the website.
+- Fathom Analytics does not track personal data, and therefore, no action is required on your part to opt out.
+
+## Contact
+If you have any questions about this privacy disclaimer, please contact us via the [contact page](/en/contact).
 </x-markdown>
-            </div>
+            </x-content>
 
         </article>
-    </div>
 </x-site-layout>

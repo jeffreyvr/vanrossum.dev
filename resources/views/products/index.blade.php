@@ -1,13 +1,10 @@
-<x-app-layout :title="__('Products')">
+<x-site-layout :title="__('Products')">
 
-    <article class="container mx-auto max-w-screen-xl my-16">
-        <header>
-            <h1 class="font-semibold font-wide text-2xl lg:text-3xl mb-6 text-primary">{{ __('Products') }}</h1>
-        </header>
+        <x-heading size="2xl" level="1" period>{{ __('Products') }}</x-heading>
 
-        <div>
+        <div class="flex flex-col gap-16 my-8">
             @foreach($products as $product)
-                <x-product :product="$product" :even="$product->even" class="border-t-0 border-b last:border-none" />
+                <x-product :product="$product" />
             @endforeach
         </div>
 

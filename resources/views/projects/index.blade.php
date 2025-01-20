@@ -1,4 +1,4 @@
-<x-app-layout :title="__('Projects')">
+<x-site-layout :title="__('Projects')">
 
     <article class="container mx-auto max-w-screen-xl my-16">
         <header>
