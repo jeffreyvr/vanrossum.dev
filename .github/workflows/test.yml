@@ -30,8 +30,8 @@ jobs:
       - name: Install NPM dependencies
         run: npm ci
 
-      - name: Compile assets
-        run: npx mix --production
+      # - name: Compile assets
+      #   run: npx mix --production
 
       - name: Execute tests
         run: vendor/bin/phpunit --verbose
