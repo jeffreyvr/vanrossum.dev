@@ -13,7 +13,7 @@ module.exports = {
             'sans': ['Manrope', 'Helvetica', 'Arial', 'sans-serif'],
             'display': ['roc-grotesk', 'Helvetica', 'Arial', 'sans-serif'],
             'wide': ['roc-grotesk-wide', 'Helvetica', 'Arial', 'sans-serif'],
-            'extrawide': ['roc-grotesk-extrawide', 'Helvetica', 'Arial', 'sans-serif'],
+            // 'extrawide': ['roc-grotesk-extrawide', 'Helvetica', 'Arial', 'sans-serif'],
         },
         screens: {
             'sm': '640px',

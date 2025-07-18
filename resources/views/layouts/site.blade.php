@@ -30,6 +30,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/images/icons/favicon-16x16.png') }}">
     <link rel="shortcut icon" href="{{ asset('/images/icons/favicon.ico') }}">
 
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=manrope:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.typekit.net/vab7vzb.css">
+
     <link rel="webmention" href="https://webmention.io/vanrossum.dev/webmention" />
     <link rel="pingback" href="https://webmention.io/vanrossum.dev/xmlrpc" />
 
