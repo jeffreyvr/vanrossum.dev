@@ -4,7 +4,7 @@
                 <x-heading level="1" size="2xl" period>{{ __('Freelance Laravel Developer') }}</x-heading>
             </header>
 
-            <img src="{{ url('images/me@work.jpg') }}" class="rounded-3xl shadow-xl shadow-primary/10 mb-12" />
+            <img src="{{ url('images/me@work.jpg') }}" alt="Me at work" class="rounded-3xl shadow-xl shadow-primary/10 mb-12" />
 
             <x-content>
                 <p class="text-lg font-medium">

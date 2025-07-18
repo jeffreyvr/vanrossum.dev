@@ -5,7 +5,7 @@
                 <x-heading size="2xl" level="1" period>{{ __('Freelance WordPress Developer') }}</x-heading>
             </header>
 
-            <img src="{{ url('images/me@work2.jpg') }}" data-aos="fade-up" data-aos-duration="1000" class="rounded-xl shadow-2xl shadow-primary/25 mb-12"  />
+            <img src="{{ url('images/me@work2.jpg') }}" alt="Me at work" data-aos="fade-up" data-aos-duration="1000" class="rounded-xl shadow-2xl shadow-primary/25 mb-12"  />
 
             <x-content>
                 <p class="text-lg font-medium">

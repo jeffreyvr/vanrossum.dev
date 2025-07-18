@@ -4,7 +4,7 @@
     <div class="ml-[calc(50%_-_50vw)] mr-[calc(50%_-_50vw)] py-12 md:py-20 overflow-x-hidden flex justify-center gap-8">
         <!-- travel -->
         <div class="relative group hover:z-10 w-44 sm:w-72 shrink-0">
-            <img src="{{ url('images/pic-5.png') }}" class="saturate-75 rounded-3xl h-48 object-cover rotate-3 group-hover:rotate-0 group-hover:scale-110 transition" />
+            <img src="{{ url('images/pic-5.png') }}" alt="Apple Store Singapore" class="saturate-75 rounded-3xl h-48 object-cover rotate-3 group-hover:rotate-0 group-hover:scale-110 transition" />
             <div class="group-hover:opacity-100 transition opacity-0 absolute left-2 text-xs text-zinc-800 -bottom-8 dark:text-zinc-400">
                 Visiting the Apple Store Singapore
             </div>
@@ -12,7 +12,7 @@
 
         <!-- coffee -->
         <div class="relative group hover:z-10 w-44 sm:w-72 shrink-0">
-            <img src="{{ url('images/pic-4.png') }}" class="saturate-75 rounded-3xl h-48 object-cover -rotate-3 group-hover:rotate-0 group-hover:scale-110 transition" />
+            <img src="{{ url('images/pic-4.png') }}" alt="Coding and coffee is magic" class="saturate-75 rounded-3xl h-48 object-cover -rotate-3 group-hover:rotate-0 group-hover:scale-110 transition" />
             <div class="group-hover:opacity-100 transition opacity-0 absolute left-2 text-xs text-zinc-800 -bottom-8 dark:text-zinc-400">
                 👨‍💻 + ☕ = ✨
             </div>
@@ -20,7 +20,7 @@
 
         <!-- desk -->
         <div class="relative group hover:z-10 w-44 sm:w-72 shrink-0">
-            <img src="{{ url('images/me@work.jpg') }}" class="saturate-75 rounded-3xl h-48 object-cover rotate-3 group-hover:rotate-0 group-hover:scale-110 transition" />
+            <img src="{{ url('images/me@work.jpg') }}" alt="My desk" class="saturate-75 rounded-3xl h-48 object-cover rotate-3 group-hover:rotate-0 group-hover:scale-110 transition" />
             <div class="group-hover:opacity-100 transition opacity-0 absolute left-2 text-xs text-zinc-800 -bottom-8 dark:text-zinc-400">
                 Where the magic happens
             </div>
@@ -28,7 +28,7 @@
 
         <!-- guitar -->
         <div class="relative group hover:z-10 w-44 sm:w-72 shrink-0 ">
-            <img src="{{ url('images/pic-6.png') }}" class="saturate-75 rounded-3xl h-48 object-cover -rotate-3 group-hover:rotate-0 group-hover:scale-110 transition" />
+            <img src="{{ url('images/pic-6.png') }}" alt="My guitars" class="saturate-75 rounded-3xl h-48 object-cover -rotate-3 group-hover:rotate-0 group-hover:scale-110 transition" />
             <div class="group-hover:opacity-100 transition opacity-0 absolute left-2 text-xs text-zinc-800 -bottom-8 dark:text-zinc-400">
                 Now if I could only play a decent tune...
             </div>
@@ -36,7 +36,7 @@
 
         <!-- laracon -->
         <div class="relative group hover:z-10 w-44 sm:w-72 shrink-0">
-            <img src="{{ url('images/pic-2.png') }}" class="saturate-75 rounded-3xl h-48 object-cover rotate-3 group-hover:rotate-0 group-hover:scale-110 transition" />
+            <img src="{{ url('images/pic-2.png') }}" alt="Taylor Otwell at Laracon" class="saturate-75 rounded-3xl h-48 object-cover rotate-3 group-hover:rotate-0 group-hover:scale-110 transition" />
             <div class="group-hover:opacity-100 transition opacity-0 absolute left-2 text-xs text-zinc-800 -bottom-8 dark:text-zinc-400">
                 Watching Taylor Otwell in action at Laracon
             </div>

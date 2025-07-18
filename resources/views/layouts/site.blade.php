@@ -102,27 +102,29 @@
                         &copy; {{ date('Y') }} vanrossum.dev. All rights reserved.
                     </div>
                     <div class="text-zinc-800 dark:text-zinc-300 flex items-center gap-6">
-                        <a href="{{ localized_route('privacy') }}">{{ __('Privacy') }}</a>
+                        <a href="{{ localized_route('privacy') }}" aria-label="Privacy policy">
+                            {{ __('Privacy') }}
+                        </a>
 
                         <div class="h-full w-[1px] bg-black/10 dark:bg-white/10"></div>
 
-                        <a href="https://x.com/jeffreyrossum">
+                        <a href="https://x.com/jeffreyrossum" aria-label="X profile">
                             <x-fab-x-twitter class="size-5" />
                         </a>
 
-                        <a href="https://github.com/jeffreyvr">
+                        <a href="https://github.com/jeffreyvr" aria-label="GitHub profile">
                             <x-fab-github class="size-5" />
                         </a>
 
-                        <a href="https://youtube.com/@jeffrey.rossum">
+                        <a href="https://youtube.com/@jeffrey.rossum" aria-label="YouTube channel">
                             <x-fab-youtube class="size-5" />
                         </a>
 
-                        <a href="https://linkedin.com/in/jeffrey-van-rossum-97b27321">
+                        <a href="https://linkedin.com/in/jeffrey-van-rossum-97b27321" aria-label="LinkedIn profile">
                             <x-fab-linkedin class="size-5" />
                         </a>
 
-                        <a href="{{ localized_route('contact') }}">
+                        <a href="{{ localized_route('contact') }}" aria-label="Contact me">
                             <x-heroicon-c-at-symbol class="size-5" />
                         </a>
                     </div>
