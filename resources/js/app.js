@@ -1,4 +1,4 @@
-require('./bootstrap');
+import './bootstrap';
 
 var videoEmbeds = document.querySelectorAll('iframe[src*="youtube.com"], iframe[src*="vimeo.com"]');
 

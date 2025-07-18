@@ -1,1 +1,0 @@
-require("./bootstrap");var a=document.querySelectorAll('iframe[src*="youtube.com"], iframe[src*="vimeo.com"]');a.forEach(r=>{let e=document.createElement("div");e.classList.add("aspect-h-9"),e.classList.add("aspect-w-16"),r.parentNode.insertBefore(e,r),e.appendChild(r)});
