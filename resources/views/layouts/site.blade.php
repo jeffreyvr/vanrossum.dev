@@ -46,7 +46,7 @@
     <script src="https://cdn.usefathom.com/script.js" data-site="{{ $fathom_id }}" defer></script>
     @endif
 
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @yield('styles')
 </head>
@@ -143,7 +143,5 @@
     </div>
 
     @yield('scripts')
-
-    <script defer src="{{ mix('/js/app.js') }}"></script>
 </body>
 </html>
