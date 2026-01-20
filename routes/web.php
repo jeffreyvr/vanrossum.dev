@@ -60,7 +60,9 @@ Route::get('/{postSlug}', [PostController::class, 'show'])->name('posts.show');
 Route::post('/webhooks/webmentions', [WebmentionsController::class, 'handle']);
 
 Route::get('media/{mediaItem}/download.zip', function (Media $mediaItem) {
-    return response()->streamDownload(function () use ($mediaItem) {
-        echo $mediaItem->stream()->getContents();
-    }, $mediaItem->file_name);
+    return redirect($mediaItem->getTemporaryUrl(
+        now()->addMinutes(5),
+        '',
+        ['ResponseContentDisposition' => 'attachment; filename="' . $mediaItem->file_name . '"']
+    ));
 })->name('download')->middleware('signed.or.licensekeyed');
