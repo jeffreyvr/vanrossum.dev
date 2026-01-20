@@ -66,7 +66,7 @@ return [
      * More info: https://commonmark.thephpleague.com/2.1/extensions/overview/
      */
     'extensions' => [
-        new TableExtension,
+        TableExtension::class,
     ],
 
     /*
