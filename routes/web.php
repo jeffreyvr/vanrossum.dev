@@ -8,6 +8,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\WebmentionsController;
 use Illuminate\Support\Facades\Route;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 //Auth::routes(['register' => false]);
 
@@ -58,7 +59,7 @@ Route::get('/{postSlug}', [PostController::class, 'show'])->name('posts.show');
 
 Route::post('/webhooks/webmentions', [WebmentionsController::class, 'handle']);
 
-Route::get('media/{mediaItem}/download.zip', function (Spatie\MediaLibrary\MediaCollections\Models\Media $mediaItem) {
+Route::get('media/{mediaItem}/download.zip', function (Media $mediaItem) {
     return response()->streamDownload(function () use ($mediaItem) {
         echo $mediaItem->stream()->getContents();
     }, $mediaItem->file_name);
