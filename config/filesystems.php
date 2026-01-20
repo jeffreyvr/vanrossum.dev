@@ -39,16 +39,30 @@ return [
         ],
 
         'public' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'driver' => 's3',
+            'key' => env('CLOUDFLARE_R2_ACCESS_KEY_ID'),
+            'secret' => env('CLOUDFLARE_R2_SECRET_ACCESS_KEY'),
+            'region' => 'auto',
+            'bucket' => env('CLOUDFLARE_R2_BUCKET'),
+            'root' => 'public',
+            'url' => env('CLOUDFLARE_R2_URL'),
+            'endpoint' => env('CLOUDFLARE_R2_ENDPOINT'),
+            'use_path_style_endpoint' => false,
             'visibility' => 'public',
             'throw' => false,
         ],
 
         'product_downloads' => [
-            'driver' => 'local',
-            'root' => storage_path('app/product_downloads'),
+            'driver' => 's3',
+            'key' => env('CLOUDFLARE_R2_ACCESS_KEY_ID'),
+            'secret' => env('CLOUDFLARE_R2_SECRET_ACCESS_KEY'),
+            'region' => 'auto',
+            'bucket' => env('CLOUDFLARE_R2_BUCKET'),
+            'root' => 'product_downloads',
+            'endpoint' => env('CLOUDFLARE_R2_ENDPOINT'),
+            'use_path_style_endpoint' => false,
+            'visibility' => 'private',
+            'throw' => false,
         ],
 
         's3' => [
